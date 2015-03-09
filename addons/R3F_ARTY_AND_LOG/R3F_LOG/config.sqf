@@ -41,7 +41,8 @@ R3F_LOG_CFG_objets_heliportables =
 	"Car_F",
 	"Ship_F",
 	"Tank_F",
-	"Land_Pier_F"
+	"Land_Pier_F",
+	"Land_Cargo40_military_green_F"
 ];
 
 
@@ -136,9 +137,13 @@ R3F_LOG_CFG_objets_transportables =
 	["Land_Stone_8m_F", 5],
 	["Land_ToiletBox_F", 2],
 	["Land_BarrelWater_F", 2],
-	["Land_Pier_F", 150],  
+	["Land_Pier_F", 150],
+	["Land_Pier_addon", 50],
 	["Land_FuelStation_Feed_F", 75],
-	["Land_Pod_Heli_Transport_04_ammo_F", 150]
+	["Land_Pod_Heli_Transport_04_ammo_F", 150],
+	["Land_Cargo_House_V1_F", 10],
+	["Land_Cargo_HQ_V1_F", 20],
+	["Land_Cargo40_military_green_F", 20]
 	
 ];
 
@@ -199,5 +204,9 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_BarrelWater_F",
 	"Land_Pier_F",  
 	"Land_FuelStation_Feed_F",
-	"Land_Pod_Heli_Transport_04_ammo_F"
+	"Land_Pod_Heli_Transport_04_ammo_F",
+	"Land_Pier_addon",
+	"Land_Cargo_House_V1_F",
+	"Land_Cargo_HQ_V1_F",
+	"Land_Cargo40_military_green_F"
 ];

@@ -49,6 +49,7 @@ getMagazineDetailAmmo = [_path, "getMagazineDetailAmmo.sqf"] call mf_compile;
 findClientPlayer = [_path, "findClientPlayer.sqf"] call mf_compile;
 fn_onPlayerConnected = [_path, "fn_onPlayerConnected.sqf"] call mf_compile;
 fn_onPlayerDisconnected = [_path, "fn_onPlayerDisconnected.sqf"] call mf_compile;
+//fn_onAdminConnected = [_path, "fn_onAdminConnected.sqf"] call mf_compile;
 fn_publicVariableAll = [_path, "fn_publicVariableAll.sqf"] call mf_compile;
 fn_refillBox = [_path, "fn_refillbox.sqf"] call mf_compile;
 fn_refillTruck = [_path, "fn_refilltruck.sqf"] call mf_compile;

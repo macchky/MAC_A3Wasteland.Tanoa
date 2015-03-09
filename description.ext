@@ -24,8 +24,8 @@ class Header
 
 author="TOPARMA.COM - Core by A3Wasteland.com";
 onLoadName = "TOP A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-onLoadMission = "Website: toparma.com Teamspeak: ts.toparma.com CORE MISSION: a3wasteland.com";
-overviewText = "Website: toparma.com Teamspeak: ts.toparma.com";
+onLoadMission = "Website: game.macchky.net CORE MISSION: a3wasteland.com";
+overviewText = "Website: game.macchky.net";
 overviewTextLocked = "Website: toparma.com Teamspeak: ts.toparma.com";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";

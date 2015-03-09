@@ -120,10 +120,16 @@ forEach
 	"A3W_tkAutoKickEnabled",
 	"A3W_tkKickAmount",
 	"A3W_donatorEnabled",
-	"A3W_customUniformEnabled"
+	"A3W_customUniformEnabled",
+	"A3W_adminConnectionChat"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
+
+//if (["A3W_adminConnectionChat"] call isConfigOn) then
+//{
+//	["A3W_joinacc", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onAdminConnected }] call BIS_fnc_addStackedEventHandler;
+//};
 
 _playerSavingOn = ["A3W_playerSaving"] call isConfigOn;
 _baseSavingOn = ["A3W_baseSaving"] call isConfigOn;
