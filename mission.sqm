@@ -73,7 +73,8 @@ class Mission
 		"a3_characters_f",
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"A3_Misc_F_Helpers",
-		"A3_Soft_F_EPC_Truck_03"
+		"A3_Soft_F_EPC_Truck_03",
+		"A3_Soft_F_Gamma_HEMTT"
 	};
 	addOnsAuto[]=
 	{
@@ -91,7 +92,7 @@ class Mission
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"A3_Misc_F_Helpers",
 		"A3_Soft_F_EPC_Truck_03",
-		"A3_Structures_F_Wrecks",
+		"A3_Soft_F_Gamma_HEMTT",
 		"a3_map_altis"
 	};
 	randomSeed=14957468;
@@ -113,7 +114,7 @@ class Mission
 		startFogDecay=0.001;
 		forecastFogDecay=0.001;
 	};
-		class Groups
+	class Groups
 	{
 		items=51;
 		class Item0
@@ -4761,9 +4762,9 @@ class Mission
 			text="A";
 			type="mil_flag";
 			colorName="ColorYellow";
-			angle=1.73479;
 			a=0.5;
 			b=0.5;
+			angle=1.73479;
 		};
 		class Item242
 		{
@@ -4784,9 +4785,9 @@ class Mission
 			text="B";
 			type="mil_flag";
 			colorName="ColorYellow";
-			angle=3.7234499;
 			a=0.5;
 			b=0.5;
+			angle=3.7234499;
 		};
 		class Item244
 		{
@@ -4807,9 +4808,9 @@ class Mission
 			text="C";
 			type="mil_flag";
 			colorName="ColorYellow";
-			angle=3.3100901;
 			a=0.5;
 			b=0.5;
+			angle=3.3100901;
 		};
 		class Item246
 		{
@@ -4830,9 +4831,9 @@ class Mission
 			text="A";
 			type="mil_flag";
 			colorName="ColorYellow";
-			angle=-21.9146;
 			a=0.5;
 			b=0.5;
+			angle=-21.9146;
 		};
 		class Item248
 		{
@@ -4853,9 +4854,9 @@ class Mission
 			text="B";
 			type="mil_flag";
 			colorName="ColorYellow";
-			angle=-21.9146;
 			a=0.5;
 			b=0.5;
+			angle=-21.9146;
 		};
 		class Item250
 		{
@@ -4876,9 +4877,9 @@ class Mission
 			text="C";
 			type="mil_flag";
 			colorName="ColorYellow";
-			angle=-21.9146;
 			a=0.5;
 			b=0.5;
+			angle=-21.9146;
 		};
 		class Item252
 		{
