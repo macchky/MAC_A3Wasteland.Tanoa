@@ -117,24 +117,7 @@ rifleArray = compileFinal str
 	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_SOS_F", 1250],
 	["H&K PSG1", "hlc_rifle_psg1", 1100],
 	// Underwater Gun
-	["SDAR Underwater Rifle", "arifle_SDAR_F", 100]/*,
-	
-	//DLC Rifles
-	["ASP-1 Kir 12.7 mm (Black)", "srifle_DMR_04_F", 1000],
-	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 1000],
-	["Cyrus 9.3 mm (Black)", "srifle_DMR_05_blk_F", 1000],
-	["Cyrus 9.3 mm (Hex)", "srifle_DMR_05_hex_F", 1000],
-	["Cyrus 9.3 mm (Tan)", "srifle_DMR_05_tan_f", 1000],
-	["MAR-10 .338 (Black)", "srifle_DMR_02_F", 1000],
-	["MAR-10 .338 (Camo)", "srifle_DMR_02_camo_F", 1000],
-	["MAR-10 .338 (Sand)", "srifle_DMR_02_sniper_F", 1000],
-	["Mk-1 EMR 7.62 mm (Black)", "srifle_DMR_03_F", 1000],
-	["Mk-1 EMR 7.62 mm (Camo)", "srifle_DMR_03_multicam_F", 1000],
-	["Mk-1 EMR 7.62 mm (Khaki)", "srifle_DMR_03_khaki_F", 1000],
-	["Mk-1 EMR 7.62 mm (Sand)", "srifle_DMR_03_tan_F", 1000],
-	["Mk-1 EMR 7.62 mm (Woodland)", "srifle_DMR_03_woodland_F", 1000],
-	["Mk14 7.62 mm (Camo)", "srifle_DMR_06_camo_F", 1000],
-	["Mk14 7.62 mm (Olive)", "srifle_DMR_06_olive_F", 1000]*/
+	["SDAR Underwater Rifle", "arifle_SDAR_F", 100]
 
 
 ];
@@ -291,12 +274,7 @@ ammoArray = compileFinal str
 	["5.56x45mm NATO Mk262 30rnd", "hlc_30rnd_556x45_SPR", 30],
 	["12g Buckshot 10rnd", "hlc_10rnd_12g_buck_S12", 50],
 	["12g Slug 10rnd", "hlc_10rnd_12g_slug_S12", 50],
-	/*
-	//DLC Ammo
-	["12.7mm 10Rnd Mag", "10Rnd_127x54_Mag", 50],
-	["9.3mm 10Rnd Mag", "10Rnd_93x64_DMR_05_Mag", 50],
-	[".338 LM 10Rnd Mag", "10Rnd_338_Mag", 50],
-	*/
+
 	["HE GP25 GP30", "hlc_VOG25_AK", 100],
 	["Smoke GP25 GP30", "hlc_GRD_White", 75],
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
@@ -374,28 +352,7 @@ accessoriesArray = compileFinal str
 	["NVS", "optic_NVS", 500, "item"],
 	["TWS", "optic_tws", 5000, "item"],
 	["TWS MG", "optic_tws_mg", 6000, "item"],
-	["Nightstalker", "optic_Nightstalker", 7500, "item"]/*,
-	// DLC Items
-	["Sound Suppressor (9.3 mm Black)", "muzzle_snds_93mmg", 125, "item"],
-	["Sound Suppressor (9.3 mm Tan)", "muzzle_snds_93mmg_tan", 125, "item"],
-	["Sound Suppressor (.338 Black)", " muzzle_snds_338_black", 125, "item"],
-	["Sound Suppressor (.338 Green)", " muzzle_snds_338_green", 125, "item"],
-	["Sound Suppressor (.338 Sand)", " muzzle_snds_338_sand", 125, "item"],
-	["AMS (Black)", "optic_AMS", 200, "item"],
-	["AMS (Khaki)", "optic_AMS_khk", 200, "item"],
-	["AMS (Sand)", "optic_AMS_snd", 200, "item"],
-	["Kahlia (Black)", "optic_KHS_blk", 200, "item"],
-	["Kahlia (Hex)", "optic_KHS_hex", 200, "item"],
-	["Kahlia (Old)", "optic_KHS_old", 200, "item"],
-	["Kahlia (Tan)", "optic_KHS_tan", 200, "item"],
-	["Bipod (Black) (NATO)", "bipod_01_F_blk", 500, "item"],
-	["Bipod (Black) (CSAT)", "bipod_02_F_blk", 500, "item"],
-	["Bipod (Black) (AAF)", "bipod_03_F_blk", 500, "item"],
-	["Bipod (MTP) (NATO)", "bipod_01_F_mtp", 500, "item"],
-	["Bipod (Hex) (CSAT)", "bipod_02_F_hex", 500, "item"],
-	["Bipod (Olive) (AAF)", "bipod_03_F_oli", 500, "item"],
-	["Bipod (Sand) (NATO)", "bipod_01_F_snd", 500, "item"],
-	["Bipod (Tan) (CSAT)", "bipod_02_F_tan", 500, "item"]*/
+	["Nightstalker", "optic_Nightstalker", 7500, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -513,18 +470,7 @@ uniformArray = compileFinal str
 [
 	["Ghillie Suit (NATO)", "U_B_GhillieSuit", 300, "uni"],
 	["Ghillie Suit (CSAT)", "U_O_GhillieSuit", 300, "uni"],
-	["Ghillie Suit (AAF)", "U_I_GhillieSuit", 300, "uni"],	/*
-	//DLC Uniforms
-	["Full Ghillie (Arid) (NATO)", "U_B_FullGhillie_ard", 500, "uni"],
-	["Full Ghillie (Arid) (CSAT)", "U_O_FullGhillie_ard", 500, "uni"],
-	["Full Ghillie (Arid) (AAF)", "U_I_FullGhillie_ard", 500, "uni"],
-	["Full Ghillie (Lush) (NATO)", "U_B_FullGhillie_lsh", 500, "uni"],
-	["Full Ghillie (Lush) (CSAT)", "U_O_FullGhillie_lsh", 500, "uni"],
-	["Full Ghillie (Lush) (AAF)", "U_I_FullGhillie_lsh", 500, "uni"],
-	["Full Ghillie (Semi-Arid) (NATO)", "U_B_FullGhillie_sard", 500, "uni"],
-	["Full Ghillie (Semi-Arid) (CSAT)", "U_O_FullGhillie_sard", 500, "uni"],
-	["Full Ghillie (Semi-Arid) (AAF)", "U_I_FullGhillie_sard", 500, "uni"],
-	*/
+	["Ghillie Suit (AAF)", "U_I_GhillieSuit", 300, "uni"],
 	["Wetsuit (NATO)", "U_B_Wetsuit", 200, "uni"],
 	["Wetsuit (CSAT)", "U_O_Wetsuit", 200, "uni"],
 	["Wetsuit (AAF)", "U_I_Wetsuit", 200, "uni"],
@@ -736,9 +682,7 @@ genObjectsArray = compileFinal str
 	["Military Cargo House (macchky.net)", "Land_Cargo_House_V1_F", 1000, "object"],
 	["Military Cargo HQ (macchky.net)", "Land_Cargo_HQ_V1_F", 5000, "object"],
 	["Cargo Container (Long) (macchky.net)", "Land_Cargo40_military_green_F", 1000, "object"],
-	["Pier Platform (macchky.net)", "Land_Pier_addon", 10000, "object"],
-	["Food sacks", "Land_Sacks_goods_F", 5000, "object"], // Added on player request
-	["Water Barrel", "Land_BarrelWater_F", 5000, "object"]
+	["Pier Platform (macchky.net)", "Land_Pier_addon", 10000, "object"]
 ];
 
 allGenStoreVanillaItems = compileFinal str (call genItemArray + call genObjectsArray + call allStoreGear);
