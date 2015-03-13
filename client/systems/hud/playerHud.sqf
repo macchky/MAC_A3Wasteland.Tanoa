@@ -172,7 +172,7 @@ while {true} do
 
 	if (isStreamFriendlyUIEnabled) then
 	{
-		_tempString = format ["<t color='#A0FFFFFF'>TOP A3Wasteland %1<br/>www.toparma.com</t>", getText (configFile >> "CfgWorlds" >> worldName >> "description")];
+		_tempString = format ["<t color='#A0FFFFFF'>MAC A3Wasteland %1<br/>game.macchky.net</t>", getText (configFile >> "CfgWorlds" >> worldName >> "description")];
 		_yOffset = 0.28;
 
 		_hudVehicle ctrlSetStructuredText parseText _tempString;
