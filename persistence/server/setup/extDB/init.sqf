@@ -26,7 +26,7 @@ _return = if (isNil {uiNamespace getVariable "A3W_extDB_ID"}) then
 
 	diag_log "[extDB] Initialized DB_CUSTOM_V3 protocol";
 
-	_result = call compile ("extDB" callExtension format ["9:ADD:MISC:%1", call A3W_extDB_miscID]);
+	_result = call compile ("extDB" callExtension format ["9:ADD:MISC_V2:%1", call A3W_extDB_miscID]);
 	if (_result select 0 == 0) exitWith { diag_log format ["[extDB] ### MISC protocol error! %1", _result]; false };
 
 	diag_log "[extDB] Initialized MISC protocol";
