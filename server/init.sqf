@@ -121,15 +121,11 @@ forEach
 	"A3W_tkKickAmount",
 	"A3W_donatorEnabled",
 	"A3W_customUniformEnabled",
-	"A3W_adminConnectionChat"
+	"A3W_AdminConnectionChat"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
 
-//if (["A3W_adminConnectionChat"] call isConfigOn) then
-//{
-//	["A3W_joinacc", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onAdminConnected }] call BIS_fnc_addStackedEventHandler;
-//};
 
 _playerSavingOn = ["A3W_playerSaving"] call isConfigOn;
 _baseSavingOn = ["A3W_baseSaving"] call isConfigOn;
@@ -167,6 +163,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn) then
 			A3W_savingMethodDir = compileFinal "'extDB'";
 			A3W_extDB_ConfigName = compileFinal str (["A3W_extDB_ConfigName", "A3W"] call getPublicVar);
 			A3W_extDB_IniName = compileFinal str (["A3W_extDB_IniName", "a3wasteland"] call getPublicVar);
+			A3W_extDB_RconName = compileFinal str (["A3W_extDB_RconName", "Rcon"] call getPublicVar);
 		}
 		else
 		{

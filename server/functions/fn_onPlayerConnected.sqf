@@ -10,3 +10,29 @@ _uid = _this select 1;
 _name = _this select 2;
 
 diag_log format ["Player connected: %1 (%2)", _name, _uid];
+
+if (["A3W_AdminConnectionChat"] call isConfigOn) then
+{
+	switch (true) do
+	{
+		case ([_uid, serverOwners] call isAdmin):
+		{
+			_msg = "Super Admin " + _name + " connected";
+			uiSleep 3;
+			_result = "extDB" callExtension format["1:%1:SAY -1 %2", call A3W_extDB_RconID, _msg];
+		};
+		case ([_uid, highAdmins] call isAdmin):
+		{
+			_msg = "High Admin " + _name + " connected";
+			uiSleep 3;
+			_result = "extDB" callExtension format["1:%1:SAY -1 %2", call A3W_extDB_RconID, _msg];
+		};
+		case ([_uid, lowAdmins] call isAdmin):
+		{
+			_msg = "Low Admin " + _name + " connected";
+			uiSleep 3;
+			_result = "extDB" callExtension format["1:%1:SAY -1 %2", call A3W_extDB_RconID, _msg];
+		};
+
+	};
+};

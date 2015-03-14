@@ -20,6 +20,7 @@ _return = if (isNil {uiNamespace getVariable "A3W_extDB_ID"}) then
 
 	A3W_extDB_ID = compileFinal str floor random 999999;
 	A3W_extDB_miscID = compileFinal str (call A3W_extDB_ID + 1);
+	A3W_extDB_RconID = compileFinal str (call A3W_extDB_ID + 3);
 
 	_result = call compile ("extDB" callExtension format ["9:ADD:DB_CUSTOM_V3:%1:%2", call A3W_extDB_ID, call A3W_extDB_IniName]);
 	if (_result select 0 == 0) exitWith { diag_log format ["[extDB] ### DB_CUSTOM_V3 protocol error! %1", _result]; false };
@@ -29,16 +30,28 @@ _return = if (isNil {uiNamespace getVariable "A3W_extDB_ID"}) then
 	_result = call compile ("extDB" callExtension format ["9:ADD:MISC_V2:%1", call A3W_extDB_miscID]);
 	if (_result select 0 == 0) exitWith { diag_log format ["[extDB] ### MISC protocol error! %1", _result]; false };
 
-	diag_log "[extDB] Initialized MISC protocol";
+	diag_log "[extDB] Initialized MISC_V2 protocol";
+	
+	_result = call compile ("extDB" callExtension format ["9:START_RCON:%1", call A3W_extDB_RconName]);
+	if (_result select 0 == 0) exitWith { diag_log format ["[extDB] ### RCON protocol 1 error! %1", _result]; false };
+
+	diag_log "[extDB] Starting RCON protocol";
+	
+	_result = call compile ("extDB" callExtension format ["9:ADD:%1:%2", call A3W_extDB_RconName,call A3W_extDB_RconID]);
+	if (_result select 0 == 0) exitWith { diag_log format ["[extDB] ### RCON protocol 2 error! %1", _result]; false };
+
+	diag_log "[extDB] Initialized RCON protocol";
 
 	uiNamespace setVariable ["A3W_extDB_ID", call A3W_extDB_ID];
 	uiNamespace setVariable ["A3W_extDB_miscID", call A3W_extDB_miscID];
+	uiNamespace setVariable ["A3W_extDB_RconID", call A3W_extDB_RconID];
 	true
 }
 else
 {
 	A3W_extDB_ID = compileFinal str (uiNamespace getVariable "A3W_extDB_ID");
 	A3W_extDB_miscID = compileFinal str (uiNamespace getVariable "A3W_extDB_miscID");
+	A3W_extDB_RconID = compileFinal str (uiNamespace getVariable "A3W_extDB_RconID");
 	diag_log "[extDB] Connection and protocols already initialized!";
 	true
 };
