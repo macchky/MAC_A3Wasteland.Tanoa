@@ -313,7 +313,7 @@ while {true} do
 						//["Please stop using the global voice channel, or you will be killed and crashed.", _msgTitle] spawn BIS_fnc_guiMessage;
 						_msgTitle spawn
 						{
-							_this hintC parseText "You will be kicked/banned for using VON in GLOBAL/SIDE channels. Download TeamSpeak and join TS.TOPARMA.COM. <br/><br/> <t color='#ff0000'>How to unbind Push to Talk and default to Group:</t><br/> <img size='30'  image='client\images\information\von.jpg'/>";
+							_this hintC parseText "You will be kicked/banned for using VON in GLOBAL/SIDE channels. Download TeamSpeak and join game.macchky.net <br/>";
 						};						
 					}
 					else
