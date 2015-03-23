@@ -120,21 +120,22 @@ rifleArray = compileFinal str
 	["SDAR Underwater Rifle", "arifle_SDAR_F", 100]/*,
 	
 	//DLC Rifles
-	["ASP-1 Kir 12.7 mm (Black)", "srifle_DMR_04_F", 1000],
-	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 1000],
-	["Cyrus 9.3 mm (Black)", "srifle_DMR_05_blk_F", 1000],
-	["Cyrus 9.3 mm (Hex)", "srifle_DMR_05_hex_F", 1000],
-	["Cyrus 9.3 mm (Tan)", "srifle_DMR_05_tan_f", 1000],
-	["MAR-10 .338 (Black)", "srifle_DMR_02_F", 1000],
-	["MAR-10 .338 (Camo)", "srifle_DMR_02_camo_F", 1000],
-	["MAR-10 .338 (Sand)", "srifle_DMR_02_sniper_F", 1000],
+	["Mk14 7.62 mm (Camo)", "srifle_DMR_06_camo_F", 1000],
+	["Mk14 7.62 mm (Olive)", "srifle_DMR_06_olive_F", 1000],
 	["Mk-1 EMR 7.62 mm (Black)", "srifle_DMR_03_F", 1000],
 	["Mk-1 EMR 7.62 mm (Camo)", "srifle_DMR_03_multicam_F", 1000],
 	["Mk-1 EMR 7.62 mm (Khaki)", "srifle_DMR_03_khaki_F", 1000],
 	["Mk-1 EMR 7.62 mm (Sand)", "srifle_DMR_03_tan_F", 1000],
 	["Mk-1 EMR 7.62 mm (Woodland)", "srifle_DMR_03_woodland_F", 1000],
-	["Mk14 7.62 mm (Camo)", "srifle_DMR_06_camo_F", 1000],
-	["Mk14 7.62 mm (Olive)", "srifle_DMR_06_olive_F", 1000]*/
+	["MAR-10 .338 (Black)", "srifle_DMR_02_F", 1000],
+	["MAR-10 .338 (Camo)", "srifle_DMR_02_camo_F", 1000],
+	["MAR-10 .338 (Sand)", "srifle_DMR_02_sniper_F", 1000],
+	["Cyrus 9.3 mm (Black)", "srifle_DMR_05_blk_F", 1000],
+	["Cyrus 9.3 mm (Hex)", "srifle_DMR_05_hex_F", 1000],
+	["Cyrus 9.3 mm (Tan)", "srifle_DMR_05_tan_f", 1000],
+	["ASP-1 Kir 12.7 mm (Black)", "srifle_DMR_04_F", 1000],
+	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 1000]
+*/
 
 
 ];
@@ -146,7 +147,14 @@ lmgArray = compileFinal str
 	["Mk200 LMG", "LMG_Mk200_F", 375],
 	["Zafir LMG", "LMG_Zafir_F", 450],
 	["M60 (no optic)", "hlc_lmg_m60", 450],
-	["M60E4", "hlc_lmg_M60E4", 450]
+	["M60E4", "hlc_lmg_M60E4", 450]/*,
+	
+	//DLC Weapons
+	["Navid 9.3 mm (Hex)", "MMG_01_hex_F", 500],
+	["Navid 9.3 mm (Tan)", "MMG_01_tan_F", 500],
+	["SPMG .338 (Black)", "MMG_02_black_F", 500],
+	["SPMG .338 (MTP)", "MMG_02_camo_F", 500],
+	["SPMG .338 (Sand)", "MMG_02_sand_F", 500]*/
 ];
 
 shotgunArray = compileFinal str
@@ -296,6 +304,8 @@ ammoArray = compileFinal str
 	["12.7mm 10Rnd Mag", "10Rnd_127x54_Mag", 50],
 	["9.3mm 10Rnd Mag", "10Rnd_93x64_DMR_05_Mag", 50],
 	[".338 LM 10Rnd Mag", "10Rnd_338_Mag", 50],
+	["9.3mm 150Rnd Belt", "150Rnd_93x64_Mag", 150],
+	[".338 NM 130Rnd Belt", "130Rnd_338_Mag", 150],
 	*/
 	["HE GP25 GP30", "hlc_VOG25_AK", 100],
 	["Smoke GP25 GP30", "hlc_GRD_White", 75],
