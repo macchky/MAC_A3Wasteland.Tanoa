@@ -957,20 +957,10 @@ colorsArray = compileFinal str
 			["'Murica", _texDir + "murica.jpg"],
 			["Confederate", _texDir + "confederate.jpg"],
 			["Union Jack", _texDir + "unionjack.jpg"],
-			["Green Camo", _texDir + "camo_fuel.jpg"],
+			["Yellow Camo", _texDir + "camo_fuel.jpg"],
 			["Orange Camo", _texDir + "camo_fack.jpg"],
-			["Red Camo", _texDir + "redcamo.jpg"],
-			["Pink Camo", _texDir + "camo_pank.jpg"],
-			["Red Digi Camo", _texDir + "dmr.jpg"],
-			["Ice Camo", _texDir + "icecamo.jpg"],
-			["Digital Camo", _texDir + "digicam.jpg"],
-			["Snakeskin Camo", _texDir + "snake.jpg"],
-			["Yellow Camo", _texDir + "clothcamo.jpg"],
-			["Sierra Whiskey Wild Dogs", _texDir + "swwd.jpg"],
-			["Skulls", _texDir + "skulls.jpg"],
-			["Zebra", _texDir + "zebra.jpg"],
-			["Hello Kitty", _texDir + "kitty.jpg"]
-			
+			["Red Camo", _texDir + "camo_deser.jpg"],
+			["Pink Camo", _texDir + "camo_pank.jpg"]
 		]
 	],
 	[ // Kart colors
