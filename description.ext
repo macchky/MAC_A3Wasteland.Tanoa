@@ -21,11 +21,11 @@ class Header
 	maxPlayers=145; // 144 players, 1 headless client
 };
 
-author="TOPARMA.COM - Core by A3Wasteland.com";
-onLoadName = "TOP A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+author="macchky and TOPARMA.COM - Core by A3Wasteland.com";
+onLoadName = "MAC A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "Website: game.macchky.net CORE MISSION: a3wasteland.com";
 overviewText = "Website: game.macchky.net";
-overviewTextLocked = "Website: toparma.com Teamspeak: ts.toparma.com";
+overviewTextLocked = "Website: macchky.net Teamspeak: game.macchky.net";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";
 
