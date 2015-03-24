@@ -1,6 +1,6 @@
 *Wasteland.Altis* by Team Wasteland!
 ===================
-Modified by TOPARMA.COM
+Modified by TOPARMA.COM and macchky
 
 We are looking for active coders to take over our mission to support community ideas further than what Team Wasteland has on it's current roadmap. TOParma is a new community that thrives off self-sustaining support. 
 
