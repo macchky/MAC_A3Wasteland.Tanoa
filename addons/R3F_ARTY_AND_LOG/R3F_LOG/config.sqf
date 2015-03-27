@@ -202,7 +202,7 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_Stone_8m_F",
 	// "Land_ToiletBox_F",
 	"Land_BarrelWater_F",
-	"Land_Pier_F",  
+	"Land_Pier_F",
 	"Land_FuelStation_Feed_F",
 	"Land_Pod_Heli_Transport_04_ammo_F",
 	"Land_Pier_addon",
