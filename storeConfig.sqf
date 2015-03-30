@@ -954,7 +954,7 @@ colorsArray = compileFinal str
 			["TOP LGBT Parade", _texDir + "top-lgbt-1.jpg"],
 			["Carbon", _texDir + "carbon.jpg"],
 			["Rusty", _texDir + "rusty.jpg"],
-			["'Murica", _texDir + "murica.jpg"],
+			["Murica", _texDir + "murica.jpg"],
 			["Confederate", _texDir + "confederate.jpg"],
 			["Union Jack", _texDir + "unionjack.jpg"],
 			["Yellow Camo", _texDir + "camo_fuel.jpg"],
