@@ -77,4 +77,5 @@ if (isServer) then
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\EtV\init.sqf";
 [] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
+[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";			// Keypad for base locking
 
