@@ -2494,7 +2494,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Service_Truck_1";
-			init="this call A3W_fnc_setupResupplyTruck";
+			init="this call A3W_fnc_setupResupplyTruck;this enableSimulation false;";
 			description="Service";
 		};
 		class Item39
@@ -2509,7 +2509,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Service_Truck_3";
-			init="this call A3W_fnc_setupResupplyTruck";
+			init="this call A3W_fnc_setupResupplyTruck;this enableSimulation false;";
 			description="Service";
 		};
 		class Item40
@@ -2524,7 +2524,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Service_Truck_4";
-			init="this call A3W_fnc_setupResupplyTruck";
+			init="this call A3W_fnc_setupResupplyTruck;this enableSimulation false;";
 			description="Service";
 		};
 		class Item41
@@ -2539,7 +2539,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Service_Truck_5";
-			init="this call A3W_fnc_setupResupplyTruck";
+			init="this call A3W_fnc_setupResupplyTruck;this enableSimulation false;";
 			description="Service";
 		};
 		class Item42
@@ -2554,7 +2554,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Service_Truck_6";
-			init="this call A3W_fnc_setupResupplyTruck";
+			init="this call A3W_fnc_setupResupplyTruck;this enableSimulation false;";
 			description="Service";
 		};
 		class Item43
@@ -2569,7 +2569,7 @@ class Mission
 			lock="LOCKED";
 			skill=0.60000002;
 			text="Service_Truck_7";
-			init="this call A3W_fnc_setupResupplyTruck";
+			init="this call A3W_fnc_setupResupplyTruck;this enableSimulation false;";
 			description="Service";
 		};
 		class Item44

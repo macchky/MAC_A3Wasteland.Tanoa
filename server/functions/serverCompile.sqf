@@ -36,6 +36,9 @@ setLocationObjects = [_path, "setLocationObjects.sqf"] call mf_compile;
 setLocationState = [_path, "setLocationState.sqf"] call mf_compile;
 setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
 
+// Non Vanilla missions
+createCustomGroup3 = [_path, "createUnits\customGroup3.sqf"] call mf_compile;
+
 //Function Compiles
 _path = "server\functions";
 A3W_fnc_checkHackedVehicles = [_path, "checkHackedVehicles.sqf"] call mf_compile;
