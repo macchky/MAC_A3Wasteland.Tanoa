@@ -85,6 +85,7 @@ _exclObjectIDs = [];
 		_obj setVariable ["baseSaving_hoursAlive", _hoursAlive];
 		_obj setVariable ["baseSaving_spawningTime", diag_tickTime];
 		_obj setVariable ["objectLocked", true, true]; // force lock
+		_obj setVariable ["R3F_LOG_Disabled", false, true];
 
 		if (_allowDamage > 0) then
 		{
@@ -104,6 +105,8 @@ _exclObjectIDs = [];
 			{
 				case "side": { _value = _value call _strToSide };
 				case "R3F_Side": { _value = _value call _strToSide };
+				case "lockDown": { _value };
+				case "password": { _value };
 				case "ownerName":
 				{
 					switch (typeName _value) do
