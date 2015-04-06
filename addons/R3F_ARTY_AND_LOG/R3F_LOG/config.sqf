@@ -142,9 +142,12 @@ R3F_LOG_CFG_objets_transportables =
 	["Land_Pier_addon", 50],
 	["Land_FuelStation_Feed_F", 75],
 	["Land_Pod_Heli_Transport_04_ammo_F", 150],
-	["Land_Cargo_House_V1_F", 10],
-	["Land_Cargo_HQ_V1_F", 20],
-	["Land_Cargo40_military_green_F", 20]
+	["Land_Cargo_House_V1_F", 10],			//  macchky.net
+	["Land_Cargo_HQ_V1_F", 20],				//  macchky.net
+	["Land_Cargo40_military_green_F", 20],	//  macchky.net
+	["Land_LampHalogen_F", 2],				//  macchky.net
+	["Land_City_Gate_F", 4],				//  macchky.net
+	["Land_Net_Fence_Gate_F", 4]			//  macchky.net
 	
 ];
 
@@ -208,7 +211,10 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_FuelStation_Feed_F",
 	"Land_Pod_Heli_Transport_04_ammo_F",
 	"Land_Pier_addon",
-	"Land_Cargo_House_V1_F",
-	"Land_Cargo_HQ_V1_F",
-	"Land_Cargo40_military_green_F"
+	"Land_Cargo_House_V1_F",		//  macchky.net
+	"Land_Cargo_HQ_V1_F",			//  macchky.net
+	"Land_Cargo40_military_green_F",//  macchky.net
+	"Land_LampHalogen_F",			//  macchky.net
+	"Land_City_Gate_F",				//  macchky.net
+	"Land_Net_Fence_Gate_F"			//  macchky.net
 ];

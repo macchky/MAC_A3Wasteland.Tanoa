@@ -120,21 +120,21 @@ rifleArray = compileFinal str
 	["SDAR Underwater Rifle", "arifle_SDAR_F", 100]/*,
 	
 	//DLC Rifles
-	["Mk14 7.62 mm (Camo)", "srifle_DMR_06_camo_F", 1000],
-	["Mk14 7.62 mm (Olive)", "srifle_DMR_06_olive_F", 1000],
-	["Mk-1 EMR 7.62 mm (Black)", "srifle_DMR_03_F", 1000],
-	["Mk-1 EMR 7.62 mm (Camo)", "srifle_DMR_03_multicam_F", 1000],
-	["Mk-1 EMR 7.62 mm (Khaki)", "srifle_DMR_03_khaki_F", 1000],
-	["Mk-1 EMR 7.62 mm (Sand)", "srifle_DMR_03_tan_F", 1000],
-	["Mk-1 EMR 7.62 mm (Woodland)", "srifle_DMR_03_woodland_F", 1000],
-	["MAR-10 .338 (Black)", "srifle_DMR_02_F", 1000],
-	["MAR-10 .338 (Camo)", "srifle_DMR_02_camo_F", 1000],
-	["MAR-10 .338 (Sand)", "srifle_DMR_02_sniper_F", 1000],
-	["Cyrus 9.3 mm (Black)", "srifle_DMR_05_blk_F", 1000],
-	["Cyrus 9.3 mm (Hex)", "srifle_DMR_05_hex_F", 1000],
-	["Cyrus 9.3 mm (Tan)", "srifle_DMR_05_tan_f", 1000],
-	["ASP-1 Kir 12.7 mm (Black)", "srifle_DMR_04_F", 1000],
-	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 1000]
+	["Mk14 7.62 mm (Camo)[DLC]", "srifle_DMR_06_camo_F", 1000],
+	["Mk14 7.62 mm (Olive)[DLC]", "srifle_DMR_06_olive_F", 1000],
+	["Mk-1 EMR 7.62 mm (Black)[DLC]", "srifle_DMR_03_F", 1000],
+	["Mk-1 EMR 7.62 mm (Camo)[DLC]", "srifle_DMR_03_multicam_F", 1000],
+	["Mk-1 EMR 7.62 mm (Khaki)[DLC]", "srifle_DMR_03_khaki_F", 1000],
+	["Mk-1 EMR 7.62 mm (Sand)[DLC]", "srifle_DMR_03_tan_F", 1000],
+	["Mk-1 EMR 7.62 mm (Woodland)[DLC]", "srifle_DMR_03_woodland_F", 1000],
+	["MAR-10 .338 (Black)[DLC]", "srifle_DMR_02_F", 1000],
+	["MAR-10 .338 (Camo)[DLC]", "srifle_DMR_02_camo_F", 1000],
+	["MAR-10 .338 (Sand)[DLC]", "srifle_DMR_02_sniper_F", 1000],
+	["Cyrus 9.3 mm (Black)[DLC]", "srifle_DMR_05_blk_F", 1000],
+	["Cyrus 9.3 mm (Hex)[DLC]", "srifle_DMR_05_hex_F", 1000],
+	["Cyrus 9.3 mm (Tan)[DLC]", "srifle_DMR_05_tan_f", 1000],
+	["ASP-1 Kir 12.7 mm (Black)[DLC]", "srifle_DMR_04_F", 1000],
+	["ASP-1 Kir 12.7 mm (Tan)[DLC]", "srifle_DMR_04_Tan_F", 1000]
 */
 
 
@@ -150,11 +150,11 @@ lmgArray = compileFinal str
 	["M60E4", "hlc_lmg_M60E4", 450]/*,
 	
 	//DLC Weapons
-	["Navid 9.3 mm (Hex)", "MMG_01_hex_F", 500],
-	["Navid 9.3 mm (Tan)", "MMG_01_tan_F", 500],
-	["SPMG .338 (Black)", "MMG_02_black_F", 500],
-	["SPMG .338 (MTP)", "MMG_02_camo_F", 500],
-	["SPMG .338 (Sand)", "MMG_02_sand_F", 500]*/
+	["Navid 9.3 mm (Hex)[DLC]", "MMG_01_hex_F", 500],
+	["Navid 9.3 mm (Tan)[DLC]", "MMG_01_tan_F", 500],
+	["SPMG .338 (Black)[DLC]", "MMG_02_black_F", 500],
+	["SPMG .338 (MTP)[DLC]", "MMG_02_camo_F", 500],
+	["SPMG .338 (Sand)[DLC]", "MMG_02_sand_F", 500]*/
 ];
 
 shotgunArray = compileFinal str
@@ -752,13 +752,21 @@ genObjectsArray = compileFinal str
 	//["Toilet Box", "Land_ToiletBox_F", 25, "object"],
 	["Lamp Post (Harbour)", "Land_LampHarbour_F", 100, "object"],
 	["Lamp Post (Shabby)", "Land_LampShabby_F", 100, "object"],
+	["Lamp Post (Halogen)(macchky.net)", "Land_LampHalogen_F", 100, "object"],
 	["Boom Gate", "Land_BarGate_F", 150, "object"],
+	["City Wall Gate", "Land_City_Gate_F(macchky.net)", 150, "object"],
+	["Net Fence Gate", "Land_Net_Fence_Gate_F(macchky.net)", 150, "object"],
 	["Pipes", "Land_Pipes_Large_F", 200, "object"],
-	["Concrete Frame", "Land_CncShelter_F", 200, "object"],
 	["Highway Guardrail", "Land_Crash_barrier_F", 200, "object"],
+	["Concrete Frame", "Land_CncShelter_F", 200, "object"],
 	["Concrete Barrier", "Land_CncBarrier_F", 200, "object"],
 	["Concrete Barrier (Medium)", "Land_CncBarrierMedium_F", 350, "object"],
 	["Concrete Barrier (Long)", "Land_CncBarrierMedium4_F", 500, "object"],
+	["Concrete Wall", "Land_CncWall1_F", 400, "object"],
+	["Concrete Wall (Long)", "Land_CncWall4_F", 600, "object"],
+	["Concrete Military Wall", "Land_Mil_ConcreteWall_F", 400, "object"],
+	["Concrete Ramp", "Land_RampConcrete_F", 350, "object"],
+	["Concrete Ramp (High)", "Land_RampConcreteHigh_F", 500, "object"],
 	["HBarrier (1 block)", "Land_HBarrier_1_F", 150, "object"],
 	["HBarrier (3 blocks)", "Land_HBarrier_3_F", 200, "object"],
 	["HBarrier (5 blocks)", "Land_HBarrier_5_F", 250, "object"],
@@ -766,9 +774,6 @@ genObjectsArray = compileFinal str
 	["HBarrier Wall (4 blocks)", "Land_HBarrierWall4_F", 400, "object"],
 	["HBarrier Wall (6 blocks)", "Land_HBarrierWall6_F", 500, "object"],
 	["HBarrier Watchtower", "Land_HBarrierTower_F", 600, "object"],
-	["Concrete Wall", "Land_CncWall1_F", 400, "object"],
-	["Concrete Military Wall", "Land_Mil_ConcreteWall_F", 400, "object"],
-	["Concrete Wall (Long)", "Land_CncWall4_F", 600, "object"],
 	["Military Wall (Big)", "Land_Mil_WallBig_4m_F", 600, "object"],
 	//["Shoot House Wall", "Land_Shoot_House_Wall_F", 180, "object"],
 	["Canal Wall (Small)", "Land_Canal_WallSmall_10m_F", 400, "object"],
@@ -783,8 +788,6 @@ genObjectsArray = compileFinal str
 	["Bag Bunker Tower", "Land_BagBunker_Tower_F", 1000, "object"],
 	["Military Cargo Post", "Land_Cargo_Patrol_V1_F", 800, "object"],
 	["Military Cargo Tower", "Land_Cargo_Tower_V1_F", 10000, "object"],
-	["Concrete Ramp", "Land_RampConcrete_F", 350, "object"],
-	["Concrete Ramp (High)", "Land_RampConcreteHigh_F", 500, "object"],
 	//["Scaffolding", "Land_Scaffolding_F", 250, "object"]
 	["Land Pier (TOParma.com)", "Land_Pier_F", 150000, "object"],
 	["Fuel Station (TOParma.com)", "Land_FuelStation_Feed_F", 10000, "object"],
