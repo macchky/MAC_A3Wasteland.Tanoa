@@ -236,23 +236,9 @@ R3F_LOG_CFG_string_condition_allow_creation_factory_on_this_client = "false";
 R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 [
 	// e.g. : "MyTowingVehicleClassName1", "MyTowingVehicleClassName2"
-	"SUV_01_base_F",
-	"Offroad_01_base_F",
-	"Van_01_base_F",
-	"MRAP_01_base_F",
-	"MRAP_02_base_F",
-	"MRAP_03_base_F",
-	"Truck_01_base_F",
-	"Truck_02_base_F",
-	"Truck_03_base_F",
-	"Wheeled_APC_F",
-	"APC_Tracked_01_base_F",
-	"APC_Tracked_02_base_F",
-	"APC_Tracked_03_base_F",
-	"MBT_01_base_F",
-	"MBT_02_base_F",
-	"MBT_03_base_F",
-	"Boat_Armed_01_base_F"
+	"Car_F",
+	"Ship_F",
+	"Tank_F"
 ];
 
 /**
@@ -262,29 +248,12 @@ R3F_LOG_CFG_can_tow = R3F_LOG_CFG_can_tow +
 R3F_LOG_CFG_can_be_towed = R3F_LOG_CFG_can_be_towed +
 [
 	// e.g. : "MyTowableObjectClassName1", "MyTowableObjectClassName2"
-	"Hatchback_01_base_F",
-	"SUV_01_base_F",
-	"Offroad_01_base_F",
-	"Van_01_base_F",
-	"MRAP_01_base_F",
-	"MRAP_02_base_F",
-	"MRAP_03_base_F",
-	"Truck_01_base_F",
-	"Truck_02_base_F",
-	"Truck_03_base_F",
-	"UGV_01_base_F",
-	"SDV_01_base_F",
-	"Boat_Civil_01_base_F",
-	"Boat_Armed_01_base_F",
+	"Car_F",
+	"Ship_F",
+	"Tank_F",
+	"Plane",
 	"Helicopter_Base_F",
-	"Wheeled_APC_F",
-	"APC_Tracked_01_base_F",
-	"APC_Tracked_02_base_F",
-	"APC_Tracked_03_base_F",
-	"MBT_01_base_F",
-	"MBT_02_base_F",
-	"MBT_03_base_F",
-	"Plane"
+	"Land_Pod_Heli_Transport_04_ammo_F"
 ];
 
 
@@ -307,27 +276,11 @@ R3F_LOG_CFG_can_lift = R3F_LOG_CFG_can_lift +
 R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
 	// e.g. : "MyLiftableObjectClassName1", "MyLiftableObjectClassName2"
-	"Hatchback_01_base_F",
-	"SUV_01_base_F",
-	"Offroad_01_base_F",
-	"Van_01_base_F",
-	"MRAP_01_base_F",
-	"MRAP_02_base_F",
-	"MRAP_03_base_F",
-	"Truck_01_base_F",
-	"Truck_02_base_F",
-	"Truck_03_base_F",
-	"UGV_01_base_F",
-	"SDV_01_base_F",
-	"Boat_Civil_01_base_F",
-	"Boat_Armed_01_base_F",
-	"Wheeled_APC_F",
-	"APC_Tracked_01_base_F",
-	"APC_Tracked_02_base_F",
-	"APC_Tracked_03_base_F",
-	"MBT_01_base_F",
-	"MBT_02_base_F",
-	"MBT_03_base_F"
+	"Car_F",
+	"Ship_F",
+	"Tank_F",
+	"Land_Pier_F",
+	"Land_Cargo40_military_green_F"
 ];
 
 
@@ -375,9 +328,9 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["Heli_Light_02_base_F", 20],
 	["I_Heli_light_03_base_F", 20],
 	["Heli_Transport_01_base_F", 25],
-	["Heli_Transport_02_base_F", 30],
-	["B_Heli_Transport_03_base_F", 75],
-	["Heli_Transport_04_base_F", 30],
+	["Heli_Transport_02_base_F", 150],
+	["B_Heli_Transport_03_base_F", 150],
+	["Heli_Transport_04_base_F", 125],
 	["Heli_Attack_01_base_F", 10],
 	["Heli_Attack_02_base_F", 20]
 ];
@@ -400,7 +353,6 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Kart_01_Base_F", 5],
 	["Quadbike_01_base_F", 10],
 	["Rubber_duck_base_F", 10],
-	["SDV_01_base_F", 15],
 	["UAV_01_base_F", 2],
 	["Land_BagBunker_Large_F", 10],
 	["Land_BagBunker_Small_F", 5],
@@ -416,7 +368,6 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_CargoBox_V1_F", 5],
 	["Land_Cargo_Patrol_V1_F", 7],
 	["Land_Cargo_Tower_V1_F", 30],
-	["Land_Cargo_HQ_V1_F", 30], // Added on player request
 	["Land_CncBarrier_F", 4],
 	["Land_CncBarrierMedium_F", 4],
 	["Land_CncBarrierMedium4_F", 4],
@@ -446,7 +397,17 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_Shoot_House_Wall_F", 3],
 	["Land_Stone_8m_F", 5],
 	["Land_ToiletBox_F", 2],
-	["Land_BarrelWater_F", 2]
+	["Land_BarrelWater_F", 2],
+	["Land_Pier_F", 150],
+	["Land_Pier_addon", 50],
+	["Land_FuelStation_Feed_F", 75],
+	["Land_Pod_Heli_Transport_04_ammo_F", 150],
+	["Land_Cargo_House_V1_F", 10],			//  macchky.net
+	["Land_Cargo_HQ_V1_F", 20],				//  macchky.net
+	["Land_Cargo40_military_green_F", 20],	//  macchky.net
+	["Land_LampHalogen_F", 2],				//  macchky.net
+	["Land_City_Gate_F", 4],				//  macchky.net
+	["Land_Net_Fence_Gate_F", 4]			//  macchky.net
 ];
 
 /****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
@@ -458,7 +419,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 [
 	// e.g. : "MyMovableObjectClassName1", "MyMovableObjectClassName2"
-	"Land_Device_assembled_F", //relocker
+	"Land_Device_assembled_F",
 	"StaticWeapon",
 	"ReammoBox_F",
 	"Kart_01_Base_F",
@@ -480,7 +441,6 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_CargoBox_V1_F",
 	"Land_Cargo_Patrol_V1_F",
 	"Land_Cargo_Tower_V1_F",
-	"Land_Cargo_HQ_V1_F", // Added on player request
 	"Land_CncBarrier_F",
 	"Land_CncBarrierMedium_F",
 	"Land_CncBarrierMedium4_F",
@@ -509,8 +469,16 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_Scaffolding_F",
 	"Land_Shoot_House_Wall_F",
 	"Land_Stone_8m_F",
-	"Land_ToiletBox_F",
+	// "Land_ToiletBox_F",
 	"Land_BarrelWater_F",
-	"Land_HandyCam_F",
-	"Land_Laptop_F"
+	"Land_Pier_F",
+	"Land_FuelStation_Feed_F",
+	"Land_Pod_Heli_Transport_04_ammo_F",
+	"Land_Pier_addon",
+	"Land_Cargo_House_V1_F",		//  macchky.net
+	"Land_Cargo_HQ_V1_F",			//  macchky.net
+	"Land_Cargo40_military_green_F",//  macchky.net
+	"Land_LampHalogen_F",			//  macchky.net
+	"Land_City_Gate_F",				//  macchky.net
+	"Land_Net_Fence_Gate_F"			//  macchky.net
 ];
