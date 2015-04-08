@@ -180,6 +180,18 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 
 			switch (true) do
 			{
+				// Add food to bought food sacks.
+				case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
+				{
+					_object setVariable ["food", 50, true];
+				};
+				
+				// Add water to bought water barrels.
+				case ({_object isKindOf _x} count ["Land_BarrelWater_F"] > 0):
+				{
+					_object setVariable ["water", 50, true];
+				};
+				
 				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
 				{
 					_object setAmmoCargo 5;

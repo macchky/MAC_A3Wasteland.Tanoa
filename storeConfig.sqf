@@ -117,25 +117,25 @@ rifleArray = compileFinal str
 	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_SOS_F", 1250],
 	["H&K PSG1", "hlc_rifle_psg1", 1100],
 	// Underwater Gun
-	["SDAR Underwater Rifle", "arifle_SDAR_F", 100]/*,
+	["SDAR Underwater Rifle", "arifle_SDAR_F", 100],
 	
 	//DLC Rifles
-	["Mk14 7.62 mm (Camo)[DLC]", "srifle_DMR_06_camo_F", 1000],
-	["Mk14 7.62 mm (Olive)[DLC]", "srifle_DMR_06_olive_F", 1000],
-	["Mk-1 EMR 7.62 mm (Black)[DLC]", "srifle_DMR_03_F", 1000],
-	["Mk-1 EMR 7.62 mm (Camo)[DLC]", "srifle_DMR_03_multicam_F", 1000],
-	["Mk-1 EMR 7.62 mm (Khaki)[DLC]", "srifle_DMR_03_khaki_F", 1000],
-	["Mk-1 EMR 7.62 mm (Sand)[DLC]", "srifle_DMR_03_tan_F", 1000],
-	["Mk-1 EMR 7.62 mm (Woodland)[DLC]", "srifle_DMR_03_woodland_F", 1000],
-	["MAR-10 .338 (Black)[DLC]", "srifle_DMR_02_F", 1000],
-	["MAR-10 .338 (Camo)[DLC]", "srifle_DMR_02_camo_F", 1000],
-	["MAR-10 .338 (Sand)[DLC]", "srifle_DMR_02_sniper_F", 1000],
-	["Cyrus 9.3 mm (Black)[DLC]", "srifle_DMR_05_blk_F", 1000],
-	["Cyrus 9.3 mm (Hex)[DLC]", "srifle_DMR_05_hex_F", 1000],
-	["Cyrus 9.3 mm (Tan)[DLC]", "srifle_DMR_05_tan_f", 1000],
-	["ASP-1 Kir 12.7 mm (Black)[DLC]", "srifle_DMR_04_F", 1000],
-	["ASP-1 Kir 12.7 mm (Tan)[DLC]", "srifle_DMR_04_Tan_F", 1000]
-*/
+	["Mk14 7.62 mm (Camo) [DLC]", "srifle_DMR_06_camo_F", 450],
+	["Mk14 7.62 mm (Olive) [DLC]", "srifle_DMR_06_olive_F", 450],
+	["Mk-1 EMR 7.62 mm (Black) [DLC]", "srifle_DMR_03_F", 500],
+	["Mk-1 EMR 7.62 mm (Camo) [DLC]", "srifle_DMR_03_multicam_F", 500],
+	["Mk-1 EMR 7.62 mm (Khaki) [DLC]", "srifle_DMR_03_khaki_F", 500],
+	["Mk-1 EMR 7.62 mm (Sand) [DLC]", "srifle_DMR_03_tan_F", 500],
+	["Mk-1 EMR 7.62 mm (Woodland) [DLC]", "srifle_DMR_03_woodland_F", 500],
+	["MAR-10 .338 (Black) [DLC]", "srifle_DMR_02_F", 750],
+	["MAR-10 .338 (Camo) [DLC]", "srifle_DMR_02_camo_F", 750],
+	["MAR-10 .338 (Sand) [DLC]", "srifle_DMR_02_sniper_F", 750],
+	["Cyrus 9.3 mm (Black) [DLC]", "srifle_DMR_05_blk_F", 1000],
+	["Cyrus 9.3 mm (Hex) [DLC]", "srifle_DMR_05_hex_F", 1000],
+	["Cyrus 9.3 mm (Tan) [DLC]", "srifle_DMR_05_tan_f", 1000],
+	["ASP-1 Kir 12.7 mm (Black) [DLC]", "srifle_DMR_04_F", 1250],
+	["ASP-1 Kir 12.7 mm (Tan) [DLC]", "srifle_DMR_04_Tan_F", 1250]
+
 
 
 ];
@@ -147,14 +147,14 @@ lmgArray = compileFinal str
 	["Mk200 LMG", "LMG_Mk200_F", 375],
 	["Zafir LMG", "LMG_Zafir_F", 450],
 	["M60 (no optic)", "hlc_lmg_m60", 450],
-	["M60E4", "hlc_lmg_M60E4", 450]/*,
+	["M60E4", "hlc_lmg_M60E4", 450],
 	
 	//DLC Weapons
-	["Navid 9.3 mm (Hex)[DLC]", "MMG_01_hex_F", 500],
-	["Navid 9.3 mm (Tan)[DLC]", "MMG_01_tan_F", 500],
+	["Navid 9.3 mm (Hex)[DLC]", "MMG_01_hex_F", 550],
+	["Navid 9.3 mm (Tan)[DLC]", "MMG_01_tan_F", 550],
 	["SPMG .338 (Black)[DLC]", "MMG_02_black_F", 500],
 	["SPMG .338 (MTP)[DLC]", "MMG_02_camo_F", 500],
-	["SPMG .338 (Sand)[DLC]", "MMG_02_sand_F", 500]*/
+	["SPMG .338 (Sand)[DLC]", "MMG_02_sand_F", 500]
 ];
 
 shotgunArray = compileFinal str
@@ -253,7 +253,7 @@ ammoArray = compileFinal str
 	["6.5mm 100Rnd Tracer (Red) Belt Case", "100Rnd_65x39_caseless_mag_Tracer", 50],
 	["6.5mm 200Rnd Belt Case", "200Rnd_65x39_cased_Box", 150],
 	["6.5mm 200Rnd Tracer (Yellow) Belt Case", "200Rnd_65x39_cased_Box_Tracer", 125],
-	["7.62mm 10Rnd Mag", "10Rnd_762x51_Mag", 15],
+	["7.62mm 10Rnd Mag", "10Rnd_762x54_Mag", 15],
 	["7.62mm 20Rnd Mag", "20Rnd_762x51_Mag", 25],
 	["7.62mm 150Rnd Box", "150Rnd_762x51_Box", 150],
 	["7.62mm 150Rnd Tracer (Green) Box", "150Rnd_762x51_Box_Tracer", 125],
@@ -299,14 +299,14 @@ ammoArray = compileFinal str
 	["5.56x45mm NATO Mk262 30rnd", "hlc_30rnd_556x45_SPR", 30],
 	["12g Buckshot 10rnd", "hlc_10rnd_12g_buck_S12", 50],
 	["12g Slug 10rnd", "hlc_10rnd_12g_slug_S12", 50],
-	/*
+	
 	//DLC Ammo
 	["12.7mm 10Rnd Mag", "10Rnd_127x54_Mag", 50],
 	["9.3mm 10Rnd Mag", "10Rnd_93x64_DMR_05_Mag", 50],
 	[".338 LM 10Rnd Mag", "10Rnd_338_Mag", 50],
 	["9.3mm 150Rnd Belt", "150Rnd_93x64_Mag", 150],
 	[".338 NM 130Rnd Belt", "130Rnd_338_Mag", 150],
-	*/
+	
 	["HE GP25 GP30", "hlc_VOG25_AK", 100],
 	["Smoke GP25 GP30", "hlc_GRD_White", 75],
 	["40mm HE Grenade Round", "1Rnd_HE_Grenade_shell", 125],
@@ -380,11 +380,11 @@ accessoriesArray = compileFinal str
 	["RCO", "optic_Hamr", 150, "item"],
 	["DMS", "optic_DMS", 175, "item"],
 	["LRPS", "optic_LRPS", 175, "item"],
-	["SOS", "optic_SOS", 200, "item"],
+	["MOS", "optic_SOS", 200, "item"],
 	["NVS", "optic_NVS", 500, "item"],
-	["TWS", "optic_tws", 5000, "item"],
-	["TWS MG", "optic_tws_mg", 6000, "item"],
-	["Nightstalker", "optic_Nightstalker", 7500, "item"]/*,
+	["TWS", "optic_tws", 7000, "item"],
+	["TWS MG", "optic_tws_mg", 5000, "item"],
+	["Nightstalker", "optic_Nightstalker", 10000, "item"],
 	// DLC Items
 	["Sound Suppressor (9.3 mm Black)", "muzzle_snds_93mmg", 125, "item"],
 	["Sound Suppressor (9.3 mm Tan)", "muzzle_snds_93mmg_tan", 125, "item"],
@@ -405,7 +405,7 @@ accessoriesArray = compileFinal str
 	["Bipod (Hex) (CSAT)", "bipod_02_F_hex", 500, "item"],
 	["Bipod (Olive) (AAF)", "bipod_03_F_oli", 500, "item"],
 	["Bipod (Sand) (NATO)", "bipod_01_F_snd", 500, "item"],
-	["Bipod (Tan) (CSAT)", "bipod_02_F_tan", 500, "item"]*/
+	["Bipod (Tan) (CSAT)", "bipod_02_F_tan", 500, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -523,7 +523,7 @@ uniformArray = compileFinal str
 [
 	["Ghillie Suit (NATO)", "U_B_GhillieSuit", 300, "uni"],
 	["Ghillie Suit (CSAT)", "U_O_GhillieSuit", 300, "uni"],
-	["Ghillie Suit (AAF)", "U_I_GhillieSuit", 300, "uni"],	/*
+	["Ghillie Suit (AAF)", "U_I_GhillieSuit", 300, "uni"],
 	//DLC Uniforms
 	["Full Ghillie (Arid) (NATO)", "U_B_FullGhillie_ard", 500, "uni"],
 	["Full Ghillie (Arid) (CSAT)", "U_O_FullGhillie_ard", 500, "uni"],
@@ -534,7 +534,7 @@ uniformArray = compileFinal str
 	["Full Ghillie (Semi-Arid) (NATO)", "U_B_FullGhillie_sard", 500, "uni"],
 	["Full Ghillie (Semi-Arid) (CSAT)", "U_O_FullGhillie_sard", 500, "uni"],
 	["Full Ghillie (Semi-Arid) (AAF)", "U_I_FullGhillie_sard", 500, "uni"],
-	*/
+
 	["Wetsuit (NATO)", "U_B_Wetsuit", 200, "uni"],
 	["Wetsuit (CSAT)", "U_O_Wetsuit", 200, "uni"],
 	["Wetsuit (AAF)", "U_I_Wetsuit", 200, "uni"],
@@ -641,8 +641,8 @@ vestArray = compileFinal str
 	["Tactical Vest (Olive)", "V_TacVest_oli", -1, "vest"],
 	["Tactical Vest (Police)", "V_TacVest_blk_POLICE", -1, "vest"],
 	["Tactical Vest (Stavrou)", "V_I_G_resistanceLeader_F", -1, "vest"],
-	//["Carrier Special Rig (MTP)", "V_PlateCarrierSpec_mtp", -1, "vest"], // DLC Vest
-	//["Carrier Special Rig (Black)", "V_PlateCarrierSpec_blk", -1, "vest"], // DLC Vest
+	["Carrier Special Rig (MTP)", "V_PlateCarrierSpec_mtp", -1, "vest"], // DLC Vest
+	["Carrier Special Rig (Black)", "V_PlateCarrierSpec_blk", -1, "vest"], // DLC Vest
 	["Raven Night Vest", "V_TacVestIR_blk", -1, "vest"]
 ];
 
