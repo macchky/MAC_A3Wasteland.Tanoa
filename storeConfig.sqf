@@ -255,8 +255,8 @@ ammoArray = compileFinal str
 	["6.5mm 200Rnd Tracer (Yellow) Belt Case", "200Rnd_65x39_cased_Box_Tracer", 125],
 	["7.62mm 10Rnd Mag", "10Rnd_762x54_Mag", 15],
 	["7.62mm 20Rnd Mag", "20Rnd_762x51_Mag", 25],
-	["7.62mm 150Rnd Box", "150Rnd_762x51_Box", 150],
-	["7.62mm 150Rnd Tracer (Green) Box", "150Rnd_762x51_Box_Tracer", 125],
+	["7.62mm 150Rnd Box", "150Rnd_762x54_Box", 150],
+	["7.62mm 150Rnd Tracer (Green) Box", "150Rnd_762x54_Box_Tracer", 125],
 	[".408 7Rnd Cheetah Mag", "7Rnd_408_Mag", 50],
 	["12.7mm 5Rnd Mag", "5Rnd_127x108_Mag", 50],
 	["12.7mm 5Rnd Armor-Piercing Mag", "5Rnd_127x108_APDS_Mag", 60],
@@ -266,6 +266,7 @@ ammoArray = compileFinal str
 	["Titan Anti-Tank Missile", "Titan_AT", 1000],             // Direct damage: high      | Splash damage: low    | Guidance: mouse, laser, ground vehicles
 	["Titan Anti-Personnel Missile", "Titan_AP", 1000],        // Direct damage: low       | Splash damage: high   | Guidance: mouse, laser
 	["Titan Anti-Air Missile", "Titan_AA",1000],              // Direct damage: low       | Splash damage: medium | Guidance: aircraft
+	//MOD Ammo
 	["7.62x51mm Ball 100Rnd", "hlc_100Rnd_762x51_B_M60E4", 150],
 	["7.62x51mm Tracer 100Rnd", "hlc_100Rnd_762x51_T_M60E4", 150],
 	["7.62x51mm Mixed 100Rnd", "hlc_100Rnd_762x51_M_M60E4	", 150],
@@ -388,9 +389,9 @@ accessoriesArray = compileFinal str
 	// DLC Items
 	["Sound Suppressor (9.3 mm Black)", "muzzle_snds_93mmg", 125, "item"],
 	["Sound Suppressor (9.3 mm Tan)", "muzzle_snds_93mmg_tan", 125, "item"],
-	["Sound Suppressor (.338 Black)", " muzzle_snds_338_black", 125, "item"],
-	["Sound Suppressor (.338 Green)", " muzzle_snds_338_green", 125, "item"],
-	["Sound Suppressor (.338 Sand)", " muzzle_snds_338_sand", 125, "item"],
+	["Sound Suppressor (.338 Black)", "muzzle_snds_338_black", 125, "item"],
+	["Sound Suppressor (.338 Green)", "muzzle_snds_338_green", 125, "item"],
+	["Sound Suppressor (.338 Sand)", "muzzle_snds_338_sand", 125, "item"],
 	["AMS (Black)", "optic_AMS", 200, "item"],
 	["AMS (Khaki)", "optic_AMS_khk", 200, "item"],
 	["AMS (Sand)", "optic_AMS_snd", 200, "item"],
