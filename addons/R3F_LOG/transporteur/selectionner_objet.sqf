@@ -1,7 +1,7 @@
 /**
- * Sélectionne un objet à charger dans un transporteur
+ * SÃ©lectionne un objet Ã  charger dans un transporteur
  * 
- * @param 0 l'objet à sélectionner
+ * @param 0 l'objet Ã  sÃ©lectionner
  */
 
 if (R3F_LOG_mutex_local_verrou) then
@@ -10,33 +10,7 @@ if (R3F_LOG_mutex_local_verrou) then
 }
 else
 {
-//Start donator part
-private ["_objet","_ProtectedPlayers","_IsProtected"];
-	_ProtectedPlayers = [];
-	_IsProtected = false;
-	_objet = _this select 0;
 
-	_IsProtected = false;
-	_IsAllowed = false;
-
-	{
-		if(((_objet distance getMarkerPos  (_x select 3)) <  (_x select 1))) then
-		{	
-			_IsProtected = true;			
-			if ((getPlayerUID player) in (_x select 5)) then {				
-				_IsAllowed = true;
-			};
-		};
-	} forEach call Donators;
-
-	if ((_IsProtected) && !(_IsAllowed)) exitwith {	 
-		hint "This base is protected by donator status"; R3F_LOG_mutex_local_verrou = false;
-	};
-//End donator part
-
-	if (((_objet distance getMarkerPos  "_BluBaseMarker") < 100) && !(side player == blufor)) exitwith {
-		hint "This base can only be changed by Blufor"; R3F_LOG_mutex_local_verrou = false;
-	};
 
 	_tempVar = false;
 	if(!isNil {(_this select 0) getVariable "R3F_Side"}) then {
@@ -53,7 +27,7 @@ private ["_objet","_ProtectedPlayers","_IsProtected"];
 	
 	[R3F_LOG_objet_selectionne, player] call R3F_LOG_FNCT_definir_proprietaire_verrou;
 	
-	// Déselectionner l'objet si le joueur n'en fait rien
+	// DÃ©selectionner l'objet si le joueur n'en fait rien
 	[] spawn
 	{
 		while {!isNull R3F_LOG_objet_selectionne} do
