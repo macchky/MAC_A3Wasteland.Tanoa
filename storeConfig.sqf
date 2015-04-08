@@ -614,11 +614,14 @@ vestArray = compileFinal str
 	["Carrier Lite (Black)", "V_PlateCarrier1_blk", -1, "vest"],
 	["Carrier Rig (Green)", "V_PlateCarrier3_rgr", -1, "vest"],
 	["Carrier GL Rig (Green)", "V_PlateCarrierGL_rgr", -1, "vest"],
+	["Carrier GL Rig (Black)", "V_PlateCarrierGL_blk", -1, "vest"], // DLC Vest
+	["Carrier GL Rig (MTP)", "V_PlateCarrierGL_mtp", -1, "vest"], // DLC Vest
 	["CTRG Plate Carrier Rig Mk.1 (Light)", "V_PlateCarrierL_CTRG", -1, "vest"],
 	["CTRG Plate Carrier Rig Mk.2 (Heavy)", "V_PlateCarrierH_CTRG", -1, "vest"],
 	["GA Carrier Lite (Digi)", "V_PlateCarrierIA1_dgtl", -1, "vest"],
 	["GA Carrier Rig (Digi)", "V_PlateCarrierIA2_dgtl", -1, "vest"],
 	["GA Carrier GL Rig (Digi)", "V_PlateCarrierIAGL_dgtl", -1, "vest"],
+	["GA Carrier GL Rig (Olive)", "V_PlateCarrierIAGL_oli", -1, "vest"], // DLC Vest
 	["LBV Harness", "V_HarnessO_brn", -1, "vest"],
 	["LBV Harness (Gray)", "V_HarnessO_gry", -1, "vest"],
 	["LBV Grenadier Harness", "V_HarnessOGL_brn", -1, "vest"],
@@ -641,6 +644,7 @@ vestArray = compileFinal str
 	["Tactical Vest (Olive)", "V_TacVest_oli", -1, "vest"],
 	["Tactical Vest (Police)", "V_TacVest_blk_POLICE", -1, "vest"],
 	["Tactical Vest (Stavrou)", "V_I_G_resistanceLeader_F", -1, "vest"],
+	["Carrier Special Rig (Green)", "V_PlateCarrierSpec_rgr", -1, "vest"],
 	["Carrier Special Rig (MTP)", "V_PlateCarrierSpec_mtp", -1, "vest"], // DLC Vest
 	["Carrier Special Rig (Black)", "V_PlateCarrierSpec_blk", -1, "vest"], // DLC Vest
 	["Raven Night Vest", "V_TacVestIR_blk", -1, "vest"]
@@ -682,6 +686,8 @@ backpackArray = compileFinal str
 
 genItemArray = compileFinal str
 [
+	["Remote Designator Bag (NATO)", "B_Static_Designator_01_weapon_F", 2000, "backpack"],
+	["Remote Designator Bag (CSAT)", "O_Static_Designator_02_weapon_F", 2000, "backpack"],
 	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 5000, "backpack"],
 	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 5000, "backpack"],
 	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 5000, "backpack"],
