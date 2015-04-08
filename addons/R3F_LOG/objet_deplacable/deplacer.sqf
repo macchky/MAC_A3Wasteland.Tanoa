@@ -48,7 +48,7 @@ else
 	if(_tempVar) exitwith {
 		hint format["This object belongs to %1 and they're nearby you cannot take this.", _objet getVariable "R3F_Side"]; R3F_LOG_mutex_local_verrou = false;
 	};
-	s
+	
 	
 	_objet setVariable ["R3F_Side", (playerSide), true];
 	
