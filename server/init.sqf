@@ -122,6 +122,7 @@ forEach
 	"A3W_donatorEnabled",
 	"A3W_customUniformEnabled",
 	"A3W_AdminConnectionChat"
+	"A3W_uavControl"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;
