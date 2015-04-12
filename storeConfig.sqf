@@ -111,10 +111,10 @@ rifleArray = compileFinal str
 	["Colt M4 Carbine", "hlc_rifle_M4", 350],
 	["Colt M4 Carbine M203", "hlc_rifle_m4m203", 350],
 // Sniper Rifles
-	["M320 LRR Sniper", "srifle_LRR_SOS_F", 1000],
-	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_SOS_F", 1150],
-	["GM6 Lynx Sniper", "srifle_GM6_SOS_F", 1100],
-	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_SOS_F", 1250],
+	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 1800],
+	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_LRPS_F", 1850],
+	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 1700],
+	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_LRPS_F", 1750],
 	["H&K PSG1", "hlc_rifle_psg1", 1100],
 	// Underwater Gun
 	["SDAR Underwater Rifle", "arifle_SDAR_F", 100],
@@ -127,14 +127,14 @@ rifleArray = compileFinal str
 	["Mk-1 EMR 7.62 mm (Khaki) [DLC]", "srifle_DMR_03_khaki_F", 500],
 	["Mk-1 EMR 7.62 mm (Sand) [DLC]", "srifle_DMR_03_tan_F", 500],
 	["Mk-1 EMR 7.62 mm (Woodland) [DLC]", "srifle_DMR_03_woodland_F", 500],
-	["MAR-10 .338 (Black) [DLC]", "srifle_DMR_02_F", 750],
-	["MAR-10 .338 (Camo) [DLC]", "srifle_DMR_02_camo_F", 750],
-	["MAR-10 .338 (Sand) [DLC]", "srifle_DMR_02_sniper_F", 750],
-	["Cyrus 9.3 mm (Black) [DLC]", "srifle_DMR_05_blk_F", 1000],
-	["Cyrus 9.3 mm (Hex) [DLC]", "srifle_DMR_05_hex_F", 1000],
-	["Cyrus 9.3 mm (Tan) [DLC]", "srifle_DMR_05_tan_f", 1000],
-	["ASP-1 Kir 12.7 mm (Black) [DLC]", "srifle_DMR_04_F", 1250],
-	["ASP-1 Kir 12.7 mm (Tan) [DLC]", "srifle_DMR_04_Tan_F", 1250]
+	["MAR-10 .338 (Black) [DLC]", "srifle_DMR_02_F", 1400],
+	["MAR-10 .338 (Camo) [DLC]", "srifle_DMR_02_camo_F", 1400],
+	["MAR-10 .338 (Sand) [DLC]", "srifle_DMR_02_sniper_F", 1400],
+	["Cyrus 9.3 mm (Black) [DLC]", "srifle_DMR_05_blk_F", 1400],
+	["Cyrus 9.3 mm (Hex) [DLC]", "srifle_DMR_05_hex_F", 1400],
+	["Cyrus 9.3 mm (Tan) [DLC]", "srifle_DMR_05_tan_f", 1400],
+	["ASP-1 Kir 12.7 mm (Black) [DLC]", "srifle_DMR_04_F", 1850],
+	["ASP-1 Kir 12.7 mm (Tan) [DLC]", "srifle_DMR_04_Tan_F", 1850]
 
 
 
