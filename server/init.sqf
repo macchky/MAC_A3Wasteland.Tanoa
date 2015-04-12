@@ -123,7 +123,7 @@ forEach
 	"A3W_tkKickAmount",
 	"A3W_donatorEnabled",
 	"A3W_customUniformEnabled",
-	"A3W_AdminConnectionChat"
+	"A3W_AdminConnectionChat",
 	"A3W_uavControl"
 ];
 
