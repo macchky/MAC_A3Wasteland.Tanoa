@@ -279,7 +279,7 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 	"Car_F",
 	"Ship_F",
 	"Tank_F",
-	"Land_Pier_F",
+	//"Land_Pier_F",
 	"Land_Cargo40_military_green_F"
 ];
 
