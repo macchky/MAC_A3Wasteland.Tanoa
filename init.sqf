@@ -70,7 +70,6 @@ if (isServer) then
 };
 
 //init 3rd Party Scripts
-[] execVM "addons\vactions\functions.sqf";
 [] execVM "addons\R3F_LOG\init.sqf";
 [] execVM "addons\proving_ground\init.sqf";
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
@@ -78,5 +77,7 @@ if (isServer) then
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\EtV\init.sqf";
 [] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
+[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";	// Airdrop
 [] execVM "addons\AF_Keypad\AF_KP_vars.sqf";			// Keypad for base locking
 
