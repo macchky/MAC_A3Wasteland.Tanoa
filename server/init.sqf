@@ -127,7 +127,8 @@ forEach
 	"A3W_uavControl",
 	"A3W_hackedMissionDlSize",
 	"A3W_hackedMissionPercentage",
-	"APOC_coolDownTimer"
+	"APOC_coolDownTimer",
+	"A3W_townSpawnCooldown"
 ];
 
 ["A3W_join", "onPlayerConnected", { [_id, _uid, _name] spawn fn_onPlayerConnected }] call BIS_fnc_addStackedEventHandler;

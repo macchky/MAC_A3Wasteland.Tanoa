@@ -29,6 +29,7 @@ A3W_customUniformEnabled = 1;		// Enable/Disable Custom Uniforms
 A3W_tkAutoKickEnabled = 1;			// Enable/Disable Autokick for teamkillers
 A3W_tkKickAmount = 10;			// TeamKill amount needed before Kick.
 A3W_AdminConnectionChat = 0;        // Admin connection notifier
+A3W_townSpawnCooldown = 5*60;    // Number of seconds to wait between each use of a spawn on friends in towns (0 = disabled)
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
 
 // Store settings
