@@ -119,13 +119,14 @@ _exclVehicleIDs = [];
 
 		{ _veh setVariable [_x select 0, _x select 1, true] } forEach _variables;
 
-		// If vehicle is owned by a player, lock it and make it untowable/unliftable Cael817
-		if (!isNil {_veh getVariable "ownerUID"}) then {
+		// If vehicle is was locked before restart then restore lockstate and make it untowable/unliftable LouD
+		if (_veh getVariable "R3F_LOG_disabled") then 
+		{
 			_veh lock 2;
-			_veh setVariable ["R3F_LOG_disabled",true,true];
-		} else {
+		} 
+		else 
+		{
 			_veh lock 1;
-			_veh setVariable ["R3F_LOG_disabled",false,true];		
 		};
 
 		clearWeaponCargoGlobal _veh;
