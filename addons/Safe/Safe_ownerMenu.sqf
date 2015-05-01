@@ -1,7 +1,10 @@
-//	@file Version:
-//	@file Name:
-//	@file Author: Cael817, all credit to A3W
-//	@file Created:
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Version: 1.0
+//	@file Name: Safe_ownerMenu.sqf
+//	@file Author: LouD / Cael817 for original script
+//	@file Description: Safe script
 
 #define Safe_Menu_option 17001
 disableSerialization;

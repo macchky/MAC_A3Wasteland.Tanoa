@@ -1,7 +1,10 @@
-//	@file Version:
-//	@file Name:
-//	@file Author: Cael817
-//	@file Created:
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Version: 1.0
+//	@file Name: Safe_selectMenu.sqf
+//	@file Author: LouD / Cael817 for original script
+//	@file Description: Safe script
 
 #define PLAYER_CONDITION "(vehicle player == player && {!isNull cursorTarget})"
 #define ITEM_CONDITION "{cursortarget iskindof 'Box_NATO_AmmoVeh_F'} && {(player distance cursortarget) < 5}"
@@ -39,20 +42,11 @@ Safe_open =
 
 Safe_Actions = 
 {
-//	private ["_unit"];
-//	_unit = _this select 0;
-	
-	//_unit addAction ["<t color='#FFE496'><img image='client\icons\r3f_lock.paa'/> Open Safe</t>", "addons\Safe\Safe_selectMenu.sqf", [cursorTarget], -97, false, false, "", "vehicle player == player && {cursortarget iskindof 'Box_NATO_AmmoVeh_F'} && {cursorTarget getVariable ['objectLocked', false]} && {!isNull cursorTarget} && {(player distance cursortarget) < 5}"],	
-	//_unit addAction ["<t color='#FFE496'><img image='client\icons\take.paa'/> Hack Safe</t>", "addons\Safe\Safe_hack.sqf", [cursorTarget], -97, false, false, "", "vehicle player == player && {cursortarget iskindof 'Box_NATO_AmmoVeh_F'} && {cursorTarget getVariable ['objectLocked', false]} && {!isNull cursorTarget} && {'ToolKit' in (items player)} && {cursorTarget getVariable ['ownerUID',''] != getPlayerUID player} && {(player distance cursortarget) < 5}"]	
-//	_unit addAction ["<t color='#FFE496'><img image='client\icons\r3f_lock.paa'/> Open Safe</t>", Safe_open, [cursorTarget], -97, false, false, "", PLAYER_CONDITION + " && " + ITEM_CONDITION + " && " + OBJECT_CONDITION];
-//	_unit addAction ["<t color='#FFE496'><img image='client\icons\take.paa'/> Hack Safe</t>", "addons\Safe\Safe_hack.sqf", [cursorTarget], -97, false, false, "", PLAYER_CONDITION + " && " + ITEM_CONDITION + " && " + OBJECT_CONDITION + " && " + HACKING_CONDITION];	
-{ [player, _x] call fn_addManagedAction } forEach
-[
-	["<t color='#FFE496'><img image='client\icons\r3f_lock.paa'/> Open Safe</t>", Safe_open, [cursorTarget], -97, false, false, "", PLAYER_CONDITION + " && " + ITEM_CONDITION + " && " + OBJECT_CONDITION],
-	["<t color='#FFE496'><img image='client\icons\take.paa'/> Hack Safe</t>", "addons\Safe\Safe_hack.sqf", [cursorTarget], -97, false, false, "", PLAYER_CONDITION + " && " + ITEM_CONDITION + " && " + OBJECT_CONDITION + " && " + HACKING_CONDITION]
-];
-
+	{ [player, _x] call fn_addManagedAction } forEach
+	[
+		["<t color='#FFE496'><img image='client\icons\r3f_lock.paa'/> Open Safe</t>", Safe_open, [cursorTarget], -97, false, false, "", PLAYER_CONDITION + " && " + ITEM_CONDITION + " && " + OBJECT_CONDITION],
+		["<t color='#FFE496'><img image='client\icons\take.paa'/> Hack Safe</t>", "addons\Safe\Safe_hack.sqf", [cursorTarget], -97, false, false, "", PLAYER_CONDITION + " && " + ITEM_CONDITION + " && " + OBJECT_CONDITION + " && " + HACKING_CONDITION]
+	];
 };
 
-//=======================
 SafeScriptInitialized = true;

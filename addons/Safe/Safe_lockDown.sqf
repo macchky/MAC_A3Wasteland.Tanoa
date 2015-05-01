@@ -1,7 +1,10 @@
-//	@file Version:
-//	@file Name:
-//	@file Author: LouD
-//	@file Created:
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Version: 1.0
+//	@file Name: Safe_lockDown.sqf
+//	@file Author: LouD / Cael817 for original script
+//	@file Description: Safe script
 
 private ["_safe"];
 _safe = cursorTarget;

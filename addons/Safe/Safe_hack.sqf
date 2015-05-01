@@ -1,7 +1,10 @@
-//	@file Version: 1
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Version: 1.0
 //	@file Name: Safe_hack.sqf
 //	@file Author: LouD (based on objectLockStateMachine.sqf by [404] Costlyy)
-//	@file Created: 1 may 2015
+//	@file Description: Safe script
 
 if(mutexScriptInProgress) exitWith {
 	player globalChat "The current operation isn't finished !";

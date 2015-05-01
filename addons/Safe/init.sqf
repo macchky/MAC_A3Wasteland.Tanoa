@@ -6,7 +6,6 @@
 //	@file Author: LouD
 //	@file Description: Safe script
 
-//diag_log format["Initialising NLU base script functions..."];
 waitUntil {time > 0};
 execVM "addons\Safe\safe_SelectMenu.sqf";
 waitUntil {!isNil "SafeScriptInitialized"};

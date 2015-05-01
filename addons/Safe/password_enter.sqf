@@ -4,9 +4,7 @@
 //	@file Version: 1.0
 //	@file Name: password_enter.sqf
 //	@file Author: BadVolt
-//	@file Description: Entering password and open the doors for duration. Then closes them.
-
-//#define DURATION 10
+//	@file Description: Entering password and opens safe
 
 _object = cursorTarget;
 
