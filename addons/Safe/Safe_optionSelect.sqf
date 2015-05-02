@@ -25,12 +25,12 @@ if (!isNil "_uid") then
 
 			switch (lbCurSel _Safe_select) do
 			{
-				case 0: //Lock Down Base
+				case 0: //Lock Safe
 				{
 					closeDialog 0;					
 					execVM "addons\Safe\Safe_lockDown.sqf";
 				};
-				case 1: //Release Lock Down
+				case 1: //Release Safe Lock
 				{
 					closeDialog 0;					
 					execVM "addons\Safe\Safe_releaseLockDown.sqf";

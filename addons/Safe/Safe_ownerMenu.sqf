@@ -17,10 +17,11 @@ if (!isNil "_uid") then {
 	_displaySafe = uiNamespace getVariable "Safe_Menu";
 	_Safe_select = _displaySafe displayCtrl Safe_Menu_option;
 
-	_panelOptions = [
-					"Lock Safe",
-					"Unlock Safe",
-					"Change PIN"
+	_panelOptions = 
+	[
+		"Lock Safe",
+		"Unlock Safe",
+		"Change PIN"
 	];
 
 	{
