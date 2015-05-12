@@ -82,6 +82,7 @@ _object = switch (_type) do {
 		_object setVariable ["A3W_purchasedStoreObject", true];
 		_object setVariable ["A3W_purchasedVehicle", true, true];
 		_object setVariable ["ownerUID", getPlayerUID _player, true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
 		[_object, false] call vehicleSetup;
 		if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
 		{
@@ -95,7 +96,9 @@ _object = switch (_type) do {
 		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
 		_object = createVehicle ["B_supplyCrate_F", _objectSpawnPos, [], 0, "None"];
 		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
 		[_object, _selectionClass] call fn_refillbox;
+		_object setVariable ["A3W_inventoryLockR3F", false, true];
 		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
 		_object 
 	};
@@ -105,6 +108,7 @@ _object = switch (_type) do {
 		_object = createVehicle ["B_supplyCrate_F", _objectSpawnPos, [], 0, "None"];
 		diag_log format ["Apoc's Airdrop Assistance - Object Spawned at %1", position _object];
 		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
 		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
 		_object
 	};
@@ -112,7 +116,9 @@ _object = switch (_type) do {
 		_objectSpawnPos = [(_spos select 0), (_spos select 1), (_spos select 2) - 5];
 		_object = createVehicle ["B_supplyCrate_F", _objectSpawnPos, [], 0, "None"];
 		_object setVariable ["A3W_purchasedStoreObject", true];
+		_object setVariable ["R3F_LOG_Disabled", false, true];
 		[_object, "mission_USSpecial"] call fn_refillbox;
+		_object setVariable ["A3W_inventoryLockR3F", false, true];
 		_object attachTo [_heli, [0,0,-5]]; //Attach Object to the heli
 		_object 
 		};
@@ -204,11 +210,13 @@ WaitUntil {((((position _object) select 2) < 1) || (isNil "_para"))};
 				case "Land_Sacks_goods_F": {
 					_object2 = createVehicle [_selectionClass, _objectLandPos, [], 0, "None"];
 					_object2 setVariable ["food", 50, true];
+					_object2 setVariable ["R3F_LOG_Disabled", false, true];
 					_object2
 				}; //A very big picnic, no?
 				case "Land_BarrelWater_F": {
 					_object2 = createVehicle [_selectionClass, _objectLandPos, [], 0, "None"];
 					_object2 setVariable ["water",50, true];
+					_object2 setVariable ["R3F_LOG_Disabled", false, true];
 					_object2
 				};		
 			};
