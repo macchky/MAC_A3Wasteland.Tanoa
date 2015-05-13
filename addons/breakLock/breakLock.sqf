@@ -34,6 +34,10 @@ _checks =
 	{
 		case (!alive player): { _text = "" };
 		case (vehicle player != player): { _text = "Action failed! You can't do this in a vehicle" };
+		case ((_vehClass isKindOf "B_Truck_01_box_F") or (_vehClass isKindOf "O_Truck_03_ammo_F")): // Except Service Truck
+		{
+			_text = "Action failed! You can't do this to the vehicle";
+		};
 		case (player distance _object > (sizeOf typeOf _object / 3) max 2): { _text = "Action failed! You are too far away from the object" };
 		case (isNull _object): { _text = "The object no longer exists" };
 		//case (alive _object || {alive _x} count crew _object > 0): { _text = "Action failed! You are not allowed to break into this object" };
