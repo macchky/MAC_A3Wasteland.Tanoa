@@ -14,16 +14,20 @@ private ["_convoyVeh", "_veh1", "_veh2", "_createVehicle", "_vehicles", "_leader
 _setupVars =
 {
 	_missionType = "Drugs Runners";
-	_locationsArray = LandConvoyPaths;
+	_locationsArray = nil;
 };
 
 _setupObjects =
 {
-	private ["_starts", "_startDirs", "_waypoints"];
-	call compile preprocessFileLineNumbers format ["mapConfig\convoys\%1.sqf", _missionLocation];
-
+	_town = (call cityList) call BIS_fnc_selectRandom;
+	_missionPos = markerPos (_town select 0);
+	
 	// pick the vehicles for the convoy
 	_convoyVeh = if (missionDifficultyHard) then
+	{
+		["C_Hatchback_01_sport_F"]
+	}
+	else
 	{
 		["C_Hatchback_01_sport_F"]
 	};
@@ -66,31 +70,36 @@ _setupObjects =
 
 	_aiGroup = createGroup CIVILIAN;
 
+	_pos = getMarkerPos (_town select 0);
+	_rad = _town select 1;
+	_vehiclePos = [_pos,5,_rad,5,0,0,0] call findSafePos;
+	
 	_vehicles =
 	[
-		[_veh1, _starts select 0, _startDirs select 0] call _createVehicle
+		[_veh1, _vehiclePos, 0] call _createVehicle
 	];
 
 	_leader = effectiveCommander (_vehicles select 0);
 	_aiGroup selectLeader _leader;
 
-	_aiGroup setCombatMode "GREEN"; // units will defend themselves
-	_aiGroup setBehaviour "SAFE"; // units feel safe until they spot an enemy or get into contact
+	_aiGroup setCombatMode "GREEN"; // units will never fire
+	_aiGroup setBehaviour "CARELESS"; // nits will try to stay on roads, not caring about finding any cover
 	_aiGroup setFormation "STAG COLUMN";
 
 	_speedMode = if (missionDifficultyHard) then { "FULL" } else { "FULL" };
 	
 	_aiGroup setSpeedMode _speedMode;
-
+	
+	// behaviour on waypoints
 	{
-		_waypoint = _aiGroup addWaypoint [_x, 0];
+		_waypoint = _aiGroup addWaypoint [markerPos (_x select 0), 0];
 		_waypoint setWaypointType "MOVE";
-		_waypoint setWaypointCompletionRadius 25;
+		_waypoint setWaypointCompletionRadius 50;
 		_waypoint setWaypointCombatMode "GREEN";
-		_waypoint setWaypointBehaviour "SAFE"; // safe is the best behaviour to make AI follow roads, as soon as they spot an enemy or go into combat they WILL leave the road for cover though!
+		_waypoint setWaypointBehaviour "CARELESS";
 		_waypoint setWaypointFormation "STAG COLUMN";
 		_waypoint setWaypointSpeed _speedMode;
-	} forEach _waypoints;
+	} forEach ((call cityList) call BIS_fnc_arrayShuffle);
 
 	_missionPos = getPosATL leader _aiGroup;
 
@@ -132,7 +141,7 @@ _drop_item =
 _successExec =
 {
 	// Mission completed
-	_drugpilerandomizer = [4,8];
+	_drugpilerandomizer = [4,8,12];
 	_drugpile = _drugpilerandomizer call BIS_fnc_SelectRandom;
 	
 	for "_i" from 1 to _drugpile do 
