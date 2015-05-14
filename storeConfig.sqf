@@ -20,7 +20,8 @@ pistolArray = compileFinal str
 	["Rook-40 Pistol", "hgun_Rook40_F", 50],
 	["ACP-C2 Pistol", "hgun_ACPC2_F", 75],
 	["Zubr Revolver", "hgun_Pistol_heavy_02_F", 75],
-	["4-Five Pistol", "hgun_Pistol_heavy_01_F", 100]
+	["4-Five Pistol", "hgun_Pistol_heavy_01_F", 100],
+	["Starter Pistol", "hgun_Pistol_Signal_F", 25]
 ];
 
 smgArray = compileFinal str
@@ -233,6 +234,8 @@ throwputArray = compileFinal str
 //Text name, classname, buy cost
 ammoArray = compileFinal str
 [
+	["6Rnd Signal Cylinder (Green)", "6Rnd_GreenSignal_F", 10],
+	["6Rnd Signal Cylinder (Red)", "6Rnd_RedSignal_F", 10],
 	["9mm 16Rnd Mag", "16Rnd_9x21_Mag", 10],
 	["9mm 30Rnd Mag", "30Rnd_9x21_Mag", 15],
 	[".45 ACP 6Rnd Cylinder", "6Rnd_45ACP_Cylinder", 5],
@@ -689,9 +692,9 @@ genItemArray = compileFinal str
 [
 	["Remote Designator Bag (NATO)", "B_Static_Designator_01_weapon_F", 2000, "backpack"],
 	["Remote Designator Bag (CSAT)", "O_Static_Designator_02_weapon_F", 2000, "backpack"],
-	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 5000, "backpack"],
-	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 5000, "backpack"],
-	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 5000, "backpack"],
+	["Quadrotor UAV (NATO)", "B_UAV_01_backpack_F", 20000, "backpack"],
+	["Quadrotor UAV (CSAT)", "O_UAV_01_backpack_F", 20000, "backpack"],
+	["Quadrotor UAV (AAF)", "I_UAV_01_backpack_F", 20000, "backpack"],
 	["UAV Terminal (NATO)", "B_UavTerminal", 150, "gps"],
 	["UAV Terminal (CSAT)", "O_UavTerminal", 150, "gps"],
 	["UAV Terminal (AAF)", "I_UavTerminal", 150, "gps"],
@@ -858,11 +861,11 @@ landArray = compileFinal str
 	// ["Zamak Ammo", "I_Truck_02_ammo_F", 25000, "vehicle"],
 
 	["UGV Stomper (NATO)", "B_UGV_01_F", 25000, "vehicle"],
-	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 35000, "vehicle"],
+	["UGV Stomper RCWS (NATO)", "B_UGV_01_rcws_F", 50000, "vehicle"],
 	["UGV Stomper (AAF)", "I_UGV_01_F", 25000, "vehicle"],
-	["UGV Stomper RCWS (AAF)", "I_UGV_01_rcws_F", 35000, "vehicle"],
+	["UGV Stomper RCWS (AAF)", "I_UGV_01_rcws_F", 50000, "vehicle"],
 	["UGV Saif (CSAT)", "O_UGV_01_F", 25000, "vehicle"],
-	["UGV Saif RCWS (CSAT)", "O_UGV_01_rcws_F", 35000, "vehicle"]
+	["UGV Saif RCWS (CSAT)", "O_UGV_01_rcws_F", 50000, "vehicle"]
 ];
 
 armoredArray = compileFinal str
@@ -933,12 +936,12 @@ planesArray = compileFinal str
 	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 90000, "vehicle"],
 	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 100000, "vehicle"],
 	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 100000, "vehicle"],
-	["MQ4A Greyhawk ATGM UAV", "B_UAV_02_F", 20000, "vehicle"],
-	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 20000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than ATGMs
-	["K40 Ababil-3 ATGM UAV (CSAT)", "O_UAV_02_F", 20000, "vehicle"],
-	["K40 Ababil-3 Bomber UAV (CSAT)", "O_UAV_02_CAS_F", 20000, "vehicle"],
-	["K40 Ababil-3 ATGM UAV (AAF)", "I_UAV_02_F", 20000, "vehicle"],
-	["K40 Ababil-3 Bomber UAV (AAF)", "I_UAV_02_CAS_F", 20000, "vehicle"]
+	["MQ4A Greyhawk ATGM UAV", "B_UAV_02_F", 200000, "vehicle"],
+	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 200000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than ATGMs
+	["K40 Ababil-3 ATGM UAV (CSAT)", "O_UAV_02_F", 200000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV (CSAT)", "O_UAV_02_CAS_F", 200000, "vehicle"],
+	["K40 Ababil-3 ATGM UAV (AAF)", "I_UAV_02_F", 200000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV (AAF)", "I_UAV_02_CAS_F", 200000, "vehicle"]
 ];
 
 boatsArray = compileFinal str
