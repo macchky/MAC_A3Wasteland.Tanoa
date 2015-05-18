@@ -30,15 +30,15 @@ SideMissions =
 	//["mission_WepCache", 1.5],
 	["mission_Outpost", 2],
 	//["mission_HostileInfantry", 3],
-	["mission_Truck", 1]
-	["mission_drugsRunners", 1],
+	["mission_Truck", 1],
+	["mission_drugsRunners", 1]
 ];
 
 MoneyMissions =
 [
 	["mission_MoneyShipment", 1],
 	["mission_SunkenTreasure", 0.5],
-	["mission_Hackers", 1]
+	["mission_Hackers", 1],
 	["mission_altisPatrol", 1]
 ];
 
