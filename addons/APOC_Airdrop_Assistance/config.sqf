@@ -11,6 +11,7 @@ APOC_AA_VehOptions =
 ["MH-9 Hummingbird",	"B_Heli_Light_01_F", 		20000,	 "vehicle"],
 ["Strider HMG", 		"I_MRAP_03_hmg_F", 			30000, 	 "vehicle"],
 ["MSE-3 Marid", 		"O_APC_Wheeled_02_rcws_F", 	150000,  "vehicle"],
+["A-143 Buzzard AA", 	"I_Plane_Fighter_03_AA_F", 	200000,  "vehicle"],
 ["MBT-52 Kuma", 		"I_MBT_03_cannon_F", 		750000,  "vehicle"],
 ["A-164 Wipeout CAS", 	"B_Plane_CAS_01_F", 		950000,  "vehicle"]
 ];
