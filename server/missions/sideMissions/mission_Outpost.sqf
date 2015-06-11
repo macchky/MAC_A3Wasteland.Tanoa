@@ -28,7 +28,7 @@ _setupObjects =
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup, _missionPos, _nbUnits, 5] call createCustomGroup;
 
-	_missionHintText = format ["An armed <t color='%1'>outpost</t> containing weapon crates has been spotted near the marker, go capture it!", sideMissionColor]
+	_missionHintText = format ["An armed <t color='%1'>outpost</t> containing weapon crates has been spotted near the marker, go capture it!<br/><br/>武装した<t color='%1'>前哨基地</t>が発見された<br/>占拠しろ！", sideMissionColor]
 };
 
 _waitUntilMarkerPos = nil;

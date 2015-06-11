@@ -102,7 +102,7 @@ _setupObjects =
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh3 >> "displayName");
 	_vehicleName3 = getText (configFile >> "CfgVehicles" >> _veh4 >> "displayName");
 	
-	_missionHintText = format ["A convoy containing at least a <t color='%4'>%1</t>, a <t color='%4'>%2</t> and a <t color='%4'>%3</t> is patrolling Altis! Stop the patrol and capture the goods and money!", _vehicleName, _vehicleName2, _vehicleName3, moneyMissionColor];
+	_missionHintText = format ["A convoy containing at least a <t color='%4'>%1</t>, a <t color='%4'>%2</t> and a <t color='%4'>%3</t> is patrolling Altis! Stop the patrol and capture the goods and money!<br/><br/><t color='%4'>%1</t>と<t color='%4'>%2</t>と<t color='%4'>%3</t>の車列がAltisをパトロールしている<br/>車列を襲撃して装備とお金を手に入れろ！", _vehicleName, _vehicleName2, _vehicleName3, moneyMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
