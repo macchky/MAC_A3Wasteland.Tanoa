@@ -10,7 +10,7 @@ if (isDedicated) exitWith {};
 
 if ((getPlayerUID player) call isAdmin) then
 {
-
+	private ["_curPlayerInvisState"];
 	_curPlayerInvisState = player getVariable ["isAdminInvisible", false];
 
 	if (!_curPlayerInvisState) then

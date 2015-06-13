@@ -37,6 +37,8 @@ setLocationState = [_path, "setLocationState.sqf"] call mf_compile;
 setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
 
 // Non Vanilla missions
+createsniperGroup = [_path, "createUnits\sniperGroup.sqf"] call mf_compile; 
+createsmugglerGroup = [_path, "createUnits\smugglerGroup.sqf"] call mf_compile;
 createCustomGroup3 = [_path, "createUnits\customGroup3.sqf"] call mf_compile;
 
 //Function Compiles
