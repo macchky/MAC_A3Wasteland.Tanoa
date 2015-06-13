@@ -799,7 +799,8 @@ genObjectsArray = compileFinal str
 	["Bag Bunker Tower", "Land_BagBunker_Tower_F", 1000, "object"],
 	["Military Cargo Post", "Land_Cargo_Patrol_V1_F", 800, "object"],
 	["Military Cargo Tower", "Land_Cargo_Tower_V1_F", 10000, "object"],
-	//["Scaffolding", "Land_Scaffolding_F", 250, "object"]
+	//["Scaffolding", "Land_Scaffolding_F", 250, "object"],
+	["Concrete Block (macchky.net)", "BlockConcrete_F", 10000, "object"],
 	["Land Pier (TOParma.com)", "Land_Pier_F", 150000, "object"],
 	["Fuel Station (TOParma.com)", "Land_FuelStation_Feed_F", 10000, "object"],
 	["Military Cargo House (macchky.net)", "Land_Cargo_House_V1_F", 1000, "object"],

@@ -404,6 +404,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	["Land_Pier_addon", 50],
 	["Land_FuelStation_Feed_F", 75],
 	["Land_Pod_Heli_Transport_04_ammo_F", 150],
+	["BlockConcrete_F", 25],				//  macchky.net
 	["Land_Cargo_House_V1_F", 10],			//  macchky.net
 	["Land_Cargo_HQ_V1_F", 20],				//  macchky.net
 	["Land_Cargo40_military_green_F", 20],	//  macchky.net
@@ -477,6 +478,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	"Land_FuelStation_Feed_F",
 	"Land_Pod_Heli_Transport_04_ammo_F",
 	"Land_Pier_addon",
+	"BlockConcrete_F",				//  macchky.net
 	"Land_Cargo_House_V1_F",		//  macchky.net
 	"Land_Cargo_HQ_V1_F",			//  macchky.net
 	"Land_Cargo40_military_green_F",//  macchky.net
