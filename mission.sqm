@@ -98,8 +98,8 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="MAC A3Wasteland Altis v1.1b extDB";
-		overviewText="MAC Wasteland Conquest Altis by macchky.net. Core developed by A3Wasteland.com";
+		briefingName="MAC A3Wasteland Altis v1.2 Beta";
+		overviewText="MAC Wasteland Conquest Altis by macchky.net. Core developed by Team Wasteland - visit A3Wasteland.com for more details"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 		resistanceWest=0;
 		timeOfChanges=3e+038;
 		startWeather=0;

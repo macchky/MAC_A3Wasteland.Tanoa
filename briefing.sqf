@@ -19,6 +19,27 @@ player createDiarySubject ["credits", "Credits"];
 
 player createDiaryRecord ["changelog",
 [
+"v1.2",
+"
+<br/>[Added] Mag Repack by Outlawled
+<br/>[Added] New vehicle store paintjobs
+<br/>[Added] Town spawn cooldown
+<br/>[Added] Object lock restriction near stores and missions
+<br/>[Changed] Upgraded saving system to extDB2 by Torndeco
+<br/>[Changed] Expanded UAV control restriction to quadcopters
+<br/>[Changed] Downed players no longer count as town enemies
+<br/>[Changed] Updated antihack
+<br/>[Fixed] Old spawn beacons no longer shown on spawn menu
+<br/>[Fixed] Multiple money duping exploits
+<br/>[Fixed] Vehicles and objects sometimes disappearing from DB
+<br/>[Fixed] Severe injuries caused by jumping over small ledges
+<br/>[Fixed] Antihack kicks related to RHS, MCC, AGM, ACE3
+<br/>[Fixed] Various minor bugfixes and optimizations
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v1.1b",
 "
 <br/>[Added] Marksmen DLC content
@@ -123,7 +144,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9h",
+"v0.9h",
 "
 <br/>[Added] Custom revive system based on Farooq's Revive
 <br/>[Added] Territory payroll at regular intervals
@@ -183,55 +204,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9gh",
-"
-<br/> 10/01/2014
-<br/> [Community update] Base building features tweaked
-<br/> [Added] Base objects - Land Piers
-<br/> [Added] Base objects - Fuel Pumps
-<br/> [Added] Mag Repack by Outlawled
-<br/> 
-<br/> 09/22/2014
-<br/> [Merge] A3Wasteland - 964 commits
-<br/>
-<br/>
-<br/> 09/14/2014
-<br/> 
-<br/> [Changed] Island and Ghost Hotel to Selakano and Kore
-<br/> [Added] Town spawn Kore, Selakano, Panagia
-<br/> [Merge] A3Wasteland - 960 commits 
-<br/>
-<br/> 09/11/2014
-<br/> [Removed] Ammo Trunks
-<br/> [Added] Resupply Trunk - Mobile resupply truck, resupply cost is pulled from Bank.
-<br/>
-<br/> 09/05/2014 
-<br/> [Removed] UAV Terminal, unable to get out of vehicle.
-<br/> [Added] New Money Shipment Missions. 
-<br/> [Added] Vehicle Store north of Kavala - Power Plant area.
-<br/> [Fixed] Money values display correctly over 1 Mil.
-<br/> [Changed] Resupply cost is 25% of cost of vehicle - pulls cost from storeconfig. 
-<br/> [Fixed] deletePlayerData to deletePlayerSave - Money lost glitch in heli.
-<br/> 
-<br/> 08/09/2014 - 1pm
-<br/> [Added] Vehicle Lock once Vehicle Saved.
-<br/> 
-<br/> 08/08/2014 - 10pm
-<br/> [Fixed] Bank Money (ATM) deletes on death.
-<br/> [Added] ALL helicopters come with flares. 
-<br/> [Changed] - Helicopter price increase.
-<br/> 
-<br/> 07/28/2014 - 11am
-<br/> [Changed] - Altis Airport Conquest Territories - $15,000 Payout
-<br/> [Changed] - Able to tow or lift any vehicle with all vehicles. 
-<br/> [Added] - Server Cleanup process - FPS boost
-<br/> 
-"
-]];
-
-player createDiaryRecord ["changelog",
-[
-"0.9g",
+"v0.9g",
 "
 <br/>[Added] - Vehicle stores
 <br/>[Added] - New lootspawner by Na_Palm, stuff in ALL buildings
@@ -273,7 +246,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9f",
+"v0.9f",
 "
 <br/>[Added] - Money missions
 <br/>[Added] - Sell Crate Items option at stores when moving crate
@@ -288,7 +261,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9e",
+"v0.9e",
 "
 <br/>[Added] - Territory system
 <br/>[Added] - Jumping option (step over while running)
@@ -302,7 +275,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9d",
+"v0.9d",
 "
 <br/>[Added] - Store object purchases
 <br/>[Changed] - New UI by KoS
@@ -311,7 +284,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9c",
+"v0.9c",
 "
 <br/>[Changed] - Instant money pickup and drop
 <br/>[Changed] - Increased plane and heli spawning odds
@@ -322,7 +295,7 @@ player createDiaryRecord ["changelog",
 
 player createDiaryRecord ["changelog",
 [
-"0.9b",
+"v0.9b",
 "
 <br/>[Initial release] - Welcome to Altis!
 "
