@@ -30,7 +30,7 @@ _rulesOnline = "http://game.macchky.net/waste/rules.php";
 _rulesOffline = "addons\TOParmaInfo\rules.html";
 _newsOnline = "http://game.macchky.net/waste/news.php";
 _newsOffline = "addons\TOParmaInfo\news.html";
-_statsOnline = "http://game.macchky.net/waste/stats.php?uid=" + _uid;
+_statsOnline = "http://game.macchky.net/waste/stats.php";
 _statsOffline = "addons\TOParmaInfo\stats.html";
 
 
