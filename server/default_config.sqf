@@ -16,7 +16,7 @@ A3W_moonLight = 1;                 // Moon light during night (0 = no, 1 = yes)
 A3W_teamPlayersMap = 1;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
 A3W_globalVoiceWarnTimer = 5;      // Number of seconds for which global voice chat must be active before triggering a warning (0 = disabled)
 A3W_globalVoiceMaxWarns = 5;       // Number of global voice warnings after which the player will be killed and crashed (0 = disabled)
-APOC_coolDownTimer = 1800;		   // APOC Air Drop Cool Down Time
+A3W_antiHackUnitCheck = 1;         // Detect players who spawn unauthorized AI units (0 = no, 1 = yes) - disable if you have custom unit scripts/mods like AI recruitment or ALiVE
 A3W_antiHackMinRecoil = 1.0;       // Mininum recoil coefficient enforced by the antihack (recommended values: default = 1.0, TMR Mod = 0.5, VTS Weapon Resting = 0.25) (minimum: 0.02)
 A3W_townSpawnCooldown = 5*60;      // Number of seconds to wait between each spawn on a specific town (0 = disabled)
 A3W_spawnBeaconCooldown = 5*60;    // Number of seconds to wait between each use of a specific spawn beacon (0 = disabled)
@@ -29,8 +29,8 @@ A3W_donatorEnabled = 1;				// Enable/Disable Donator Features
 A3W_customUniformEnabled = 1;		// Enable/Disable Custom Uniforms
 A3W_tkAutoKickEnabled = 1;			// Enable/Disable Autokick for teamkillers
 A3W_tkKickAmount = 10;			// TeamKill amount needed before Kick.
+APOC_coolDownTimer = 1800;		   // APOC Air Drop Cool Down Time
 A3W_AdminConnectionChat = 0;        // Admin connection notifier
-A3W_townSpawnCooldown = 5*60;    // Number of seconds to wait between each use of a spawn on friends in towns (0 = disabled)
 A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
 
 // Store settings
