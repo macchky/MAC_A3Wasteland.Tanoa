@@ -14,12 +14,12 @@ private ["_minWeatherChangeTimeMin", "_maxWeatherChangeTimeMin", "_minTimeBetwee
 private ["_minimumFog", "_maximumFog", "_minimumOvercast", "_maximumOvercast", "_minimumRain", "_maximumRain", "_minimumWind", "_maximumWind", "_minRainIntervalTimeMin", "_maxRainIntervalTimeMin", "_forceRainToStopAfterOneRainInterval", "_maxWind"];
 private ["_minimumFogDecay", "_maximumFogDecay", "_minimumFogBase", "_maximumFogBase"];
 
-if (isNil "_this") then { _this = []; };
-if (count _this > 0) then { _initialFog = _this select 0; } else { _initialFog = -1; };
-if (count _this > 1) then { _initialOvercast = _this select 1; } else { _initialOvercast = -1; };
-if (count _this > 2) then { _initialRain = _this select 2; } else { _initialRain = -1; };
-if (count _this > 3) then { _initialWind = _this select 3; } else { _initialWind = [-1, -1]; };
-if (count _this > 4) then { _debug = _this select 4; } else { _debug = false; };
+if (isNil "_this") then { _this = [] };
+_initialFog = [_this, 0, -1, [0]] call BIS_fnc_param;
+_initialOvercast = [_this, 1, -1, [0]] call BIS_fnc_param;
+_initialRain = [_this, 2, -1, [0]] call BIS_fnc_param;
+_initialWind = [_this, 3, [-1,-1], [[]]] call BIS_fnc_param;
+_debug = [_this, 4, false, [false]] call BIS_fnc_param;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // The following variables can be changed to tweak weather behaviour
@@ -367,276 +367,279 @@ if (isServer) then {
 		drn_JIPWeatherSync = nil;
 	};
 
-    sleep 0.05;
+	sleep 0.05;
 
-    publicVariable "drn_var_DynamicWeather_Rain";
-    drn_var_DynamicWeather_ServerInitialized = true;
-    publicVariable "drn_var_DynamicWeather_ServerInitialized";
+	publicVariable "drn_var_DynamicWeather_Rain";
+	drn_var_DynamicWeather_ServerInitialized = true;
+	publicVariable "drn_var_DynamicWeather_ServerInitialized";
 
-    // Start weather thread
-    [_minWeatherChangeTimeMin, _maxWeatherChangeTimeMin, _minTimeBetweenWeatherChangesMin, _maxTimeBetweenWeatherChangesMin, _minimumFog, _maximumFog, _minimumFogDecay, _maximumFogDecay, _minimumFogBase, _maximumFogBase, _minimumOvercast, _maximumOvercast, _minimumWind, _maximumWind, _windChangeProbability, _debug] spawn {
-        private ["_minWeatherChangeTimeMin", "_maxWeatherChangeTimeMin", "_minTimeBetweenWeatherChangesMin", "_maxTimeBetweenWeatherChangesMin", "_minimumFog", "_maximumFog", "_minimumOvercast", "_maximumOvercast", "_minimumWind", "_maximumWind", "_windChangeProbability", "_debug"];
-        private ["_weatherType", "_fogLevel", "_overcastLevel", "_oldFogLevel", "_oldOvercastLevel", "_weatherChangeTimeSek"];
-        private ["_fogValue", "_fogBase", "_fogDecay"];
-        _minWeatherChangeTimeMin = _this select 0;
-        _maxWeatherChangeTimeMin = _this select 1;
-        _minTimeBetweenWeatherChangesMin = _this select 2;
-        _maxTimeBetweenWeatherChangesMin = _this select 3;
-        _minimumFog = _this select 4;
-        _maximumFog = _this select 5;
-        _minimumFogDecay = _this select 6;
-        _maximumFogDecay = _this select 7;
-        _minimumFogBase = _this select 8;
-        _maximumFogBase = _this select 9;
-        _minimumOvercast = _this select 10;
-        _maximumOvercast = _this select 11;
-        _minimumWind = _this select 12;
-        _maximumWind = _this select 13;
-        _windChangeProbability = _this select 14;
-        _debug = _this select 15;
+	// Start weather thread
+	if (!isNil "drn_DynamicWeather_WeatherThread") then { terminate drn_DynamicWeather_WeatherThread };
+	drn_DynamicWeather_WeatherThread = [_minWeatherChangeTimeMin, _maxWeatherChangeTimeMin, _minTimeBetweenWeatherChangesMin, _maxTimeBetweenWeatherChangesMin, _minimumFog, _maximumFog, _minimumFogDecay, _maximumFogDecay, _minimumFogBase, _maximumFogBase, _minimumOvercast, _maximumOvercast, _minimumWind, _maximumWind, _windChangeProbability, _debug] spawn {
+		private ["_minWeatherChangeTimeMin", "_maxWeatherChangeTimeMin", "_minTimeBetweenWeatherChangesMin", "_maxTimeBetweenWeatherChangesMin", "_minimumFog", "_maximumFog", "_minimumOvercast", "_maximumOvercast", "_minimumWind", "_maximumWind", "_windChangeProbability", "_debug"];
+		private ["_weatherType", "_fogLevel", "_overcastLevel", "_oldFogLevel", "_oldOvercastLevel", "_weatherChangeTimeSek"];
+		private ["_fogValue", "_fogBase", "_fogDecay"];
+		_minWeatherChangeTimeMin = _this select 0;
+		_maxWeatherChangeTimeMin = _this select 1;
+		_minTimeBetweenWeatherChangesMin = _this select 2;
+		_maxTimeBetweenWeatherChangesMin = _this select 3;
+		_minimumFog = _this select 4;
+		_maximumFog = _this select 5;
+		_minimumFogDecay = _this select 6;
+		_maximumFogDecay = _this select 7;
+		_minimumFogBase = _this select 8;
+		_maximumFogBase = _this select 9;
+		_minimumOvercast = _this select 10;
+		_maximumOvercast = _this select 11;
+		_minimumWind = _this select 12;
+		_maximumWind = _this select 13;
+		_windChangeProbability = _this select 14;
+		_debug = _this select 15;
 
-        // Set initial fog level
-        _fogLevel = 2;
-        _overcastLevel = 2;
+		// Set initial fog level
+		_fogLevel = 2;
+		_overcastLevel = 2;
 
-        while {true} do {
-            // Sleep a while until next weather change
-            sleep floor (_minTimeBetweenWeatherChangesMin * 60 + random ((_maxTimeBetweenWeatherChangesMin - _minTimeBetweenWeatherChangesMin) * 60));
+		while {true} do {
+			// Sleep a while until next weather change
+			sleep floor (_minTimeBetweenWeatherChangesMin * 60 + random ((_maxTimeBetweenWeatherChangesMin - _minTimeBetweenWeatherChangesMin) * 60));
 
-            if (_minimumFog == _maximumFog && _minimumOvercast != _maximumOvercast) then {
-                _weatherType = "OVERCAST";
-            };
-            if (_minimumFog != _maximumFog && _minimumOvercast == _maximumOvercast) then {
-                _weatherType = "FOG";
-            };
-            if (_minimumFog != _maximumFog && _minimumOvercast != _maximumOvercast) then {
+			if (_minimumFog == _maximumFog && _minimumOvercast != _maximumOvercast) then {
+				_weatherType = "OVERCAST";
+			};
+			if (_minimumFog != _maximumFog && _minimumOvercast == _maximumOvercast) then {
+				_weatherType = "FOG";
+			};
+			if (_minimumFog != _maximumFog && _minimumOvercast != _maximumOvercast) then {
 
-                // Select type of weather to change
-                if ((random 100) < 50) then {
-                    _weatherType = "OVERCAST";
-                }
-                else {
-                    _weatherType = "FOG";
-                };
-            };
+				// Select type of weather to change
+				if ((random 100) < 50) then {
+					_weatherType = "OVERCAST";
+				}
+				else {
+					_weatherType = "FOG";
+				};
+			};
 
-            // DEBUG
-            //_weatherType = "OVERCAST";
+			// DEBUG
+			//_weatherType = "OVERCAST";
 
-            if (_weatherType == "FOG") then {
+			if (_weatherType == "FOG") then {
 
-                drn_DynamicWeather_CurrentWeatherChange = "FOG";
+				drn_DynamicWeather_CurrentWeatherChange = "FOG";
 
-                // Select a new fog level
-                _oldFogLevel = _fogLevel;
-                _fogLevel = floor ((random 100) / 25);
+				// Select a new fog level
+				_oldFogLevel = _fogLevel;
+				_fogLevel = floor ((random 100) / 25);
 
-                while {_fogLevel == _oldFogLevel} do {
-                    _fogLevel = floor ((random 100) / 25);
-                };
+				while {_fogLevel == _oldFogLevel} do {
+					_fogLevel = floor ((random 100) / 25);
+				};
 
-                _fogDecay = _minimumFogDecay + (_maximumFogDecay - _minimumFogDecay) * random 1;
-                _fogBase = _minimumFogBase + (_maximumFogBase - _minimumFogBase) * random 1;
-                _fogValue = 0;
+				_fogDecay = _minimumFogDecay + (_maximumFogDecay - _minimumFogDecay) * random 1;
+				_fogBase = _minimumFogBase + (_maximumFogBase - _minimumFogBase) * random 1;
+				_fogValue = 0;
 
-                if (_fogLevel == 0) then {
-                    _fogValue = _minimumFog + (_maximumFog - _minimumFog) * random 0.05;
-                };
-                if (_fogLevel == 1) then {
-                    _fogValue = _minimumFog + (_maximumFog - _minimumFog) * (0.05 + random 0.2);
-                };
-                if (_fogLevel == 2) then {
-                    _fogValue = _minimumFog + (_maximumFog - _minimumFog) * (0.25 + random 0.3);
-                };
-                if (_fogLevel == 3) then {
-                    _fogValue = _minimumFog + (_maximumFog - _minimumFog) * (0.55 + random 0.45);
-                };
+				if (_fogLevel == 0) then {
+					_fogValue = _minimumFog + (_maximumFog - _minimumFog) * random 0.05;
+				};
+				if (_fogLevel == 1) then {
+					_fogValue = _minimumFog + (_maximumFog - _minimumFog) * (0.05 + random 0.2);
+				};
+				if (_fogLevel == 2) then {
+					_fogValue = _minimumFog + (_maximumFog - _minimumFog) * (0.25 + random 0.3);
+				};
+				if (_fogLevel == 3) then {
+					_fogValue = _minimumFog + (_maximumFog - _minimumFog) * (0.55 + random 0.45);
+				};
 
 				drn_DynamicWeather_WeatherTargetValue = [([_fogValue, _maximumFog] call drn_fnc_fogOdds) * _maximumFog, _fogDecay, _fogBase];
 
-                drn_DynamicWeather_WeatherChangeStartedTime = time;
-                _weatherChangeTimeSek = _minWeatherChangeTimeMin * 60 + random ((_maxWeatherChangeTimeMin - _minWeatherChangeTimeMin) * 60);
-                drn_DynamicWeather_WeatherChangeCompletedTime = time + _weatherChangeTimeSek;
+				drn_DynamicWeather_WeatherChangeStartedTime = time;
+				_weatherChangeTimeSek = _minWeatherChangeTimeMin * 60 + random ((_maxWeatherChangeTimeMin - _minWeatherChangeTimeMin) * 60);
+				drn_DynamicWeather_WeatherChangeCompletedTime = time + _weatherChangeTimeSek;
 
-                if (_debug) then {
-                    ["Weather forecast: Fog " + str drn_DynamicWeather_WeatherTargetValue + " in " + str round (_weatherChangeTimeSek / 60) + " minutes."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
-                };
-            };
+				if (_debug) then {
+					["Weather forecast: Fog " + str drn_DynamicWeather_WeatherTargetValue + " in " + str round (_weatherChangeTimeSek / 60) + " minutes."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
+				};
+			};
 
-            if (_weatherType == "OVERCAST") then {
+			if (_weatherType == "OVERCAST") then {
 
-                drn_DynamicWeather_CurrentWeatherChange = "OVERCAST";
+				drn_DynamicWeather_CurrentWeatherChange = "OVERCAST";
 
-                // Select a new overcast level
-                _oldOvercastLevel = _overcastLevel;
-                //_overcastLevel = floor ((random 100) / 25);
-                _overcastLevel = 3;
+				// Select a new overcast level
+				_oldOvercastLevel = _overcastLevel;
+				//_overcastLevel = floor ((random 100) / 25);
+				_overcastLevel = 3;
 
-                while {_overcastLevel == _oldOvercastLevel} do {
-                    _overcastLevel = floor ((random 100) / 25);
-                };
+				while {_overcastLevel == _oldOvercastLevel} do {
+					_overcastLevel = floor ((random 100) / 25);
+				};
 
-                if (_overcastLevel == 0) then {
-                    drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * random 0.05;
-                };
-                if (_overcastLevel == 1) then {
-                    drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * (0.05 + random 0.3);
-                };
-                if (_overcastLevel == 2) then {
-                    drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * (0.35 + random 0.35);
-                };
-                if (_overcastLevel == 3) then {
-                    drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * (0.7 + random 0.3);
-                };
+				if (_overcastLevel == 0) then {
+					drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * random 0.05;
+				};
+				if (_overcastLevel == 1) then {
+					drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * (0.05 + random 0.3);
+				};
+				if (_overcastLevel == 2) then {
+					drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * (0.35 + random 0.35);
+				};
+				if (_overcastLevel == 3) then {
+					drn_DynamicWeather_WeatherTargetValue = _minimumOvercast + (_maximumOvercast - _minimumOvercast) * (0.7 + random 0.3);
+				};
 
-                // DEBUG
-                /*
-                if (overcast > 0.8) then {
-                    drn_DynamicWeather_WeatherTargetValue = 0.5;
-                }
-                else {
-                    drn_DynamicWeather_WeatherTargetValue = 0.85;
-                };
-                */
+				// DEBUG
+				/*
+				if (overcast > 0.8) then {
+					drn_DynamicWeather_WeatherTargetValue = 0.5;
+				}
+				else {
+					drn_DynamicWeather_WeatherTargetValue = 0.85;
+				};
+				*/
 
-                drn_DynamicWeather_WeatherChangeStartedTime = time;
-                _weatherChangeTimeSek = _minWeatherChangeTimeMin * 60 + random ((_maxWeatherChangeTimeMin - _minWeatherChangeTimeMin) * 60);
-                drn_DynamicWeather_WeatherChangeCompletedTime = time + _weatherChangeTimeSek;
+				drn_DynamicWeather_WeatherChangeStartedTime = time;
+				_weatherChangeTimeSek = _minWeatherChangeTimeMin * 60 + random ((_maxWeatherChangeTimeMin - _minWeatherChangeTimeMin) * 60);
+				drn_DynamicWeather_WeatherChangeCompletedTime = time + _weatherChangeTimeSek;
 
-                if (_debug) then {
-                    ["Weather forecast: Overcast " + str drn_DynamicWeather_WeatherTargetValue + " in " + str round (_weatherChangeTimeSek / 60) + " minutes."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
-                };
-            };
+				if (_debug) then {
+					["Weather forecast: Overcast " + str drn_DynamicWeather_WeatherTargetValue + " in " + str round (_weatherChangeTimeSek / 60) + " minutes."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
+				};
+			};
 
-            // On average every one fourth of weather changes, change wind too
-            if (random 100 < _windChangeProbability) then {
-                private ["_maxWind"];
+			// On average every one fourth of weather changes, change wind too
+			if (random 100 < _windChangeProbability) then {
+				private ["_maxWind"];
 
-                _maxWind = _minimumWind + random (_maximumWind - _minimumWind);
+				_maxWind = _minimumWind + random (_maximumWind - _minimumWind);
 
-                if (random 100 < 50) then {
-                    drn_DynamicWeather_WindX = -_minimumWind - random (_maxWind - _minimumWind);
-                }
-                else {
-                    drn_DynamicWeather_WindX = _minimumWind + random (_maxWind - _minimumWind);
-                };
-                if (random 100 < 50) then {
-                    drn_DynamicWeather_WindZ = -_minimumWind - random (_maxWind - _minimumWind);
-                }
-                else {
-                    drn_DynamicWeather_WindZ = _minimumWind + random (_maxWind - _minimumWind);
-                };
+				if (random 100 < 50) then {
+					drn_DynamicWeather_WindX = -_minimumWind - random (_maxWind - _minimumWind);
+				}
+				else {
+					drn_DynamicWeather_WindX = _minimumWind + random (_maxWind - _minimumWind);
+				};
+				if (random 100 < 50) then {
+					drn_DynamicWeather_WindZ = -_minimumWind - random (_maxWind - _minimumWind);
+				}
+				else {
+					drn_DynamicWeather_WindZ = _minimumWind + random (_maxWind - _minimumWind);
+				};
 
-                if (_debug) then {
-                    ["Wind changes: [" + str drn_DynamicWeather_WindX + ", " + str drn_DynamicWeather_WindZ + "]."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
-                };
-            };
+				if (_debug) then {
+					["Wind changes: [" + str drn_DynamicWeather_WindX + ", " + str drn_DynamicWeather_WindZ + "]."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
+				};
+			};
 
-            call drn_fnc_DynamicWeather_SetWeatherAllClients;
+			call drn_fnc_DynamicWeather_SetWeatherAllClients;
 
-            sleep _weatherChangeTimeSek;
-        };
-    };
+			sleep _weatherChangeTimeSek;
+		};
+	};
 
-    // Start rain thread
-    if (_rainIntervalRainProbability > 0) then {
-        [_minimumRain, _maximumRain, _forceRainToStopAfterOneRainInterval, _minRainIntervalTimeMin, _maxRainIntervalTimeMin, _rainIntervalRainProbability, _debug] spawn {
-            private ["_minimumRain", "_maximumRain", "_forceRainToStopAfterOneRainInterval", "_minRainIntervalTimeMin", "_maxRainIntervalTimeMin", "_rainIntervalRainProbability", "_debug"];
-            private ["_nextRainEventTime", "_forceStop"];
+	// Start rain thread
+	if (_rainIntervalRainProbability > 0) then {
+		if (!isNil "drn_DynamicWeather_RainThread") then { terminate drn_DynamicWeather_RainThread };
+		drn_DynamicWeather_RainThread = [_minimumRain, _maximumRain, _forceRainToStopAfterOneRainInterval, _minRainIntervalTimeMin, _maxRainIntervalTimeMin, _rainIntervalRainProbability, _debug] spawn {
+			private ["_minimumRain", "_maximumRain", "_forceRainToStopAfterOneRainInterval", "_minRainIntervalTimeMin", "_maxRainIntervalTimeMin", "_rainIntervalRainProbability", "_debug"];
+			private ["_nextRainEventTime", "_forceStop"];
 
-            _minimumRain = _this select 0;
-            _maximumRain = _this select 1;
-            _forceRainToStopAfterOneRainInterval = _this select 2;
-            _minRainIntervalTimeMin = _this select 3;
-            _maxRainIntervalTimeMin = _this select 4;
-            _rainIntervalRainProbability = _this select 5;
-            _debug = _this select 6;
+			_minimumRain = _this select 0;
+			_maximumRain = _this select 1;
+			_forceRainToStopAfterOneRainInterval = _this select 2;
+			_minRainIntervalTimeMin = _this select 3;
+			_maxRainIntervalTimeMin = _this select 4;
+			_rainIntervalRainProbability = _this select 5;
+			_debug = _this select 6;
 
-            if (rain > 0) then {
-                drn_var_DynamicWeather_Rain = rain;
-                publicVariable "drn_var_DynamicWeather_Rain";
-            };
+			if (rain > 0) then {
+				drn_var_DynamicWeather_Rain = rain;
+				publicVariable "drn_var_DynamicWeather_Rain";
+			};
 
-            _nextRainEventTime = time;
-            _forceStop = false;
+			_nextRainEventTime = time;
+			_forceStop = false;
 
-            while {true} do {
+			while {true} do {
 
-                if (overcast > 0.75) then {
+				if (overcast > 0.75) then {
 
-                    if (time >= _nextRainEventTime) then {
-                        private ["_rainTimeSec"];
+					if (time >= _nextRainEventTime) then {
+						private ["_rainTimeSec"];
 
-                        // At every rain event time, start or stop rain with 50% probability
-                        if (random 100 < _rainIntervalRainProbability && !_forceStop) then {
-                            drn_var_DynamicWeather_rain = _minimumRain + random (_maximumRain - _minimumRain);
-                            publicVariable "drn_var_DynamicWeather_rain";
+						// At every rain event time, start or stop rain with 50% probability
+						if (random 100 < _rainIntervalRainProbability && !_forceStop) then {
+							drn_var_DynamicWeather_rain = _minimumRain + random (_maximumRain - _minimumRain);
+							publicVariable "drn_var_DynamicWeather_rain";
 
-                            _forceStop = _forceRainToStopAfterOneRainInterval;
-                        }
-                        else {
-                            drn_var_DynamicWeather_rain = 0;
-                            publicVariable "drn_var_DynamicWeather_rain";
+							_forceStop = _forceRainToStopAfterOneRainInterval;
+						}
+						else {
+							drn_var_DynamicWeather_rain = 0;
+							publicVariable "drn_var_DynamicWeather_rain";
 
-                            _forceStop = false;
-                        };
+							_forceStop = false;
+						};
 
-                        // Pick a time for next rain change
-                        _rainTimeSec = _minRainIntervalTimeMin * 60 + random ((_maxRainIntervalTimeMin - _minRainIntervalTimeMin) * 60);
-                        _nextRainEventTime = time + _rainTimeSec;
+						// Pick a time for next rain change
+						_rainTimeSec = _minRainIntervalTimeMin * 60 + random ((_maxRainIntervalTimeMin - _minRainIntervalTimeMin) * 60);
+						_nextRainEventTime = time + _rainTimeSec;
 
-                        if (_debug) then {
-                            ["Rain set to " + str drn_var_DynamicWeather_rain + " for " + str (_rainTimeSec / 60) + " minutes"] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
-                        };
-                    };
-                }
-                else {
-                    if (drn_var_DynamicWeather_rain != 0) then {
-                        drn_var_DynamicWeather_rain = 0;
-                        publicVariable "drn_var_DynamicWeather_rain";
+						if (_debug) then {
+							["Rain set to " + str drn_var_DynamicWeather_rain + " for " + str (_rainTimeSec / 60) + " minutes"] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
+						};
+					};
+				}
+				else {
+					if (drn_var_DynamicWeather_rain != 0) then {
+						drn_var_DynamicWeather_rain = 0;
+						publicVariable "drn_var_DynamicWeather_rain";
 
-                        if (_debug) then {
-                            ["Rain stops due to low overcast."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
-                        };
-                    };
+						if (_debug) then {
+							["Rain stops due to low overcast."] call drn_fnc_DynamicWeather_ShowDebugTextAllClients;
+						};
+					};
 
-                    _nextRainEventTime = time;
-                    _forceStop = false;
-                };
+					_nextRainEventTime = time;
+					_forceStop = false;
+				};
 
-                if (_debug) then {
-                    sleep 1;
-                }
-                else {
-                    sleep 20;
-                };
-            };
-        };
-    };
+				if (_debug) then {
+					sleep 1;
+				}
+				else {
+					sleep 20;
+				};
+			};
+		};
+	};
 };
 
-[_rainIntervalRainProbability, _debug] spawn {
-    private ["_rainIntervalRainProbability", "_debug"];
-    private ["_rain", "_rainPerSecond"];
+if (!isNil "drn_DynamicWeather_FogThread") then { terminate drn_DynamicWeather_FogThread };
+drn_DynamicWeather_FogThread = [_rainIntervalRainProbability, _debug] spawn {
+	private ["_rainIntervalRainProbability", "_debug"];
+	private ["_rain", "_rainPerSecond"];
 
-    _rainIntervalRainProbability = _this select 0;
-    _debug = _this select 1;
+	_rainIntervalRainProbability = _this select 0;
+	_debug = _this select 1;
 
-    if (_debug) then {
-        _rainPerSecond = 0.2;
-    }
-    else {
-        _rainPerSecond = 0.03;
-    };
+	if (_debug) then {
+		_rainPerSecond = 0.2;
+	}
+	else {
+		_rainPerSecond = 0.03;
+	};
 
-    if (_rainIntervalRainProbability > 0) then {
-        _rain = drn_var_DynamicWeather_Rain;
-    }
-    else {
-        _rain = 0;
-    };
+	if (_rainIntervalRainProbability > 0) then {
+		_rain = drn_var_DynamicWeather_Rain;
+	}
+	else {
+		_rain = 0;
+	};
 
-    0 setRain _rain;
+	0 setRain _rain;
 	0 setFog [fog max (_rain / 4), 0.001, 1000];
     sleep 0.1;
 

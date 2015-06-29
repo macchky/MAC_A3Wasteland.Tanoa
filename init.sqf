@@ -76,7 +76,6 @@ if (hasInterface || isServer) then
 	//init 3rd Party Scripts
 	[] execVM "addons\R3F_LOG\init.sqf";
 	[] execVM "addons\proving_ground\init.sqf";
-	[] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 	[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
 	[] execVM "addons\JumpMF\init.sqf";
 	[] execVM "addons\EtV\init.sqf";
@@ -85,4 +84,5 @@ if (hasInterface || isServer) then
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";	// Airdrop
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";			// Keypad for base locking
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
+	if (isNil "drn_DynamicWeather_MainThread") then { drn_DynamicWeather_MainThread = [] execVM "addons\scripts\DynamicWeatherEffects.sqf" };
 };
