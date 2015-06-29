@@ -86,8 +86,6 @@ essentialsList =
 //Object List - Random Spawns.
 objectList =
 [
-	"B_supplyCrate_F",
-	"B_supplyCrate_F",
 	"CamoNet_INDP_open_F",
 	"CamoNet_INDP_open_F",
 	"Land_BagBunker_Large_F",
@@ -125,9 +123,7 @@ objectList =
 	"Land_Pipes_large_F",
 	"Land_RampConcrete_F",
 	"Land_RampConcreteHigh_F",
-	"Land_Sacks_goods_F",
-	"Land_Shoot_House_Wall_F",
-	"Land_BarrelWater_F"
+	"Land_Shoot_House_Wall_F"
 ];
 
 //Object List - Random Spawns.
