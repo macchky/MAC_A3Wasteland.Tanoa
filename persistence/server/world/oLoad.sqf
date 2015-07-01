@@ -81,6 +81,7 @@ _exclObjectIDs = [];
 		if (!isNil "_objectID") then
 		{
 			_obj setVariable ["A3W_objectID", _objectID, true];
+			_obj setVariable ["A3W_objectSaved", true, true];
 			A3W_objectIDs pushBack _objectID;
 		};
 
@@ -211,5 +212,4 @@ if (_warchestMoneySavingOn) then
 
 diag_log format ["A3Wasteland - world persistence loaded %1 objects from %2", _objCount, call A3W_savingMethodName];
 
-fn_deleteObjects = [_methodDir, "deleteObjects.sqf"] call mf_compile;
 _exclObjectIDs call fn_deleteObjects;
