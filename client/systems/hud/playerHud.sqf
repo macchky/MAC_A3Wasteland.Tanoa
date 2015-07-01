@@ -292,9 +292,7 @@ while {true} do
 	// Global voice warning system
 	if (_globalVoiceWarnTimer > 0 && _globalVoiceMaxWarns > 0) then
 	{
-
-		if (!isNull findDisplay 55 && (ctrlText (findDisplay 63 displayCtrl 101) == localize "str_channel_global" && !((getPlayerUID player) call isAdmin) || ctrlText (findDisplay 63 displayCtrl 101) == localize "str_channel_side")) then
-
+		if (!isNull findDisplay 55 && currentChannel == 0 && !((getPlayerUID player) call isAdmin)) then
 		{
 			if (isNil "_globalVoiceTimestamp") then
 			{
