@@ -322,6 +322,39 @@ player createDiaryRecord ["changelog",
 "
 ]];
 
+player createDiaryRecord ["changelog",
+ [
+"game.macchky.net",
+"
+<br/> [Added] Base locker (It is hackable and destroyable)
+<br/> [Added] Safe with keypad to General Store
+<br/> [Added] Ability to mark your owned vehicles and objects on the map
+<br/> [Added] Show R.I.P. map marker on corpse location after death
+<br/> [Added] Sell, Change Ownership and Resupply trucks
+<br/> [Added] Vehicle locking and info script by Micovery
+<br/> [Added] Vehicle lock state saving
+<br/> [Added] Locked vehicle break in and hot wire at a cost
+<br/> [Added] Access to DLC Helicopter pilot seat without DLC
+<br/> [Added] New side missions: Snipers, DrugsRunners, Roadblock
+<br/> [Added] New side missions: Geocache, Smugglers
+<br/> [Added] New money missions: Military patrol and Altis-Stratis patrol, Hackers
+<br/> [Added] Airdrop system by Apoc
+<br/> [Added] Voiceblock to side channel
+<br/> [Added] New welcome screen by Lodac from TOP Arma
+<br/> [Added] Drugs by Micovery
+<br/> [Added] Wateredge fix by Micovery
+<br/> [Added] 3D Markers
+<br/> [Added] ZLT Fastrope
+<br/> [Added] Explosives to vehicles
+<br/> [Added] Fix for spawnbeacons placed above water
+<br/> [Added] Several new objects to General store for base building
+<br/> [Changed] Disabled Fog
+<br/> [Changed] Changed prices
+<br/> [Changed] Vehicles spawn in locked and with engine on
+<br/> [Changed] Spawnbeacon insertion to 0 mtrs
+<br/> [Changed] Old R3F script to version 3.1
+"
+]];
 
 player createDiaryRecord ["credits",
 [
