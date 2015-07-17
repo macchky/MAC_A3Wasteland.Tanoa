@@ -17,7 +17,7 @@ if (isNull _dialog) exitWith {};
 
 _accDropdown = _dialog displayCtrl AtmAccountDropdown_IDC;
 
-_players = call allPlayer;
+_players = call allPlayers;
 
 if !(["A3W_atmTransferAllTeams"] call isConfigOn) then
 {

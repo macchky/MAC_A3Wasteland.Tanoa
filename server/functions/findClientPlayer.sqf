@@ -16,6 +16,6 @@ _player = objNull;
 		_player = _x;
 	};
 }
-forEach (call allPlayer);
+forEach (call allPlayers);
 
 _player

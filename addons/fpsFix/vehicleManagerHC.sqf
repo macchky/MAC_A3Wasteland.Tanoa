@@ -106,7 +106,7 @@ while {true} do
 {
 	_startTime = diag_tickTime;
 	_entities = entities "All";
-	A3W_allPlayers = call allPlayer;
+	A3W_allPlayers = call allPlayers;
 
 	_loopQty = [A3W_vehicleManagerHC, _entities, MAIN_LOOP_INTERVAL, _oldCount, _totalTime, _loopQty, true] call fn_loopSpread;
 
