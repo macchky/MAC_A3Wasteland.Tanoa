@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
@@ -1086,26 +1085,28 @@ colorsArray = compileFinal str
 			["Drylands", _texDir + "drylands.paa"],
 			["Hex", _texDir + "hex.paa"],
 			["Hippie", _texDir + "hippie.paa"],
+			["ISIS", _texDir + "isis.paa"],
 			["Leopard", _texDir + "leopard.paa"],
 			["Mountain Dew", _texDir + "mtndew.paa"],
 			["'Murica", _texDir + "murica.paa"],
-			["Orange Camo", _texDir + "camo_fack.paa"],
-			["Pink Camo", _texDir + "camo_pank.paa"],
+			["Nazi", _texDir + "nazi.paa"],
+			["Orange Camo", _texDir + "camo_orange.paa"],
+			["Pink Camo", _texDir + "camo_pink.paa"],
 			["Psych", _texDir + "psych.paa"],
-			["Red Camo", _texDir + "camo_deser.paa"],
+			["Red Camo", _texDir + "camo_red.paa"],
 			["Rusty", _texDir + "rusty.paa"],
 			["Sand", _texDir + "sand.paa"],
 			["Snake", _texDir + "snake.paa"],
 			["Stripes", _texDir + "stripes.paa"],
 			["Stripes 2", _texDir + "stripes2.paa"],
 			["Stripes 3", _texDir + "stripes3.paa"],
-			["Swamp", _texDir + "camo_fuel.paa"],
+			["Swamp", _texDir + "swamp.paa"],
 			["Tiger", _texDir + "tiger.paa"],
 			["Union Jack", _texDir + "unionjack.paa"],
 			["Urban", _texDir + "urban.paa"],
 			["Weed", _texDir + "weed.paa"],
 			["Woodland", _texDir + "woodland.paa"],
-			["Woodland 2", _texDir + "woodland2.paa"],
+			["Woodland Dark", _texDir + "wooddark.paa"],
 			["Woodland Tiger", _texDir + "woodtiger.paa"]
 		]
 	],
