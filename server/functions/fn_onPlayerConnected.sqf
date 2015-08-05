@@ -18,19 +18,19 @@ if (["A3W_AdminConnectionChat"] call isConfigOn) then
 		case ([_uid, serverOwners] call isAdmin):
 		{
 			_msg = "Super Admin " + _name + " connected";
-			uiSleep 3;
+			uiSleep 5;
 			_result = "extDB2" callExtension format["1:%1:SAY -1 %2", call A3W_extDB_RconID, _msg];
 		};
 		case ([_uid, highAdmins] call isAdmin):
 		{
 			_msg = "High Admin " + _name + " connected";
-			uiSleep 3;
+			uiSleep 5;
 			_result = "extDB2" callExtension format["1:%1:SAY -1 %2", call A3W_extDB_RconID, _msg];
 		};
 		case ([_uid, lowAdmins] call isAdmin):
 		{
 			_msg = "Low Admin " + _name + " connected";
-			uiSleep 3;
+			uiSleep 5;
 			_result = "extDB2" callExtension format["1:%1:SAY -1 %2", call A3W_extDB_RconID, _msg];
 		};
 
