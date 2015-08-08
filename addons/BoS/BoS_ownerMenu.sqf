@@ -23,6 +23,8 @@ if (!isNil "_uid") then {
 					"Lights ON",
 					"Lock Down Base",
 					"Release Lock Down",
+					"Lights OFF",
+					"Lights ON",
 					"Change PIN"
 	];
 
