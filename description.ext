@@ -29,6 +29,11 @@ overviewTextLocked = "Website: macchky.net Teamspeak: game.macchky.net";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";
 
+// A3W UI color (default = sky blue)
+
+#define A3W_UICOLOR_R  0.25 // default = 0.25
+#define A3W_UICOLOR_G  0.51 // default = 0.51
+#define A3W_UICOLOR_B  0.96 // default = 0.96
 
 //Dialog includes
 
@@ -98,7 +103,7 @@ class params
 		values[] = {0,1};
 		texts[] = {$STR_DISABLED,$STR_ENABLED};
 		default = 1;
-		isGlobal = 1;		
+		isGlobal = 1;
 		file = "addons\3D_Markers\3Dmarkers.sqf";
 	};
 };
