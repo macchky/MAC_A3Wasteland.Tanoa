@@ -21,9 +21,8 @@ if ([_uid, 2] call isAdmin) then {
 	_panelOptions = ["Player Management",
 					"Vehicle Management",
 					"Spectator Cam",
-					"Player Markers",
+					"Group Leader Markers",
 					"Teleport"
-					
 	];
 
 	{
