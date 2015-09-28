@@ -38,18 +38,23 @@ if (_uid call isAdmin) then
 					execVM "client\systems\adminPanel\vehicleManagement.sqf";
 				};
 				case 2: //Spectator Cam
-			    {
+				{
 					closeDialog 0;
 					if (isnil {RscSpectator_camera}) then {RscSpectator_allowFreeCam = true; cutrsc ['RscSpectator','plain'];if (!isNil "notifyAdminMenu") then { ["SpectatorCam", "used"] call notifyAdminMenu };} else {cuttext ['','plain']};
-			    };
-			    case 3: //Tags
-			    {
+				};
+				case 3: //P Tags
+				{
+					execVM "client\systems\adminPanel\playerIcons.sqf";
+					if (!isNil "notifyAdminMenu") then { ["AllPlayerTag","used"] call notifyAdminMenu };
+				};
+				case 4: //Tags
+				{
 					execVM "client\systems\adminPanel\playerTags.sqf";
 					if (!isNil "notifyAdminMenu") then { ["PlayerTag","used"] call notifyAdminMenu };
-			    };
-			    case 4: //Teleport
-			    {
-	                closeDialog 0;
+				};
+				case 5: //Teleport
+				{
+					closeDialog 0;
 					["A3W_teleport", "onMapSingleClick",
 					{
 						vehicle player setPos _pos;
@@ -59,37 +64,37 @@ if (_uid call isAdmin) then
 					}] call BIS_fnc_addStackedEventHandler;
 					hint "Click on map to teleport";
 				};
-				case 5: //Teleport player to me
+				case 6: //Teleport player to me
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\tptome.sqf";
 				};
-				case 6: //Teleport me to player
+				case 7: //Teleport me to player
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\tpmeto.sqf";
 				};
-				case 7: //Money
+				case 8: //Money
 				{
 					_money = 10000;
 					player setVariable ["cmoney", (player getVariable ["cmoney",0]) + _money, true];
 					if (!isNil "notifyAdminMenu") then { ["money", _money] call notifyAdminMenu };
 				};
-				case 8: //Debug Menu
+				case 9: //Debug Menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadDebugMenu.sqf";
 				};
-				case 9: //Object search menu
+				case 10: //Object search menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadObjectSearch.sqf";
 				};
-				case 10: // toggle God mode
+				case 11: // toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleGodMode.sqf";
 				};
-				case 11: // toggle Invis mode
+				case 12: // toggle Invis mode
 				{
 					execVM "client\systems\adminPanel\toggleInvisMode.sqf";
 				};
