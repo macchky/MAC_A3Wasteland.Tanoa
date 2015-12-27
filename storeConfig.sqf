@@ -162,7 +162,7 @@ lmgArray = compileFinal str
 	["M249", "CUP_lmg_M249", 450],
 	["M249 Para", "CUP_lmg_M249_para", 450],
 	["M240", "CUP_lmg_M240", 450],
-	["M60E4", "CUP_lmg_M60A4", 450],
+	["M60E4", "CUP_lmg_M60E4", 450],
 	["Mk48 Mod 0 (Desert)", "CUP_lmg_Mk48_des", 450],
 	["Mk48 Mod 0 (Woodland)", "CUP_lmg_Mk48_wdl", 450],
 	["RPK-74", "CUP_arifle_RPK74", 450],
