@@ -21,6 +21,17 @@ class Header
 	maxPlayers=145; // 144 players, 1 headless client
 };
 
+showHUD[] = {
+	true,	// Scripted HUD (same as showHUD command)
+	true,	// Vehicle + soldier info
+	false,	// Vehicle radar [HIDDEN]
+	true,	// Vehicle compass [HIDDEN]
+	true,	// Tank direction indicator
+	true,	// Commanding menu
+	true,	// Group Bar
+	true	// HUD Weapon Cursors
+};
+
 author="macchky and TOPARMA.COM - Core by A3Wasteland.com";
 onLoadName = "MAC A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "Website: game.macchky.net CORE MISSION: a3wasteland.com";
