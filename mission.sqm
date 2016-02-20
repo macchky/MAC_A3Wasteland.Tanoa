@@ -98,7 +98,7 @@ class Mission
 	randomSeed=14957468;
 	class Intel
 	{
-		briefingName="MAC A3Wasteland Altis v1.2";
+		briefingName="MAC A3Wasteland Altis v1.2b";
 		overviewText="MAC Wasteland Conquest Altis by macchky.net. Core developed by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
