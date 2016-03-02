@@ -2062,7 +2062,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=53;
+		items=55;
 		class Item0
 		{
 			position[]={5892.3325,225.05762,20124.521};
@@ -2713,6 +2713,28 @@ class Mission
 			text="Sell_Truck_8";
 			init="this call A3W_fnc_setupSellTruck";
 			description="Sell Vehicle";
+		};
+		class Item53
+		{
+			position[]={26723.945,20.500479,24605.947};
+			azimut=-49.479092;
+			id=213;
+			side="EMPTY";
+			vehicle="Land_Atm_01_F";
+			leader=1;
+			skill=0.60000002;
+			init="[this] call A3W_fnc_setupMissionATM";
+		};
+		class Item54
+		{
+			position[]={22986.473,4.3386722,18883.984};
+			azimut=-31.252335;
+			id=214;
+			side="EMPTY";
+			vehicle="Land_Atm_01_F";
+			leader=1;
+			skill=0.60000002;
+			init="[this] call A3W_fnc_setupMissionATM";
 		};
 	};
 	class Markers
