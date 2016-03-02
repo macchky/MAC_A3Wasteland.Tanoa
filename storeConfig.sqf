@@ -1004,14 +1004,14 @@ planesArray = compileFinal str
 [
 	//["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 80000, "vehicle"],
 	//["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 90000, "vehicle"],
-	//["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 100000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 100000, "vehicle"],
 	//["To-199 Neophron CAS", "O_Plane_CAS_02_F", 100000, "vehicle"],
 	//["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 200000, "vehicle"],
-	//["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 200000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
+	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 160000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
 	//["K40 Ababil-3 Missile UAV (CSAT)", "O_UAV_02_F", 200000, "vehicle"],
-	//["K40 Ababil-3 Bomber UAV (CSAT)", "O_UAV_02_CAS_F", 200000, "vehicle"],
+	["K40 Ababil-3 Bomber UAV (CSAT)", "O_UAV_02_CAS_F", 160000, "vehicle"],
 	//["K40 Ababil-3 Missile UAV (AAF)", "I_UAV_02_F", 200000, "vehicle"],
-	//["K40 Ababil-3 Bomber UAV (AAF)", "I_UAV_02_CAS_F", 200000, "vehicle"]
+	["K40 Ababil-3 Bomber UAV (AAF)", "I_UAV_02_CAS_F", 160000, "vehicle"]
 ];
 
 boatsArray = compileFinal str
