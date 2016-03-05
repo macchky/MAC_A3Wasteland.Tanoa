@@ -329,7 +329,10 @@ R3F_LOG_CFG_can_transport_cargo = R3F_LOG_CFG_can_transport_cargo +
 	["I_Heli_light_03_base_F", 20],
 	["Heli_Transport_01_base_F", 25],
 	["Heli_Transport_02_base_F", 150],
-	["B_Heli_Transport_03_base_F", 150],
+	["B_Heli_Transport_03_F", 150],	// Huron
+	["B_Heli_Transport_03_unarmed_F", 150],	// Huron
+	["B_Heli_Transport_03_black_F", 150],	// Huron
+	["B_Heli_Transport_03_unarmed_green_F", 150],	// Huron
 	["Heli_Transport_04_base_F", 125],
 	["Heli_Attack_01_base_F", 10],
 	["Heli_Attack_02_base_F", 20]
