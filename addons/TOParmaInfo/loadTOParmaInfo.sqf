@@ -22,7 +22,7 @@ _serverInfoString = format ["<t color='#A0FFFFFF'>MAC #%1 Wasteland %2</t>", cal
 _serverInfoText ctrlSetStructuredText parseText _serverInfoString;
 
 _generalInfoText = _display displayCtrl TOParmaInfo_General_Info_BG;
-_generalInfoString = "Website: <t color='#0091CD'><a href='http://game.macchky.net'>game.macchky.net</a></t> Steam Group :<t color='#0091CD'><a href='http://steamcommunity.com/groups/macchky'>macchky.net</a></t> TeamSpeak: game.macchky.net Pass: waste";
+_generalInfoString = "Website: <t color='#0091CD'><a href='http://game.macchky.net'>game.macchky.net</a></t> Steam Group :<t color='#0091CD'><a href='http://steamcommunity.com/groups/macchky'>macchky.net</a></t> TeamSpeak: ts2.macchky.net Pass: waste";
 _generalInfoText ctrlSetStructuredText parseText _generalInfoString;
 
 
