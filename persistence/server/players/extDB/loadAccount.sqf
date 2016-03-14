@@ -6,7 +6,7 @@
 
 if (!isServer) exitWith {};
 
-private ["_UID", "_bank", "_moneySaving", "_donator", "_donatorEnabled", "_teamkiller", "_tkCount", "_tkAutoKickEnabled", "_tkKickAmount", "_customUniformEnabled", "_uniformNumber", "_result", "_data", "_columns", "_dataTemp", "_ghostingTimer", "_secs"];
+private ["_UID", "_bank", "_moneySaving", "_donator", "_donatorEnabled", "_teamkiller", "_tkCount", "_tkAutoKickEnabled", "_tkKickAmount", "_customUniformEnabled", "_uniformNumber", "_result", "_data", "_columns", "_dataTemp", "_ghostingTimer", "_secs", "_columns", "_pvar", "_pvarG"];
 _UID = _this;
 
 _bank = 0;
@@ -177,6 +177,20 @@ else
 	_data pushBack ["BankMoney", _bank];
 	_data pushBack ["DonatorLevel", _donator];
 	_data pushBack ["CustomUniform", _uniformNumber];
+};
+
+// before returning player data, restore global player stats if applicable
+if (["A3W_playerStatsGlobal"] call isConfigOn) then
+{
+	_columns = ["playerKills", "aiKills", "teamKills", "deathCount", "reviveCount", "captureCount"];
+	_result = [format ["getPlayerStats:%1:%2", _UID, _columns joinString ","], 2] call extDB_Database_async;
+
+	{
+		_pvar = format ["A3W_playerScore_%1_%2", _columns select _forEachIndex, _UID];
+		_pvarG = _pvar + "_global";
+		missionNamespace setVariable [_pvarG, _x - (missionNamespace getVariable [_pvar, 0])];
+		publicVariable _pvarG;
+	} forEach _result;
 };
 
 _data
