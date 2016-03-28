@@ -32,8 +32,7 @@ BeaconScanInProgress = false;
 playerCompiledScripts = false;
 playerSetupComplete = false;
 
-waitUntil {!isNull player};
-waitUntil {time > 0.1};
+waitUntil {!isNull player && time > 0};
 
 // enableEnvironment false; // Temporary fix for client side FPS problems. Disables all wildlife and environment sounds
 
@@ -58,6 +57,8 @@ if !(playerSide in [BLUFOR,OPFOR,INDEPENDENT]) exitWith
 if (!isNil "client_initEH") then { player removeEventHandler ["Respawn", client_initEH] };
 player addEventHandler ["Respawn", { _this spawn onRespawn }];
 player addEventHandler ["Killed", { _this spawn onKilled }];
+
+call compile preprocessFileLineNumbers "addons\far_revive\FAR_revive_init.sqf";
 
 A3W_scriptThreads pushBack execVM "client\functions\evalManagedActions.sqf";
 
@@ -145,7 +146,6 @@ if (["A3W_survivalSystem"] call isConfigOn) then
 A3W_scriptThreads pushBack execVM "addons\fpsFix\vehicleManager.sqf";
 A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "client\functions\drawPlayerIcons.sqf";
-[] execVM "addons\far_revive\FAR_revive_init.sqf";
 [] execVM "addons\camera\functions.sqf";
 [] execVM "addons\UAV_Control\functions.sqf";
 [] execVM "addons\water_edge\functions.sqf";		// Water edge fix
