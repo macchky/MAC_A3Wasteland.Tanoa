@@ -142,17 +142,10 @@ class PlayersMenu
 			idc = playerMenuPlayerItems;
 			text = "Items:";
 			sizeEx = 0.030;
-<<<<<<< HEAD
-			x = 0.52 * safezoneW + safezoneX;
-			y = 0.315 * safezoneH + safezoneY;
-			w = 0.40 * safezoneW;
-			h = 0.04 * safezoneH;
-=======
 			x = 0.52 * (4/3) * SZ_SCALE_ABS + safezoneX;
 			y = 0.295 * SZ_SCALE_ABS + safezoneY;
 			w = 0.40 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
->>>>>>> 43d2e0f... Improved player management a bit * Player list sorted alphabetically * UID shown in textbox to allow copy * Added button to access Steam profile via default browser * Warn text size increased to be actually legible * UI scaling made consistent for all aspect ratios * Minor code improvements
 		};
 
 		class PlayerHealthText: w_RscText
@@ -160,17 +153,10 @@ class PlayersMenu
 			idc = playerMenuPlayerHealth;
 			text = "Health:";
 			sizeEx = 0.030;
-<<<<<<< HEAD
-			x = 0.52 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
-			w = 0.25 * safezoneW;
-			h = 0.04 * safezoneH;
-=======
 			x = 0.52 * (4/3) * SZ_SCALE_ABS + safezoneX;
 			y = 0.315 * SZ_SCALE_ABS + safezoneY;
 			w = 0.25 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
->>>>>>> 43d2e0f... Improved player management a bit * Player list sorted alphabetically * UID shown in textbox to allow copy * Added button to access Steam profile via default browser * Warn text size increased to be actually legible * UI scaling made consistent for all aspect ratios * Minor code improvements
 		};
 
 		class PlayerPosistionText: w_RscText
@@ -178,17 +164,10 @@ class PlayersMenu
 			idc = playerMenuPlayerPos;
 			text = "Position:";
 			sizeEx = 0.030;
-<<<<<<< HEAD
-			x = 0.52 * safezoneW + safezoneX;
-			y = 0.355 * safezoneH + safezoneY;
-			w = 0.25 * safezoneW;
-			h = 0.04 * safezoneH;
-=======
 			x = 0.52 * (4/3) * SZ_SCALE_ABS + safezoneX;
 			y = 0.335 * SZ_SCALE_ABS + safezoneY;
 			w = 0.25 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
->>>>>>> 43d2e0f... Improved player management a bit * Player list sorted alphabetically * UID shown in textbox to allow copy * Added button to access Steam profile via default browser * Warn text size increased to be actually legible * UI scaling made consistent for all aspect ratios * Minor code improvements
 		};
 	};
 
