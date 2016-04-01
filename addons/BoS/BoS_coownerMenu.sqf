@@ -22,9 +22,7 @@ if (!isNil "_uid") then {
 					"Lights OFF",
 					"Lights ON",
 					"Lock Down Base",
-					"Release Lock Down",
-					"Lights OFF",
-					"Lights ON"
+					"Release Lock Down"
 	];
 
 	{
