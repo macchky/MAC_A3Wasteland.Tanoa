@@ -38,8 +38,7 @@ switch (toLower _action) do
 
 	case "action_slay":
 	{
-		(call FAR_FindTarget) setDamage 1;
-		[player, "gutCount", 1] call fn_addScore;
+		call FAR_Slay_Target;
 	};
 
 	case "action_load":
