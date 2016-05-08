@@ -7,6 +7,16 @@
 params ["_id", "_uid", "_name", "_owner", "_jip"];
 
 diag_log format ["Player connected: %1 (%2)", _name, _uid];
+if (_uid isEqualTo "") exitWith {};
+
+missionNamespace setVariable ["A3W_joinTickTime_" + _uid, diag_tickTime];
+
+private _spawnTimestamps = missionNamespace getVariable ["A3W_spawnTimestamps_" + _uid, []];
+
+if !(_spawnTimestamps isEqualTo []) then
+{
+	[_spawnTimestamps, diag_tickTime] remoteExec ["A3W_fnc_setSpawnTimestamps", _owner]; // do not whitelist
+};
 
 if (["A3W_AdminConnectionChat"] call isConfigOn) then
 {
@@ -32,11 +42,4 @@ if (["A3W_AdminConnectionChat"] call isConfigOn) then
 		};
 
 	};
-};
-
-_spawnTimestamps = missionNamespace getVariable ["A3W_spawnTimestamps_" + _uid, []];
-
-if !(_spawnTimestamps isEqualTo []) then
-{
-	[_spawnTimestamps, diag_tickTime] remoteExec ["A3W_fnc_setSpawnTimestamps", _owner]; // do not whitelist
 };
