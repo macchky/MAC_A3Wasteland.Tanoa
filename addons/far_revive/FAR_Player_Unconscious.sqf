@@ -126,8 +126,10 @@ if (FAR_EnableDeathMessages && difficultyOption "deathMessages" > 0 && !isNil "_
 			{
 				_names set [1, toArray name _killer];
 			};
-			
-			FAR_deathMessage = [_names, netId _unit, netId _killer];
+
+			if (!alive _unit) exitWith {};
+
+			FAR_deathMessage = [_names, netId _unit];
 			publicVariable "FAR_deathMessage";
 			["FAR_deathMessage", FAR_deathMessage] call FAR_public_EH;
 		};
