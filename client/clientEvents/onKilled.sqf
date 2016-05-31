@@ -14,7 +14,6 @@ _killer = _player getVariable "FAR_killerPrimeSuspect";
 if (isNil "_killer" && !isNil "FAR_findKiller") then { _killer = _player call FAR_findKiller };
 if (isNil "_killer" || {isNull _killer}) then { _killer = _presumedKiller };
 
-<<<<<<< HEAD
 // GoT - create a R.I.P. marker (visible for the player only) to help locate it's body
 createBodyMarker = 
 {
@@ -33,6 +32,7 @@ createBodyMarker =
 };
 [] spawn createBodyMarker;
 
+_killer = effectiveCommander _killer;
 _deathCause = _player getVariable ["A3W_deathCause_local", []];
 
 if (_killer == _player) then
@@ -46,18 +46,8 @@ if (_killer == _player) then
 	_killer = objNull;
 };
 
-[_player, _killer, _presumedKiller, _deathCause] spawn
-{
-	if (isServer) then
-	{
-		_this call server_PlayerDied;
-	}
-	else
-	{
-		PlayerCDeath = _this;
-		publicVariableServer "PlayerCDeath";
-	};
-};
+[_player, _killer, _presumedKiller, _deathCause] remoteExecCall ["A3W_fnc_serverPlayerDied", 2];
+[0, _player, _killer, [_killer, _player] call A3W_fnc_isFriendly] call A3W_fnc_deathMessage;
 
 if (_player == player) then
 {
