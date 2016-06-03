@@ -39,6 +39,7 @@ overviewText = "Website: game.macchky.net";
 overviewTextLocked = "Website: macchky.net Teamspeak: ts2.macchky.net";
 overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\Loading.jpg";
+briefing = 0; // if 0, skip Continue button
 
 #include "debugFlag.hpp"
 
