@@ -17,7 +17,7 @@ respawnDialog = 0; // do not enable this, otherwise the default scoreboard will 
 onPauseScript = "client\clientEvents\onPause.sqf";
 class Header
 {
-	gameType=Sandbox;
+	gameType=Survival;
 	minPlayers=1;
 	maxPlayers=145; // 144 players, 1 headless client
 };
@@ -33,7 +33,7 @@ showHUD[] = {
 	true	// HUD Weapon Cursors
 };
 
-author="macchky - and A3Wasteland.com";
+author="macchky and A3Wasteland.com";
 onLoadName = "MAC A3Wasteland Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "Website: game.macchky.net CORE MISSION: a3wasteland.com";
 overviewText = "Website: game.macchky.net";

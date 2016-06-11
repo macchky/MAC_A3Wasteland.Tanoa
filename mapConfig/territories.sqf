@@ -1,8 +1,8 @@
 // ******************************************************************************************
-// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2016 A3Wasteland.com *
 // ******************************************************************************************
 //	@file Name: territories.sqf
-//	@file Author: AgentRev, Bewilderbeest
+//	@file Author: AgentRev
 
 // Territory system definitions. See territory/README.md for more details.
 //
@@ -12,38 +12,35 @@
 // 4 - Territory category, currently unused. See territory/README.md for details.
 
 [
-	["TERRITORY_0_KAVALA_A", "Kavala (A)", 3500],
-	["TERRITORY_0_KAVALA_B", "Kavala (B)", 3500],
-	["TERRITORY_0_KAVALA_C", "Kavala (C)", 3500],
-	["TERRITORY_1_ALTISAIR_A", "Altis Airport (A)", 3500],
-	["TERRITORY_1_ALTISAIR_B", "Altis Airport (B)", 3500],
-	["TERRITORY_1_ALTISAIR_C", "Altis Airport (C)", 3500],
-	["TERRITORY_2_PYRGOS_A", "Pyrgos (A)", 3500],
-	["TERRITORY_2_PYRGOS_B", "Pyrgos (B)", 3500],
-	["TERRITORY_2_PYRGOS_C", "Pyrgos (C)", 3500],
-	["TERRITORY_3_SELAKANO_A", "SELAKANO (A)", 3500],
-	["TERRITORY_3_SELAKANO_B", "SELAKANO (B)", 3500],
-	["TERRITORY_3_SELAKANO_C", "SELAKANO (C)", 3500],
-	["TERRITORY_4_KORE_A", "KORE (A)", 3500],
-	["TERRITORY_4_KORE_B", "KORE (B)", 3500],
-	["TERRITORY_4_KORE_C", "KORE (C)", 3500],
-	["TERRITORY_5_ZAROS_A", "ZAROS (A)", 3000],
-	["TERRITORY_5_ZAROS_B", "ZAROS (B)", 3000],
-	["TERRITORY_5_ZAROS_C", "ZAROS (C)", 3000],
-	["TERRITORY_6_DOCKS_A", "DOCKS (A)", 2500],
-	["TERRITORY_6_DOCKS_B", "DOCKS (B)", 2500],
-	["TERRITORY_6_DOCKS_C", "DOCKS (C)", 2500],
-	["TERRITORY_6_DOCKS_D", "DOCKS (D)", 2500],
-	["TERRITORY_7_GHOST_A", "GHOST (A)", 2500],
-	["TERRITORY_7_GHOST_B", "GHOST (B)", 2500],
-	["TERRITORY_7_GHOST_C", "GHOST (C)", 2500],
-	["TERRITORY_7_GHOST_D", "GHOST (D)", 2500],
-	["TERRITORY_8_ABDERA_A", "ABDERA (A)", 3500],
-	["TERRITORY_8_ABDERA_B", "ABDERA (B)", 3500],
-	["TERRITORY_8_ABDERA_C", "ABDERA (C)", 3500],
-	["TERRITORY_9_PANOCHORI_A", "PANOCHORI (A)", 2500],
-	["TERRITORY_9_PANOCHORI_B", "PANOCHORI (B)", 2500],
-	["TERRITORY_9_PANOCHORI_C", "PANOCHORI (C)", 2500],
-	["TERRITORY_9_PANOCHORI_D", "PANOCHORI (D)", 2500]
-
+	["TERRITORY_BALAVU_TRANSMITTER", "Balavu Transmitter", 2000, "TRANSMITTER"],
+	["TERRITORY_BLUE_PEARL", "Blue Pearl Port", 2000, "INDUSTRIAL"],
+	["TERRITORY_COMMS_BRAVO", "Comms Bravo", 2000, "TRANSMITTER"],
+	["TERRITORY_COMMS_WHISKEY", "Comms Whiskey", 2000, "TRANSMITTER"],
+	["TERRITORY_KATKOULA_DEPOT", "Katkoula Fuel Depot", 2000, "INDUSTRIAL"],
+	["TERRITORY_LAIKORO_DEPOT", "Laikoro Fuel Depot", 2000, "INDUSTRIAL"],
+	["TERRITORY_LIFOU_TRANSMITTER", "Lifou Transmitter", 2000, "TRANSMITTER"],
+	["TERRITORY_LIJNHAVEN_AIRSTRIP", "Lijnhaven Airstrip", 2000, "AIRFIELD"],
+	["TERRITORY_LIJNHAVEN_FORTRESS", "Lijnhaven Fortress", 2000, "RUINS"],
+	["TERRITORY_LILO_POWER", "Lilo Power Station", 2000, "POWER"],
+	["TERRITORY_LUGANVILLE_TRANSMITTER", "Luganville Transmitter", 2000, "TRANSMITTER"],
+	["TERRITORY_MONT_TANOA", "Mont Tanoa", 2000, "TRANSMITTER"],
+	["TERRITORY_RED_SPRING", "Red Spring Mine", 2000, "INDUSTRIAL"],
+	["TERRITORY_REGINA_RAILYARD", "Regina Railyard", 2000, "INDUSTRIAL"],
+	["TERRITORY_ROCHELLE_AERODROME", "La Rochelle Aerodrome", 2000, "AIRFIELD"],
+	["TERRITORY_ROCHELLE_RAILYARD", "La Rochelle Railyard", 2000, "INDUSTRIAL"],
+	["TERRITORY_SE_LUMBERYARD", "Southeast Lumberyard", 2000, "INDUSTRIAL"],
+	["TERRITORY_SE_TRANSMITTER", "Southeast Transmitter", 2000, "TRANSMITTER"],
+	["TERRITORY_STJULIEN_RAILYARD", "Saint-Julien Railyard", 2000, "INDUSTRIAL"],
+	["TERRITORY_SW_TRANSMITTER", "Southwest Transmitter", 2000, "TRANSMITTER"],
+	["TERRITORY_TANOA_AIRPORT_NORTH", "Tanoa Airport (North)", 2500, "AIRFIELD"],
+	["TERRITORY_TANOA_AIRPORT_SOUTH", "Tanoa Airport (South)", 2500, "AIRFIELD"],
+	["TERRITORY_TANOA_AIRPORT_TERMINAL", "Tanoa Airport Terminal", 2500, "AIRFIELD"],
+	["TERRITORY_TANOUKA_REFINERY", "Tanouka Sugar Refinery", 2000, "INDUSTRIAL"],
+	["TERRITORY_TANOUKA_TRANSMITTER", "Tanouka Transmitter", 2000, "TRANSMITTER"],
+	["TERRITORY_TEMPLE_RUINS", "Temple Ruins", 2000, "RUINS"],
+	["TERRITORY_TUVANAKA_AIRBASE", "Tuvanaka Airbase", 2000, "AIRFIELD"],
+	["TERRITORY_TUVANAKA_GSM", "Tuvanaka GSM Station", 2000, "TRANSMITTER"],
+	["TERRITORY_YANUKKA_AIRSTRIP", "Yanukka Airstrip", 2000, "AIRFIELD"]
 ]
+
+//copyToClipboard str ((allMapMarkers select {_x select [0,10] == "TERRITORY_"}) apply {[_x, markerText _x, 2000, ""]})
