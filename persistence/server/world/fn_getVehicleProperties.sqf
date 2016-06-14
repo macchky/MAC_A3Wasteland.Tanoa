@@ -43,6 +43,13 @@ switch (true) do
 // Save lockstate by AgentRev
 _variables pushBack ["R3F_LOG_disabled", _veh getVariable ["R3F_LOG_disabled", false]];
 
+private _isUav = (round getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0);
+
+if (_isUav && side _veh in [BLUFOR,OPFOR,INDEPENDENT]) then
+{
+	_variables pushBack ["uavSide", str side _veh];
+};
+
 _owner = _veh getVariable ["ownerUID", ""];
 
 _doubleBSlash = (call A3W_savingMethod == "extDB");
@@ -164,7 +171,7 @@ _props =
 ];
 
 // If flying and not UAV, do not save current pos/dir/vel
-if (_flying && {getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") <= 0}) then
+if (_flying && !_isUav) then
 {
 	_props deleteRange [1,3];
 };
