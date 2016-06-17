@@ -33,8 +33,8 @@ showHUD[] = {
 	true	// HUD Weapon Cursors
 };
 
-author="macchky and TOPARMA.COM - Core by A3Wasteland.com";
-onLoadName = "MAC A3Wasteland Altis"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+author="macchky - Core by A3Wasteland.com";
+onLoadName = "MAC A3Wasteland Tanoa"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 onLoadMission = "Website: game.macchky.net CORE MISSION: a3wasteland.com";
 overviewText = "Website: game.macchky.net";
 overviewTextLocked = "Website: macchky.net Teamspeak: ts2.macchky.net";

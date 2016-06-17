@@ -1,4 +1,4 @@
-# A3Wasteland Altis
+# A3Wasteland Tanoa
 
 A3Wasteland is a survival-like combat sandbox, which incorporates elements of team deathmatch and sector control in one big fun-to-play package. Similar to DayZ, the objectives are to scavenge weapons and vehicles, team up with fellow players, and engage in combat to obtain control of the landscape. Best experienced with 50 or more players. 
 
@@ -7,6 +7,8 @@ The source code is based on [GoT Wasteland](https://github.com/JoSchaap/GoT_Wast
 The mission has come a long way since 404 Wasteland. A large portion of the code a has been rewritten, and it contains many new features like territory capture, player saving, vehicle saving, vehicle stores, new secondary missions, and more.
 
 For questions and support, please visit our [forums](http://forums.a3wasteland.com/).
+
+This Mission is not yet completed.
 
 ---
 
