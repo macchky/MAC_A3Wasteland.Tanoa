@@ -1223,6 +1223,76 @@ colorsArray = compileFinal str
 		[
 			["Rusty (Hatchback)", [[0, _wreckDir + "civilcar_extwreck_co.paa"]]]
 		]
+	],
+	[ // Caesar BTT color
+		"C_Plane_Civil_01_F",
+		[
+			["Red Line (Tan Interior)", ["RedLine_1"]],
+			["Red Line", ["RedLine_2"]],
+			["Blue Wave (Tan Interior)", ["Wave_1"]],
+			["Blue Wave", ["Wave_2"]],
+			["Tribal (Tan Interior)", ["Tribal_1"]],
+			["Tribal", ["Tribal_2"]],
+			["Racing (Tan Interior)", ["Racer_1"]],
+			["Racing", ["Racer_2"]]
+		]
+	],
+	[ // V-44 X Blackfish (Infantry Transport) color
+		"B_T_VTOL_01_infantry_F",
+		[
+			["Olive", ["Olive"]],
+			["Blue", ["Blue"]]
+		]
+	],
+	[ // V-44 X Blackfish  (Vehicle Transport) color
+		"B_T_VTOL_01_vehicle_F",
+		[
+			["Olive", ["Olive"]],
+			["Blue", ["Blue"]]
+		]
+	],
+	[ // V-44 X Blackfish (Armed) color
+		"B_T_VTOL_01_armed_F",
+		[
+			["Olive", ["Olive"]],
+			["Blue", ["Blue"]]
+		]
+	],
+	[ // Y-32 Xi'an (Vehicle Transport) color
+		"O_T_VTOL_02_vehicle_F",
+		[
+			["Green Hex", ["GreenHex"]],
+			["Grey", ["Grey"]],
+			["Hex", ["Hex"]]
+		]
+	],
+	[ // Y-32 Xi'an (Infantry Transport)x color
+		"O_T_VTOL_02_infantry_F",
+		[
+			["Green Hex", ["GreenHex"]],
+			["Grey", ["Grey"]],
+			["Hex", ["Hex"]]
+		]
+	],
+		[ // RHIB color
+		"C_Boat_Transport_02_F",
+		[
+			["Black", ["Black"]],
+			["Civilian", ["Civilian"]]
+		]
+	],
+	[ // MB 4WD color
+		"C_Offroad_02_unarmed_F",
+		[
+			["Black", ["Black"]],
+			["Blue", ["Blue"]],
+			["Brown", ["Brown"]],
+			["Green", ["Green"]],
+			["Olive", ["Olive"]],
+			["Orange", ["Orange"]],
+			["Red", ["Red"]],
+			["White", ["White"]]
+		]
 	]
 ];
 
