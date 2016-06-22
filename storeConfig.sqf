@@ -65,8 +65,8 @@ rifleArray = compileFinal str
 
 	["M320 LRR Sniper", "srifle_LRR_LRPS_F", 1800],
 	["M320 LRR Sniper (Camo)", "srifle_LRR_camo_LRPS_F", 1850],
-	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 1700],
-	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_LRPS_F", 1750],
+	["GM6 Lynx Sniper", "srifle_GM6_LRPS_F", 1900],
+	["GM6 Lynx Sniper (Camo)", "srifle_GM6_camo_LRPS_F", 1950],
 	// Underwater Gun
 	["SDAR Underwater Rifle", "arifle_SDAR_F", 100],
 
@@ -88,6 +88,12 @@ rifleArray = compileFinal str
 	["ASP-1 Kir 12.7 mm (Tan)", "srifle_DMR_04_Tan_F", 1850],
 
 	// Apex
+	["MX Carbine (Khaki)", "arifle_MXC_khk_F", 150],
+	["MX Rifle (Khaki)", "arifle_MX_khk_F", 200],
+	["MX 3GL Rifle (Khaki)", "arifle_MX_GL_khk_F", 250],
+	["MXM Rifle (Khaki)", "arifle_MXM_khk_F", 300],
+	["M320 LRR Sniper (Tropic)", "srifle_LRR_tna_F", 1800],
+	["GM6 Lynx Sniper (Green Hex)", "srifle_GM6_ghex_F", 1900],
 	["SPAR-16 5.56 mm (Black)","arifle_SPAR_01_blk_F", 300],
 	["SPAR-16 5.56 mm (Khaki)","arifle_SPAR_01_khk_F", 300],
 	["SPAR-16 5.56 mm (Sand)","arifle_SPAR_01_snd_F", 300],
@@ -1195,7 +1201,7 @@ colorsArray = compileFinal str
 			]]
 		]
 	],
-	[ // Ghost Hawk camo 
+	[ // Ghost Hawk camo
 		"Heli_Transport_01_base_F",
 		[
 			["Green (Ghost Hawk)", ["Green"]]
