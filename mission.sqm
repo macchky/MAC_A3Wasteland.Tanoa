@@ -104,7 +104,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="A3Wasteland Tanoa v1.3"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+		briefingName="MAC A3Wasteland Tanoa v1.3"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
 		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
