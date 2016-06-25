@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=0.1;
 	autoGroupingDist=10;
-	toggles=2;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=846;
+		nextID=850;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1816.2435,39.877892,3916.8018};
-		dir[]={0.17628662,-0.31288216,0.93329322};
-		up[]={0.0580712,0.94979459,0.30743974};
-		aside[]={0.98262829,-1.4802208e-007,-0.18560496};
+		pos[]={4258.9512,46.983791,3986.1772};
+		dir[]={-0.8221494,-0.56848556,0.030254293};
+		up[]={-0.56809247,0.82270199,0.02090512};
+		aside[]={0.036774769,5.3109397e-007,0.99933624};
 	};
 };
 binarizationWanted=0;
@@ -37,13 +37,15 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Structures_F_Exp_Naval_Piers",
 	"A3_Structures_F_Civ_Lamps",
-	"A3_Structures_F_Naval_Buoys"
+	"A3_Structures_F_Naval_Buoys",
+	"A3_Soft_F_EPC_Truck_03",
+	"A3_Soft_F_Gamma_Truck_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=7;
+		items=9;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -93,18 +95,59 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item7
+		{
+			className="A3_Soft_F_EPC";
+			name="Arma 3 Win Episode - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item8
+		{
+			className="A3_Soft_F_Gamma";
+			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=3333663;
 class ScenarioData
 {
-	author="AgentRev";
+	author="macchky and AgentRev";
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
-		briefingName="MAC A3Wasteland Tanoa v1.3"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
+		briefingName="MAC A3Wasteland Tanoa v1.3";
 		overviewText="Wasteland survival sandbox by Team Wasteland - visit A3Wasteland.com for more details";
 		resistanceWest=0;
 		timeOfChanges=3e+038;
@@ -122,7 +165,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=687;
+		items=691;
 		class Item0
 		{
 			dataType="Group";
@@ -2967,7 +3010,7 @@ class Mission
 						angles[]={0,3.5270867,0};
 					};
 					side="Civilian";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						init="0 = [this] spawn A3W_fnc_setupStoreNPC";
@@ -2975,12 +3018,14 @@ class Mission
 					};
 					id=185;
 					type="C_man_1_1_F";
+					atlOffset=0.51183748;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=184;
+			atlOffset=0.51183748;
 		};
 		class Item40
 		{
@@ -3037,12 +3082,14 @@ class Mission
 					};
 					id=189;
 					type="C_man_1_1_F";
+					atlOffset=0.15400529;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=188;
+			atlOffset=0.15400529;
 		};
 		class Item42
 		{
@@ -3068,12 +3115,14 @@ class Mission
 					};
 					id=191;
 					type="C_man_1_1_F";
+					atlOffset=0.2036581;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=190;
+			atlOffset=0.2036581;
 		};
 		class Item43
 		{
@@ -3099,14 +3148,14 @@ class Mission
 					};
 					id=193;
 					type="C_man_1_1_F";
-					atlOffset=4.7683716e-007;
+					atlOffset=0.1682272;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=192;
-			atlOffset=4.7683716e-007;
+			atlOffset=0.1682272;
 		};
 		class Item44
 		{
@@ -3264,12 +3313,14 @@ class Mission
 					};
 					id=203;
 					type="C_man_1_1_F";
+					atlOffset=0.1342392;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=202;
+			atlOffset=0.1342392;
 		};
 		class Item49
 		{
@@ -3386,7 +3437,7 @@ class Mission
 						angles[]={0,5.9565291,0};
 					};
 					side="Civilian";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						init="0 = [this] spawn A3W_fnc_setupStoreNPC";
@@ -3394,14 +3445,14 @@ class Mission
 					};
 					id=211;
 					type="C_man_1_1_F";
-					atlOffset=7.6293945e-006;
+					atlOffset=0.27400017;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=210;
-			atlOffset=7.6293945e-006;
+			atlOffset=0.27400017;
 		};
 		class Item53
 		{
@@ -4260,7 +4311,7 @@ class Mission
 			type="Empty";
 			colorName="ColorWhite";
 			id=301;
-			atlOffset=34.474277;
+			atlOffset=38.203781;
 		};
 		class Item143
 		{
@@ -4271,6 +4322,7 @@ class Mission
 			colorName="ColorGUER";
 			angle=16.790106;
 			id=302;
+			atlOffset=0.079471588;
 		};
 		class Item144
 		{
@@ -9146,7 +9198,7 @@ class Mission
 			};
 			id=646;
 			type="Land_LampShabby_F";
-			atlOffset=0.049423695;
+			atlOffset=0.034954071;
 		};
 		class Item488
 		{
@@ -12338,7 +12390,7 @@ class Mission
 			name="LandConvoy_1_2";
 			type="Empty";
 			colorName="ColorEAST";
-			angle=291.61597;
+			angle=291.61594;
 			id=838;
 		};
 		class Item680
@@ -12358,7 +12410,7 @@ class Mission
 			name="LandConvoy_2_1";
 			type="Empty";
 			colorName="ColorEAST";
-			angle=224.24199;
+			angle=224.24197;
 			id=840;
 			atlOffset=-243.9091;
 		};
@@ -12369,7 +12421,7 @@ class Mission
 			name="LandConvoy_2_2";
 			type="Empty";
 			colorName="ColorEAST";
-			angle=214.23398;
+			angle=214.23396;
 			id=841;
 			atlOffset=-8428.7207;
 		};
@@ -12380,7 +12432,7 @@ class Mission
 			name="LandConvoy_2_3";
 			type="Empty";
 			colorName="ColorEAST";
-			angle=216.73581;
+			angle=216.73579;
 			id=842;
 		};
 		class Item684
@@ -12390,7 +12442,7 @@ class Mission
 			name="LandConvoy_3_1";
 			type="Empty";
 			colorName="ColorEAST";
-			angle=146.91399;
+			angle=146.91397;
 			id=843;
 		};
 		class Item685
@@ -12410,8 +12462,72 @@ class Mission
 			name="LandConvoy_3_3";
 			type="Empty";
 			colorName="ColorEAST";
-			angle=154.67572;
+			angle=154.6757;
 			id=845;
+		};
+		class Item687
+		{
+			dataType="Marker";
+			position[]={2172.624,10.818848,3469.4714};
+			name="Service_Truck_1";
+			text="Service_Truck_1";
+			type="Empty";
+			colorName="ColorYellow";
+			id=846;
+			atlOffset=-2.1311522;
+		};
+		class Item688
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2172.8213,15.095405,3469.1272};
+				angles[]={0,2.7790484,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="LOCKED";
+				init="this call A3W_fnc_setupResupplyTruck;this allowDamage false;";
+				name="Service_Truck_1";
+				description="Service";
+			};
+			id=847;
+			type="O_Truck_03_ammo_F";
+		};
+		class Item689
+		{
+			dataType="Marker";
+			position[]={4220.7881,2.0061078e+015,3977.3979};
+			name="Sell_Truck_1";
+			text="Sell_Truck_1";
+			type="Empty";
+			colorName="ColorGreen";
+			id=848;
+			atlOffset=2.0061078e+015;
+		};
+		class Item690
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4221.7222,20.212776,3976.9414};
+				angles[]={0.031991884,5.4477658,6.2565165};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				skill=0.60000002;
+				lock="LOCKED";
+				init="this call A3W_fnc_setupSellTruck";
+				name="Sell_Truck_1";
+				description="Sell Vehicle";
+			};
+			id=849;
+			type="B_Truck_01_box_F";
 		};
 	};
 };
