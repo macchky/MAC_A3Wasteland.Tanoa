@@ -7,6 +7,8 @@
 # @@Create Date: 2013-09-16 20:40:58
 #*********************************************************/
 
+// █████ FOR USE WITH APEX SNEAK PREVIEW BRANCH ONLY! █████
+
 // This tracks which store owner the client is interacting with
 currentOwnerName = "";
 
@@ -592,20 +594,11 @@ uniformArray = compileFinal str
 	["Bandit Clothes (Skull)","U_I_C_Soldier_Bandit_2_F", 25, "uni"],
 	["Bandit Clothes (Tank Top)","U_I_C_Soldier_Bandit_5_F", 25, "uni"],
 	["Bandit Clothes (Tee)","U_I_C_Soldier_Bandit_3_F", 25, "uni"],
-	["Casual Clothes (Blue)","U_C_Man_casual_2_F", 25, "uni"],
-	["Casual Clothes (Green)","U_C_Man_casual_3_F", 25, "uni"],
-	["Casual Clothes (Navy)","U_C_Man_casual_1_F", 25, "uni"],
 	["Paramilitary Garb (Jacket)","U_I_C_Soldier_Para_2_F", 25, "uni"],
 	["Paramilitary Garb (Shirt)","U_I_C_Soldier_Para_3_F", 25, "uni"],
 	["Paramilitary Garb (Shorts)","U_I_C_Soldier_Para_5_F", 25, "uni"],
 	["Paramilitary Garb (Tank Top)","U_I_C_Soldier_Para_4_F", 25, "uni"],
 	["Paramilitary Garb (Tee)","U_I_C_Soldier_Para_1_F", 25, "uni"],
-	["Sport Clothes (Beach)","U_C_man_sport_1_F", 25, "uni"],
-	["Sport Clothes (Blue)","U_C_man_sport_3_F", 25, "uni"],
-	["Sport Clothes (Orange)","U_C_man_sport_2_F", 25, "uni"],
-	["Summer Clothes (Red)","U_C_Man_casual_6_F", 25, "uni"],
-	["Summer Clothes (Sky)","U_C_Man_casual_4_F", 25, "uni"],
-	["Summer Clothes (Yellow)","U_C_Man_casual_5_F", 25, "uni"],
 	["Syndikat Uniform","U_I_C_Soldier_Camo_F", 25, "uni"],
 	["Combat Fatigues (Tropic)","U_B_T_Soldier_F", 50, "uni"],
 	["Combat Fatigues (Tropic, Tee)","U_B_T_Soldier_AR_F", 50, "uni"],
@@ -766,6 +759,10 @@ genItemArray = compileFinal str
 	["Chemlight (Green)", "Chemlight_green", 25, "mag"],
 	["Chemlight (Yellow)", "Chemlight_yellow", 25, "mag"],
 	["Chemlight (Red)", "Chemlight_red", 25, "mag"],
+	["Stealth Balaclava (Black)", "G_Balaclava_TI_blk_F", 200, "gogg"],
+	["Stealth Balaclava (Black, Goggles)", "G_Balaclava_TI_G_blk_F", 250, "gogg"],
+	["Stealth Balaclava (Green)", "G_Balaclava_TI_tna_F", 200, "gogg"],
+	["Stealth Balaclava (Green, Goggles)", "G_Balaclava_TI_G_tna_F", 250, "gogg"],
 	["Aviator Glasses", "G_Aviator", 25, "gogg"],
 	["Diving Goggles", "G_Diving", 100, "gogg"],
 	["Balaclava (Black)", "G_Balaclava_blk", 100, "gogg"],
