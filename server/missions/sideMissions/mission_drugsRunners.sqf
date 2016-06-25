@@ -106,7 +106,7 @@ _setupObjects =
 	_missionPicture = getText (configFile >> "CfgVehicles" >> _veh1 >> "picture");
 	_vehicleName = getText (configFile >> "CfgVehicles" >> _veh1 >> "displayName");
 
-	_missionHintText = format ["Drugrunners driving a <t color='%2'>%1</t> are moving drugs around Altis. Stop them quickly!<br/><br/>ドラッグランナーが<t color='%2'>%1</t>で移動している<br/>制止してドラッグを奪え！", _vehicleName, sideMissionColor];
+	_missionHintText = format ["Drugrunners driving a <t color='%2'>%1</t> are moving drugs around Tanoa. Stop them quickly!<br/><br/>ドラッグランナーが<t color='%2'>%1</t>で移動している<br/>制止してドラッグを奪え！", _vehicleName, sideMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
