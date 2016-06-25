@@ -115,6 +115,10 @@ randomSeed=3333663;
 class ScenarioData
 {
 	author="macchky and AgentRev";
+	class Header
+	{
+		gameType="Survival";
+	};
 };
 class CustomAttributes
 {
