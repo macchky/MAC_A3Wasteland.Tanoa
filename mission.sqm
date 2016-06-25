@@ -8313,7 +8313,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={5221.5,19.120667,3644};
-			name="TERRITORY_KATKOULA_DEPOT";
+			name="TERRITORY_8_KATKOULA_DEPOT";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8327,7 +8327,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={11841,6.9499998,13117};
-			name="TERRITORY_ROCHELLE_AERODROME";
+			name="TERRITORY_3_ROCHELLE_AERODROME";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8341,7 +8341,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={8945.5,-2.1106615,13767.5};
-			name="TERRITORY_ROCHELLE_RAILYARD";
+			name="TERRITORY_3_ROCHELLE_RAILYARD";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8356,7 +8356,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2286.5,13.184663,6330};
-			name="TERRITORY_LAIKORO_DEPOT";
+			name="TERRITORY_8_LAIKORO_DEPOT";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8370,7 +8370,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={6621.1519,66.588013,7854.624};
-			name="TERRITORY_LIFOU_TRANSMITTER";
+			name="TERRITORY_0_LIFOU_TRANSMITTER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8384,7 +8384,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={11648,5.2619948,3142};
-			name="TERRITORY_LIJNHAVEN_AIRSTRIP";
+			name="TERRITORY_7_LIJNHAVEN_AIRSTRIP";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8398,7 +8398,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={12102.5,3.4733343,2477.5};
-			name="TERRITORY_LIJNHAVEN_FORTRESS";
+			name="TERRITORY_7_LIJNHAVEN_FORTRESS";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8412,7 +8412,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={7440.418,7.4899998,8544.4863};
-			name="TERRITORY_LILO_POWER";
+			name="TERRITORY_6_LILO_POWER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8426,7 +8426,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={12877.451,183.01932,8578.5459};
-			name="TERRITORY_LUGANVILLE_TRANSMITTER";
+			name="TERRITORY_0_LUGANVILLE_TRANSMITTER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8439,7 +8439,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={9976.5,309.51569,12039};
-			name="TERRITORY_MONT_TANOA";
+			name="TERRITORY_6_MONT_TANOA";
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorYellow";
@@ -8452,7 +8452,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={12007.5,177.52345,10295.5};
-			name="TERRITORY_RED_SPRING";
+			name="TERRITORY_6_RED_SPRING";
 			markerType="RECTANGLE";
 			type="ellipse";
 			colorName="ColorYellow";
@@ -8466,7 +8466,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={4230.5,2.5999999,8455.5};
-			name="TERRITORY_REGINA_RAILYARD";
+			name="TERRITORY_3_REGINA_RAILYARD";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8480,7 +8480,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={5372,3.5599999,11165};
-			name="TERRITORY_STJULIEN_RAILYARD";
+			name="TERRITORY_4_STJULIEN_RAILYARD";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8494,7 +8494,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={12420,59.950233,3959};
-			name="TERRITORY_SE_LUMBERYARD";
+			name="TERRITORY_4_SE_LUMBERYARD";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8508,7 +8508,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={11015,182.51334,4213.5};
-			name="TERRITORY_SE_TRANSMITTER";
+			name="TERRITORY_2_SE_TRANSMITTER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8522,7 +8522,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2682,217.45,2594.5};
-			name="TERRITORY_SW_TRANSMITTER";
+			name="TERRITORY_2_SW_TRANSMITTER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8536,7 +8536,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={7105.5,2.6600001,7578.5};
-			name="TERRITORY_TANOA_AIRPORT_NORTH";
+			name="TERRITORY_1_TANOA_AIRPORT_NORTH";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8550,7 +8550,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={7169,2.6600001,7273.5};
-			name="TERRITORY_TANOA_AIRPORT_SOUTH";
+			name="TERRITORY_1_TANOA_AIRPORT_SOUTH";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8564,7 +8564,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={6915,2.6600001,7358};
-			name="TERRITORY_TANOA_AIRPORT_TERMINAL";
+			name="TERRITORY_1_TANOA_AIRPORT_TERMINAL";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8578,7 +8578,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={8356,-4.323426e-023,10305.5};
-			name="TERRITORY_TANOUKA_REFINERY";
+			name="TERRITORY_4_TANOUKA_REFINERY";
 			markerType="ELLIPSE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8593,7 +8593,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={7487.5,205.46001,9652};
-			name="TERRITORY_TANOUKA_TRANSMITTER";
+			name="TERRITORY_0_TANOUKA_TRANSMITTER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8607,7 +8607,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={11032.5,215.05161,8464};
-			name="TERRITORY_TEMPLE_RUINS";
+			name="TERRITORY_6_TEMPLE_RUINS";
 			markerType="ELLIPSE";
 			type="ellipse";
 			colorName="ColorYellow";
@@ -8621,7 +8621,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2101.6721,13.454808,13215.274};
-			name="TERRITORY_TUVANAKA_AIRBASE";
+			name="TERRITORY_5_TUVANAKA_AIRBASE";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8635,7 +8635,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2955.5,132.22601,13080.5};
-			name="TERRITORY_TUVANAKA_GSM";
+			name="TERRITORY_5_TUVANAKA_GSM";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8649,7 +8649,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2184,12.95,3520};
-			name="TERRITORY_YANUKKA_AIRSTRIP";
+			name="TERRITORY_4_YANUKKA_AIRSTRIP";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -8972,7 +8972,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2420.5,69.421318,7230};
-			name="TERRITORY_BALAVU_TRANSMITTER";
+			name="TERRITORY_0_BALAVU_TRANSMITTER";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -9000,7 +9000,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={13506.751,0,12196.567};
-			name="TERRITORY_BLUE_PEARL";
+			name="TERRITORY_8_BLUE_PEARL";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -9030,7 +9030,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={11077.245,350.4003,11503.477};
-			name="TERRITORY_COMMS_BRAVO";
+			name="TERRITORY_2_COMMS_BRAVO";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
@@ -9044,7 +9044,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={2681,170.84131,12317};
-			name="TERRITORY_COMMS_WHISKEY";
+			name="TERRITORY_2_COMMS_WHISKEY";
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="ColorYellow";
