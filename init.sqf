@@ -93,6 +93,7 @@ if (hasInterface || isServer) then
 	[] execVM "addons\EtV\init.sqf";
 	[] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
 	[] execVM "addons\vactions\functions.sqf";				// Micovery vehicle actions
+	[] execVM "addons\scripts\HvT.sqf";						// High Value Target
 	[] execVM "addons\APOC_Airdrop_Assistance\init.sqf";	// Airdrop
 	[] execVM "addons\AF_Keypad\AF_KP_vars.sqf";			// Keypad for base locking
 	[] execVM "addons\outlw_magRepack\MagRepack_init.sqf";
