@@ -1000,10 +1000,11 @@ helicoptersArray = compileFinal str
 	// Apex DLC
 	["V-44 X Blackfish (Infantry Transport)","B_T_VTOL_01_infantry_F", 15000, "vehicle"],
 	["V-44 X Blackfish (Vehicle Transport)","B_T_VTOL_01_vehicle_F", 10000, "vehicle"],
-	["V-44 X Blackfish (Armed)","B_T_VTOL_01_armed_F", 300000, "vehicle"],
+	["V-44 X Blackfish (Armed)","B_T_VTOL_01_armed_F", 60000, "vehicle"],
 
 	["Y-32 Xi'an (Vehicle Transport)","O_T_VTOL_02_vehicle_F", 60000, "vehicle"],
-	["Y-32 Xi'an (Infantry Transport)","O_T_VTOL_02_infantry_F", 80000, "vehicle"]
+	["Y-32 Xi'an (Infantry Transport)","O_T_VTOL_02_infantry_F", 65000, "vehicle"],
+	["MQ-12 Falcon UAV", "B_T_UAV_03_F", 90000, "vehicle"]
 ];
 
 planesArray = compileFinal str
@@ -1041,6 +1042,7 @@ boatsArray = compileFinal str
 	["SDV Submarine (CSAT)", "O_SDV_01_F", 1000, "submarine"],
 	["SDV Submarine (AAF)", "I_SDV_01_F", 1000, "submarine"],
 	// Apex DLC
+	["Water Scooter", "C_Scooter_Transport_01_F", 500, "boat"],
 	["RHIB","C_Boat_Transport_02_F", 1250, "boat"]
 ];
 
