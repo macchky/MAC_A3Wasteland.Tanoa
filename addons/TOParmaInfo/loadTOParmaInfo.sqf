@@ -26,11 +26,11 @@ _generalInfoString = "Website: <t color='#0091CD'><a href='http://game.macchky.n
 _generalInfoText ctrlSetStructuredText parseText _generalInfoString;
 
 
-_rulesOnline = "http://game.macchky.net/waste/rules.php";
+_rulesOnline = "http://game.macchky.net/wastet/rules.php";
 _rulesOffline = "addons\TOParmaInfo\rules.html";
-_newsOnline = "http://game.macchky.net/waste/news.php";
+_newsOnline = "http://game.macchky.net/wastet/news.php";
 _newsOffline = "addons\TOParmaInfo\news.html";
-_statsOnline = "http://game.macchky.net/waste/"+ _uid + "/stats.php";
+_statsOnline = "http://game.macchky.net/wastet/"+ _uid + "/stats.php";
 _statsOffline = "addons\TOParmaInfo\stats.html";
 
 
