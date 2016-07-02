@@ -130,7 +130,6 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_objectID = netId _object;
 			_object setVariable ["A3W_purchasedStoreObject", true];
 			_object setVariable ["ownerUID", getPlayerUID _player, true];
-			_object setVariable ["R3F_LOG_Disabled", false, true];
 
 			if (getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0) then
 			{
@@ -180,6 +179,12 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 				_object setVelocity [0,0,0.01];
 				// _object spawn cleanVehicleWreck;
 				_object setVariable ["A3W_purchasedVehicle", true, true];
+			};
+		
+			if (_object isKindOf "AllVehicles" && !({_object isKindOf _x} count ["StaticWeapon","UAV_02_base_F","UGV_01_base_F","B_T_UAV_03_F","O_T_UAV_04_CAS_F"] > 0)) then
+			{
+				_object lock 2; // Spawn vehicles in locked
+				_object setVariable ["R3F_LOG_disabled", true, true]; // Spawn vehicles in locked
 			};
 
 			_object setDir (if (_object isKindOf "Plane") then { markerDir _marker } else { random 360 });
