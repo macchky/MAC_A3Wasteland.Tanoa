@@ -149,14 +149,19 @@ shotgunArray = compileFinal str
 launcherArray = compileFinal str
 [
 	["RPG-42 Alamut", "launch_RPG32_F", 400],
+	["RPG-42 Alamut (G Hex)", "launch_RPG32_ghex_F", 400, "noDLC"],
 	["RPG-7","launch_RPG7_F", 400],
-	["PCML", "launch_NLAW_F", 1500],
-	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 3000],
-	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 3000],
-	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 3000],
-	["Titan MPRL AA (Desert)", "launch_Titan_F", 3000],
-	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 3000],
-	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 3000]
+	["PCML", "launch_NLAW_F", 600],
+	["Titan MPRL Compact (Tan)", "launch_Titan_short_F", 1000],
+	["Titan MPRL Compact (Brown)", "launch_O_Titan_short_F", 1000],
+	["Titan MPRL Compact (Olive)", "launch_I_Titan_short_F", 1000],
+	["Titan MPRL Compact (Tropic)", "launch_B_Titan_short_tna_F", 1000, "noDLC"],
+	["Titan MPRL Compact (G Hex)", "launch_O_Titan_short_ghex_F", 1000, "noDLC"],
+	["Titan MPRL AA (Desert)", "launch_Titan_F", 1000],
+	["Titan MPRL AA (Hex)", "launch_O_Titan_F", 1000],
+	["Titan MPRL AA (Digi)", "launch_I_Titan_F", 1000],
+	["Titan MPRL AA (Tropic)", "launch_B_Titan_tna_F", 1000, "noDLC"],
+	["Titan MPRL AA (G Hex)", "launch_O_Titan_ghex_F", 1000, "noDLC"]
 ];
 
 allGunStoreFirearms = compileFinal str (call pistolArray + call smgArray + call rifleArray + call lmgArray + call shotgunArray + call launcherArray);
@@ -391,19 +396,21 @@ accessoriesArray = compileFinal str
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
 headArray = compileFinal str
 [
-	["ECH", "H_HelmetB", 50, "hat"],
-	["ECH (Ghillie)", "H_HelmetB_camo", 50, "hat"],
-	["ECH (Light)", "H_HelmetB_light", 50, "hat"],
-	["ECH (Spraypaint)", "H_HelmetB_paint", 50, "hat"],
-	["SF Helmet", "H_HelmetSpecB", 50, "hat"],
-	["SF Helmet (Black)", "H_HelmetSpecB_blk", 50, "hat"],
-	["SF Helmet (Light Paint)", "H_HelmetSpecB_paint1", 50, "hat"],
-	["SF Helmet (Dark Paint)", "H_HelmetSpecB_paint2", 50, "hat"],
+	["Combat Helmet", "H_HelmetB", 50, "hat"],
+	["Combat Helmet (Black)", "H_HelmetB_black", 50, "hat"],
+	["Combat Helmet (Camonet)", "H_HelmetB_camo", 50, "hat"],
+	["Enhanced Combat Helmet", "H_HelmetSpecB", 75, "hat"],
+	["Enhanced Combat Helmet (Black)", "H_HelmetSpecB_blk", 75, "hat"],
+	["Enhanced Combat Helmet (Snakeskin)", "H_HelmetSpecB_snakeskin", 75, "hat"],
+	["Enhanced Combat Helmet (Tropic)", "H_HelmetB_Enh_tna_F", 75, "hat", "noDLC"],
 	["Combat Helmet (Black)", "H_HelmetB_plain_blk", 50, "hat"],
 	["Protector Helmet (Hex)", "H_HelmetO_ocamo", 50, "hat"],
 	["Protector Helmet (Urban)", "H_HelmetO_oucamo", 50, "hat"],
+	["Assassin Helmet (Hex)", "H_HelmetSpecO_ocamo", 75, "hat"],
+	["Assassin Helmet (Black)", "H_HelmetSpecO_blk", 75, "hat"],
 	["Defender Helmet (Hex)", "H_HelmetLeaderO_ocamo", 50, "hat"],
 	["Defender Helmet (Urban)", "H_HelmetLeaderO_oucamo", 50, "hat"],
+	["Defender Helmet (G Hex)", "H_HelmetLeaderO_ghex_F", 100, "hat", "noDLC"],
 	// ["Assassin Helmet (Hex)", "H_HelmetSpecO_ocamo", 50, "hat"],
 	["Assassin Helmet (Black)", "H_HelmetSpecO_blk", 50, "hat"],
 	["MICH", "H_HelmetIA", 50, "hat"],
@@ -947,11 +954,11 @@ armoredArray = compileFinal str
 	["AMV-7 Marshall", "B_APC_Wheeled_01_cannon_F", 27500, "vehicle"],
 	["AFV-4 Gorgon", "I_APC_Wheeled_03_cannon_F", 30000, "vehicle"],
 	// Apex DLC
-	["Prowler (Unarmed)","B_T_LSV_01_unarmed_F", 5000, "vehicle"],
-	["Prowler (Armed)","B_T_LSV_01_armed_F", 15000, "vehicle"],
+	["Prowler (Unarmed)","B_T_LSV_01_unarmed_F", 3000, "vehicle"],
+	["Prowler (Armed)","B_T_LSV_01_armed_F", 6000, "vehicle"],
 
-	["Qilin (Unarmed)","O_T_LSV_02_unarmed_F", 5000, "vehicle"],
-	["Qilin (Armed)","O_T_LSV_02_armed_F", 15000, "vehicle"]
+	["Qilin (Unarmed)","O_T_LSV_02_unarmed_F", 3000, "vehicle"],
+	["Qilin (Armed)","O_T_LSV_02_armed_F", 6000, "vehicle"]
 ];
 
 tanksArray = compileFinal str
@@ -1009,10 +1016,10 @@ helicoptersArray = compileFinal str
 
 planesArray = compileFinal str
 [
-	//["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 80000, "vehicle"],
-	//["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 90000, "vehicle"],
-	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 100000, "vehicle"],
-	//["To-199 Neophron CAS", "O_Plane_CAS_02_F", 100000, "vehicle"],
+	["A-143 Buzzard AA", "I_Plane_Fighter_03_AA_F", 150000, "vehicle"],
+	["A-143 Buzzard CAS", "I_Plane_Fighter_03_CAS_F", 150000, "vehicle"],
+	["A-164 Wipeout CAS", "B_Plane_CAS_01_F", 200000, "vehicle"],
+	["To-199 Neophron CAS", "O_Plane_CAS_02_F", 190000, "vehicle"],
 	//["MQ4A Greyhawk Missile UAV", "B_UAV_02_F", 200000, "vehicle"],
 	["MQ4A Greyhawk Bomber UAV", "B_UAV_02_CAS_F", 160000, "vehicle"], // Bomber UAVs are a lot harder to use, hence why they are cheaper than Missile ones
 	//["K40 Ababil-3 Missile UAV (CSAT)", "O_UAV_02_F", 200000, "vehicle"],
@@ -1020,7 +1027,7 @@ planesArray = compileFinal str
 	//["K40 Ababil-3 Missile UAV (AAF)", "I_UAV_02_F", 200000, "vehicle"],
 	["K40 Ababil-3 Bomber UAV (AAF)", "I_UAV_02_CAS_F", 160000, "vehicle"],
 	// Apex DLC
-	["Caesar BTT","C_Plane_Civil_01_F", 60000, "vehicle"]
+	["Caesar BTT","C_Plane_Civil_01_F", 3000, "vehicle"]
 ];
 
 boatsArray = compileFinal str
