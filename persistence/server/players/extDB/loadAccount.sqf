@@ -75,7 +75,7 @@ if (_tkAutoKickEnabled) then
 
 if (!_result) then
 {
-	_data =	[["PlayerSaveValid", false]/*,["BankMoney", _bank]*/, ["DonatorLevel", _donator], ["CustomUniform", _uniformNumber]];
+	_data =	[["PlayerSaveValid", false]/*, ["BankMoney", _bank]*/, ["DonatorLevel", _donator], ["CustomUniform", _uniformNumber]];
 
 	// prevent constraint fail on first save
 	private _sqlValues = [[["Name", name _player]], [0,1], false] call extDB_pairsToSQL;
