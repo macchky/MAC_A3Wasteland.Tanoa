@@ -10,9 +10,7 @@ class ServerDir
 	class initPlayerServer {file = "initPlayerServer.sqf";};
 	class setLockState {file = "server\functions\fn_setLockState.sqf";};
 	class setupMissionObject {file = "server\functions\setupMissionObject.sqf";};
-	class setupResupplyTruck {file = "server\functions\setupResupplyTruck.sqf";};
 	class setupSellTruck {file = "server\functions\setupSellTruck.sqf";};
-	class setupStoreNPC {file = "server\functions\setupStoreNPC.sqf";};
 	class setupMissionATM {file = "server\functions\setupMissionATM.sqf";};
 	class setupResupplyTruck {file = "server\functions\fn_setupResupplyTruck.sqf";};
 	class setupStoreNPC {file = "server\functions\setupStoreNPC.sqf";};
