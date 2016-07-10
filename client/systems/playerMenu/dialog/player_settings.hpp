@@ -189,7 +189,7 @@ class playerSettings {
 			onButtonClick = "setViewDistance 3300;";
 			x = 0.02; y = 0.57;
 			w = 0.125; h = 0.033 * safezoneH;
-		};
+		};*/
 
 		class btnDistanceEffects : w_RscButton {
 			idc = -1;
@@ -207,7 +207,7 @@ class playerSettings {
 			w = 0.225; h = 0.033 * safezoneH;
 		};
 
-		class btnDistanceInsane : w_RscButton {
+		/*class btnDistanceInsane : w_RscButton {
 			text = "Insane";
 			onButtonClick = "setViewDistance 5000;";
 			x = 0.02; y = 0.60;
