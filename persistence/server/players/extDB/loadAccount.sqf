@@ -27,7 +27,7 @@ _result = ([_query, 2] call extDB_Database_async) param [0,false];
 
 if (_donatorEnabled) then
 {
-	_result = ["getPlayerDonatorLevel:" + _UID, 2] call extDB_Database_async;
+	private _result = ["getPlayerDonatorLevel:" + _UID, 2] call extDB_Database_async;
 
 	if (count _result > 0) then
 	{
@@ -37,7 +37,7 @@ if (_donatorEnabled) then
 
 if (_customUniformEnabled) then
 {
-	_result = ["getPlayerCustomUniform:" + _UID, 2] call extDB_Database_async;
+	private _result = ["getPlayerCustomUniform:" + _UID, 2] call extDB_Database_async;
 
 	if (count _result > 0) then
 	{
@@ -47,7 +47,7 @@ if (_customUniformEnabled) then
 
 if (_tkAutoKickEnabled) then
 {
-	_result = ["getPlayerTeamKiller:" + _UID, 2] call extDB_Database_async;
+	private _result = ["getPlayerTeamKiller:" + _UID, 2] call extDB_Database_async;
 
 	if (count _result > 0) then
 	{
